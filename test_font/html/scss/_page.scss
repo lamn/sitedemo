@@ -1,0 +1,71 @@
+// Core variables and mixins bourbon
+@import "bourbon";
+
+/* Body */
+html{-webkit-font-smoothing:antialiased}
+body{-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%;font-display:swap;
+	@media only screen and (max-width:414px){font-size:calc(100% + 1 * (100vw - 360px)/ 39)}
+}
+html, body{background:#f1f5f8}
+
+
+@font-face {
+	font-family: 'Fahkwang';
+	src: url('../fonts/Fahkwang-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Fahkwang-Regular.woff') format('woff'), url('../fonts/Fahkwang-Regular.ttf') format('truetype'), url('../fonts/Fahkwang-Regular.svg#Fahkwang-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Fahkwang';
+	src: url('../fonts/Fahkwang-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Fahkwang-Bold.woff') format('woff'), url('../fonts/Fahkwang-Bold.ttf') format('truetype'), url('../fonts/Fahkwang-Bold.svg#Fahkwang-Bold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'JosefinSans';
+	src: url('../fonts/JosefinSans-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/JosefinSans-Regular.woff') format('woff'), url('../fonts/JosefinSans-Regular.ttf') format('truetype'), url('../fonts/JosefinSans-Regular.svg#JosefinSans-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'JosefinSans';
+	src: url('../fonts/JosefinSans-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/JosefinSans-Bold.woff') format('woff'), url('../fonts/JosefinSans-Bold.ttf') format('truetype'), url('../fonts/JosefinSans-Bold.svg#JosefinSans-Bold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'MontserratAlternates';
+	src: url('../fonts/MontserratAlternates-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/MontserratAlternates-Regular.woff') format('woff'), url('../fonts/MontserratAlternates-Regular.ttf') format('truetype'), url('../fonts/MontserratAlternates-Regular.svg#MontserratAlternates-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'MontserratAlternates';
+	src: url('../fonts/MontserratAlternates-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/MontserratAlternates-Bold.woff') format('woff'), url('../fonts/MontserratAlternates-Bold.ttf') format('truetype'), url('../fonts/MontserratAlternates-Bold.svg#MontserratAlternates-Bold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+/* General */
+.page-content{background-color:$white;max-width:600px;min-height:100vh;@include margin(null auto);@include padding($gutter);
+	&.is-font1{font-family:"Fahkwang";
+		*{font-family:"Fahkwang";}
+	}
+	&.is-font2{font-family:"JosefinSans";
+		*{font-family:"JosefinSans";}
+	}
+	&.is-font3{font-family:"MontserratAlternates";
+		*{font-family:"MontserratAlternates";}
+	}
+	h1{display:block;margin-bottom:$gutter*2;color:$text;font-size:$size-xlarge;font-weight:$weight-normal}
+	h2{display:block;margin-bottom:$gutter*1.5;color:$text;font-size:$size-large;font-weight:$weight-normal}
+	h3{display:block;margin-bottom:$gutter*1.5;color:$text;font-size:$size-medium;font-weight:$weight-normal}
+	p{display:block;margin-bottom:$gutter;color:$text;font-size:$size-normal;font-weight:$weight-normal}
+	strong{font-weight:bold}
+}
+

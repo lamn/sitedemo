@@ -1,0 +1,21 @@
+extends layout.pug
+
+//- Setting
+block setting
+	- var layout = true
+	- var loading = false
+
+block head
+	include head.pug
+
+block pages
+	- bodyC.push("")
+	- layoutClasses.push("ad-form")
+	- bodyClasses.push("page-content is-font2")
+
+//- Add Body
+block body
+	include page/_home.pug
+
+block javaScripts extend
+	script.
