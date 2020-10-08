@@ -3,13 +3,11 @@
   max-width: 100%
   position: relative
   vertical-align: top
-  &:not(.is-multiple)
-    height: $input-height
   &:not(.is-multiple):not(.is-loading)
     &::after
       @extend %arrow
       border-color: $input-arrow
-      right: 1.125em
+      right: 0.5em
       z-index: 4
   &.is-rounded
     select
@@ -17,9 +15,10 @@
       padding-left: 1em
   select
     @extend %input
+    background: transparent
     cursor: pointer
     display: block
-    font-size: 1em
+    font-size: 1rem
     max-width: 100%
     min-height: 100%
     outline: none

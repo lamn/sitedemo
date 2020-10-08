@@ -3,7 +3,7 @@ $control-radius-small: $radius-small !default
 
 $control-border-width: 1px !default
 
-$control-height: 2.75em !default
+$control-height: 2em !default
 $control-line-height: 1.5 !default
 
 $control-padding-vertical: calc(0.25em - #{$control-border-width}) !default
@@ -14,10 +14,10 @@ $control-padding-horizontal: calc(0.75em - #{$control-border-width}) !default
   -webkit-appearance: none
   align-items: center
   border: $control-border-width solid transparent
-  border-radius: $control-radius
+  border-radius: $control-radius-small
   box-shadow: none
   display: inline-flex
-  font-size: $size-normal
+  font-size: 1rem
   height: $control-height
   justify-content: flex-start
   line-height: $control-line-height
@@ -47,5 +47,5 @@ $control-padding-horizontal: calc(0.75em - #{$control-border-width}) !default
 =control-medium
   font-size: $size-medium
 =control-large
-  height: 3em
+  height: 44px
   font-size: $size-medium

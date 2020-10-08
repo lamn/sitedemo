@@ -1,4 +1,4 @@
-$label-color: $text !default
+$label-color: #666 !default
 $label-weight: $weight-semibold !default
 
 $help-size: $size-small !default
@@ -7,10 +7,10 @@ $help-size: $size-small !default
   color: $label-color
   display: flex
   align-items: center
-  font-size: $size-normal
+  font-size: 0.813rem
   font-weight: $label-weight
   &:not(:last-child)
-    margin-bottom: 0.25em
+    margin-bottom: 2px
   // Sizes
   &.is-small
     font-size: $size-small
@@ -27,7 +27,7 @@ $help-size: $size-small !default
   display: block
   position: relative
   font-size: $help-size
-  margin-top: 0.25rem
+  margin-top: 0.5rem
   color: $grey
   &.is-check
     padding-left: 18px
@@ -47,7 +47,7 @@ $help-size: $size-small !default
 
 .field
   &:not(:last-child)
-    margin-bottom: 1rem
+    margin-bottom: 36px
   // Modifiers
   &.has-addons
     display: flex
@@ -230,9 +230,9 @@ $help-size: $size-small !default
         & + .icon
           color: $danger
   ::-webkit-input-placeholder
-    color: $grey
+    color: $input-placeholder-color
   :-ms-input-placeholder
-    color: $grey
+    color: $input-placeholder-color
   ::placeholder
-    color: $grey
+    color: $input-placeholder-color
 
