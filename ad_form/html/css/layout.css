@@ -6273,7 +6273,7 @@ Generated using nucleoapp.com
   background-position: center center;
 }
 
-.overlay-popup .bl-popup .popup-container.is-show, .overlay-popup .bl-popup, .bl-popup, .overlay-modal .bl-modal, .bl-modal, .overlay-tooltip .bl-tooltip .tooltip-container.is-show, .overlay-tooltip .bl-tooltip, .bl-tooltip, .subtitle .js-read-more span, .input, .textarea, .button {
+.overlay-popup .bl-popup .popup-container.is-show, .overlay-popup .bl-popup, .bl-popup, .overlay-modal .bl-modal, .bl-modal, .overlay-tooltip .bl-tooltip .tooltip-container.is-show, .overlay-tooltip .bl-tooltip, .bl-tooltip, .layer-loading, .subtitle .js-read-more span, .input, .textarea, .button {
   -webkit-transition: all 0.35s ease;
   -o-transition: all 0.35s ease;
   transition: all 0.35s ease;
@@ -9046,7 +9046,7 @@ select:invalid {
 /* Loading */
 .layer-loading {
   position: fixed;
-  top: 44px;
+  top: -10px;
   left: 50%;
   z-index: 333;
   background-color: white;
@@ -9056,6 +9056,7 @@ select:invalid {
   border-radius: 100%;
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
           box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  opacity: 0;
 }
 .layer-loading .lds-ring {
   position: relative;
@@ -9088,6 +9089,10 @@ select:invalid {
 .layer-loading .lds-ring div:nth-child(3) {
   -webkit-animation-delay: -0.15s;
           animation-delay: -0.15s;
+}
+.layer-loading.is-active {
+  top: 44px;
+  opacity: 1;
 }
 
 @-webkit-keyframes lds-ring {
@@ -9604,7 +9609,7 @@ select:invalid {
   -webkit-overflow-scrolling: touch;
 }
 .bl-popup .popup-container .bl-popup-context .context-scroll {
-  height: calc(100vh - 160px);
+  height: 400px;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }

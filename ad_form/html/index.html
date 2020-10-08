@@ -20,7 +20,7 @@
     <style></style>
   </head>
   <body>
-    <div class="layer-loading">
+    <div class="layer-loading is-active">
       <div class="lds-ring">
         <div></div>
         <div></div>
@@ -250,6 +250,9 @@
       	$("html").removeClass("overlay-popup");
       	$(".popup-container").removeClass("is-show");
       });
+      
+      //- tắt loading[test]
+      setTimeout(function(){$('.layer-loading').removeClass("is-active")},3000)
       
       /* Read More JS */
       const ReadMore = (() => {
