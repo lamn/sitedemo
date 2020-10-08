@@ -100,19 +100,18 @@
 			}
 			.func-back-popup{display:none;}
 		}
+		.bl-popup-search{@include position(absolute, 50px 0 null 0);z-index:10;background-color:$white;height:40px;@include padding(null $gutter);
+			.input{height:40px;padding-left:1.5rem}
+			.icon{left:-4px;top:6px}
+		}
 		.bl-popup-heading + .bl-popup-context{padding-top:64px}
-		.bl-popup-context{position:relative;@include padding($gutter 20px);
-			&.is-scroll{height:100%;overflow-y:scroll;-webkit-overflow-scrolling:touch;}
-			.context-scroll{height:400px;overflow-y:scroll;-webkit-overflow-scrolling:touch;}
+		.bl-popup-search + .bl-popup-context{padding-top:104px}
+		.bl-popup-context{position:relative;height:100%;@include padding($gutter 20px);overflow-y:scroll;-webkit-overflow-scrolling:touch;
 			.group-add-list{
 				li{border-bottom:1px solid rgba($border, 0.5);
 					&:last-child{border-bottom:none}
 					a{display:block;@include padding(8px null);color:$text;font-size:$size-medium}
 				}
-			}
-			.field.is-seach{
-				.input{height:2.25rem;padding-left:1.5rem}
-				.icon{left:-4px;top:4px}
 			}
 		}
 	}
