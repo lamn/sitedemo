@@ -74,20 +74,20 @@
         <div class="group-question-wrap"><span class="title-question">Khung giờ thích hợp để liên hệ?</span>
           <div class="group-question">
             <div class="input-group-checkbox is-sr">
-              <input id="quest2-1" name="option" type="radio">
+              <input id="quest2-1" name="option" type="checkbox">
               <label class="label-custom" for="quest2-1">8:00 - 10:00</label>
             </div>
             <div class="input-group-checkbox is-sr">
-              <input id="quest2-2" name="option" type="radio">
+              <input id="quest2-2" name="option" type="checkbox">
               <label class="label-custom" for="quest2-2">11:00 - 13:00</label>
             </div>
             <div class="input-group-checkbox is-sr">
-              <input id="quest2-3" name="option" type="radio">
+              <input id="quest2-3" name="option" type="checkbox">
               <label class="label-custom" for="quest2-3">15:00 - 17:00</label>
             </div>
           </div>
         </div>
-        <div class="bottom"><a class="button is-primary is-large is-fullwidth" href="thankyou.html">Gửi thông tin</a>
+        <div class="bottom"><a class="button is-primary is-large is-fullwidth" href="bds_form.html">Tiếp tục</a>
           <p class="copyright">Powered by Zalo Form</p>
         </div>
       </div>
@@ -144,6 +144,9 @@
       	$("html").removeClass("overlay-popup");
       	$(".popup-container").removeClass("is-show");
       });
+      
+      //- tắt loading[test]
+      setTimeout(function(){$('.layer-loading').removeClass("is-active")},3000)
       
       /* Read More JS */
       const ReadMore = (() => {

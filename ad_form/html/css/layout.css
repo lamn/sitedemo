@@ -9342,7 +9342,27 @@ p.copyright {
   left: inherit;
   background-color: #222;
 }
-.group-question-wrap .input-group-checkbox.is-sr [type=radio]:checked + label {
+.group-question-wrap .input-group-checkbox.is-sr [type=checkbox]:checked + label:before, .group-question-wrap .input-group-checkbox.is-sr [type=checkbox]:not(:checked) + label:before {
+  background: transparent;
+  border: 1px solid #222;
+  border-radius: 100%;
+}
+.group-question-wrap .input-group-checkbox.is-sr [type=checkbox]:checked + label:after, .group-question-wrap .input-group-checkbox.is-sr [type=checkbox]:not(:checked) + label:after {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  left: inherit;
+  content: "";
+  background: #222;
+  height: 8px;
+  width: 8px;
+  margin-top: -4px;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.group-question-wrap .input-group-checkbox.is-sr [type=radio]:checked + label, .group-question-wrap .input-group-checkbox.is-sr [type=checkbox]:checked + label {
   background-color: #b6e2ff;
 }
 .group-question-wrap .input-group-checkbox:hover {

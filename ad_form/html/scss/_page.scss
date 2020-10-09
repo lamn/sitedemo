@@ -124,7 +124,9 @@ p.copyright{@include margin(20px null -5px);text-align:center;font-size:0.688em;
 				&:before{right:16px;left:inherit;border-color:$text}
 				&:after{right:20px;left:inherit;background-color:$text}
 			}
-			[type="radio"]:checked + label{background-color:#b6e2ff}
+			[type=checkbox]:checked + label:before, [type=checkbox]:not(:checked) + label:before{background:transparent;border:1px solid $text;border-radius:100%}
+			[type=checkbox]:checked + label:after, [type=checkbox]:not(:checked) + label:after{@include position(absolute, 50% 20px null inherit);content:"";background:$text;@include size(8px);margin-top:-4px;border-radius:100%;transition:all 0.2s ease}
+			[type="radio"]:checked + label, [type="checkbox"]:checked + label{background-color:#b6e2ff}
 		}
 		&:hover{color:$text}
 	}
