@@ -6476,7 +6476,7 @@ Generated using nucleoapp.com
   border-radius: 5px !important;
 }
 
-.bl-modal .modal-container, .bl-error, .page-content .body, body.for-article .page-content .body, .is-radius {
+.bl-modal .modal-container, .bl-error, .group-question-wrap .group-question, .group-form, body.for-article .page-content .body, .is-radius {
   border-radius: 10px !important;
 }
 
@@ -6494,7 +6494,7 @@ Generated using nucleoapp.com
   background-position: center center;
 }
 
-.overlay-popup .bl-popup .popup-container.is-show, .overlay-popup .bl-popup, .bl-popup, .overlay-modal .bl-modal, .bl-modal, .overlay-tooltip .bl-tooltip .tooltip-container.is-show, .overlay-tooltip .bl-tooltip, .bl-tooltip, .layer-loading, .subtitle .js-read-more span, .input, .textarea, .button {
+.overlay-popup .bl-popup .popup-container.is-show, .overlay-popup .bl-popup, .bl-popup, .overlay-modal .bl-modal, .bl-modal, .overlay-tooltip .bl-tooltip .tooltip-container.is-show, .overlay-tooltip .bl-tooltip, .bl-tooltip, .layer-loading, .input, .textarea, .button {
   -webkit-transition: all 0.35s ease;
   -o-transition: all 0.35s ease;
   transition: all 0.35s ease;
@@ -8526,7 +8526,7 @@ Generated using nucleoapp.com
 
 [type=radio]:not(:checked) + label:before {
   background: transparent;
-  border-color: #ccc;
+  border-color: #979797;
 }
 
 /* Custom Checkbox */
@@ -8591,7 +8591,7 @@ Generated using nucleoapp.com
 
 [type=checkbox]:not(:checked) + label:before {
   background: transparent;
-  border-color: #ccc;
+  border-color: #979797;
 }
 
 /*!
@@ -8910,10 +8910,10 @@ html, body {
 
 body.for-article {
   min-height: 100%;
-  background: #DDDDDD;
+  background: #ddd;
 }
 body.for-article .page-content {
-  background: #DDDDDD;
+  background: #ddd;
   padding: 15px;
 }
 body.for-article .page-content .bl-cover {
@@ -8948,11 +8948,42 @@ body.for-article .page-content .field:not(:last-child) {
 .page-content .body {
   position: relative;
   z-index: 2;
-  background-color: white;
-  margin: 15px;
-  padding: 25px;
-  -webkit-box-shadow: 0 0 6px rgba(175, 175, 175, 0.5);
-          box-shadow: 0 0 6px rgba(175, 175, 175, 0.5);
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.page-content .bl-cover + .body {
+  margin-top: -42px;
+}
+@media screen and (min-width: 769px), print {
+  .page-content .bl-cover + .body {
+    margin-top: -28px;
+  }
+}
+.page-content .bottom {
+  margin-bottom: 30px;
+}
+.page-content.has-cover-fixed .bl-cover {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+@media screen and (min-width: 769px), print {
+  .page-content.has-cover-fixed .bl-cover {
+    position: relative;
+    top: inherit;
+    right: inherit;
+    bottom: inherit;
+    left: inherit;
+  }
+}
+.page-content.has-cover-fixed .bl-cover + .body {
+  margin-top: 167px;
+}
+@media screen and (min-width: 769px), print {
+  .page-content.has-cover-fixed .bl-cover + .body {
+    margin-top: -28px;
+  }
 }
 @media screen and (min-width: 769px), print {
   .page-content {
@@ -8960,21 +8991,11 @@ body.for-article .page-content .field:not(:last-child) {
     margin-top: 2rem;
     margin-bottom: 2rem;
     border-radius: 8px;
-    -webkit-box-shadow: 0 0 6px rgba(175, 175, 175, 0.5);
-            box-shadow: 0 0 6px rgba(175, 175, 175, 0.5);
     overflow: hidden;
   }
   .page-content .body {
     margin: 0;
     border-radius: 0 !important;
-  }
-}
-.page-content .bl-cover + .body {
-  margin-top: 167px;
-}
-@media screen and (min-width: 769px), print {
-  .page-content .bl-cover + .body {
-    margin-top: -28px;
   }
 }
 
@@ -9059,6 +9080,12 @@ hr.line.is-outside {
 .subtitle .js-read-more {
   display: inline;
 }
+.subtitle .js-read-more br {
+  display: block;
+  content: "";
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 .subtitle .read-more-link-wrap {
   white-space: nowrap;
   margin-left: 4px;
@@ -9066,8 +9093,8 @@ hr.line.is-outside {
 .subtitle .read-more-link-wrap .read-more-link {
   color: #222;
 }
-.subtitle .js-read-more.is-expanded span {
-  text-align: justify;
+.subtitle .js-read-more.is-expanded + .read-more-link-wrap {
+  display: none;
 }
 @media screen and (min-width: 769px), print {
   .subtitle {
@@ -9105,13 +9132,27 @@ select:invalid {
   color: #ccc;
 }
 
+p.copyright {
+  margin-top: 20px;
+  margin-bottom: -5px;
+  text-align: center;
+  font-size: 0.688em;
+  color: #aaa;
+}
+
 /* Block */
+.group-form {
+  background-color: white;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 25px;
+  -webkit-box-shadow: 0 0 6px rgba(175, 175, 175, 0.5);
+          box-shadow: 0 0 6px rgba(175, 175, 175, 0.5);
+}
+
 .bl-cover {
   display: block;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
+  position: relative;
   background-color: #666;
   overflow: hidden;
 }
@@ -9169,6 +9210,7 @@ select:invalid {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 0;
 }
 .bl-info-oa.is-review .ico-wrap {
   display: block;
@@ -9186,9 +9228,7 @@ select:invalid {
   font-size: 1rem;
 }
 .bl-info-oa.is-review .avatar {
-  margin-right: 5px;
-  margin-bottom: 0;
-  margin-left: 5px;
+  margin: 0 5px;
 }
 
 .bl-form .label {
@@ -9216,19 +9256,12 @@ select:invalid {
 .bl-form p.is-policy strong {
   font-weight: 700;
 }
-.bl-form p.copyright {
-  text-align: center;
-  font-size: 0.688em;
-  color: #AAAAAA;
-  margin-top: 20px;
-  margin-bottom: -5px;
-}
 .bl-form .button {
   margin-top: 19.875px;
 }
 @media screen and (min-width: 769px), print {
   .bl-form {
-    padding: 20px 55px;
+    padding: 7.5px 55px;
   }
 }
 .bl-form .context-default {
@@ -9240,12 +9273,88 @@ select:invalid {
   font-size: 0.875em;
 }
 
+.group-form + .group-question-wrap {
+  margin-top: 30px;
+}
+
+.group-question-wrap {
+  margin-bottom: 30px;
+}
+.group-question-wrap .title-question {
+  display: block;
+  margin-bottom: 1rem;
+  color: #222;
+  font-size: 1em;
+  font-weight: 700;
+  text-align: center;
+}
+.group-question-wrap .group-question {
+  background-color: white;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
+  -webkit-box-shadow: 0 0 6px rgba(175, 175, 175, 0.5);
+          box-shadow: 0 0 6px rgba(175, 175, 175, 0.5);
+}
+.group-question-wrap .group-question .field.is-select-location select {
+  height: 48px;
+  border-bottom: none;
+}
+.group-question-wrap .input-group-checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  margin-right: -15px;
+  margin-left: -15px;
+  padding: 10px 15px;
+}
+.group-question-wrap .input-group-checkbox:first-child {
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+}
+.group-question-wrap .input-group-checkbox:last-child {
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
+}
+.group-question-wrap .input-group-checkbox.is-sr {
+  padding: 0;
+  border-bottom: 1px solid #ddd;
+}
+.group-question-wrap .input-group-checkbox.is-sr label.label-custom {
+  display: block;
+  width: 100%;
+  padding: 12px 40px 12px 15px;
+  color: #222;
+  font-size: 1em;
+}
+.group-question-wrap .input-group-checkbox.is-sr label.label-custom:before {
+  right: 16px;
+  left: inherit;
+  border-color: #222;
+}
+.group-question-wrap .input-group-checkbox.is-sr label.label-custom:after {
+  right: 20px;
+  left: inherit;
+  background-color: #222;
+}
+.group-question-wrap .input-group-checkbox.is-sr [type=radio]:checked + label {
+  background-color: #b6e2ff;
+}
+.group-question-wrap .input-group-checkbox:hover {
+  color: #222;
+}
+
 /* Loading */
 .layer-loading {
   position: fixed;
   top: -10px;
   left: 50%;
-  z-index: 333;
+  z-index: -1;
   background-color: white;
   width: 52px;
   margin-left: -26px;
@@ -9254,6 +9363,7 @@ select:invalid {
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
           box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
   opacity: 0;
+  visibility: hidden;
 }
 .layer-loading .lds-ring {
   position: relative;
@@ -9288,8 +9398,10 @@ select:invalid {
           animation-delay: -0.15s;
 }
 .layer-loading.is-active {
+  z-index: 333;
   top: 44px;
   opacity: 1;
+  visibility: visible;
 }
 
 @-webkit-keyframes lds-ring {
@@ -9795,12 +9907,13 @@ select:invalid {
 }
 .bl-popup .popup-container .bl-popup-search {
   position: absolute;
-  top: 54px;
+  top: 50px;
   right: 0;
   left: 0;
   z-index: 10;
   background-color: white;
   height: 40px;
+  padding-top: 4px;
   padding-right: 15px;
   padding-left: 15px;
 }

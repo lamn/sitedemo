@@ -100,7 +100,7 @@
 			}
 			.func-back-popup{display:none;}
 		}
-		.bl-popup-search{@include position(absolute, 54px 0 null 0);z-index:10;background-color:$white;height:40px;@include padding(null $gutter);
+		.bl-popup-search{@include position(absolute, 50px 0 null 0);z-index:10;background-color:$white;height:40px;@include padding(4px $gutter null);
 			.input{height:40px;padding-left:1.5rem;border-bottom-color:#eee}
 			.icon{left:-4px;top:6px}
 		}

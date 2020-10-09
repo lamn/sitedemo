@@ -41,7 +41,7 @@
 [type="radio"]:not(:checked) + label:after{opacity:0;transform:scale(0)}
 [type="radio"]:checked + label:after{opacity:1;transform:scale(1)}
 [type="radio"]:checked + label:after{opacity:1;transform:scale(1)}
-[type="radio"]:not(:checked) + label:before{background:transparent;border-color:#ccc}
+[type="radio"]:not(:checked) + label:before{background:transparent;border-color:#979797}
 
 /* Custom Checkbox */
 [type="checkbox"]:checked,[type="checkbox"]:not(:checked){position:absolute;left:-9999px}
@@ -50,4 +50,4 @@
 [type="checkbox"]:checked + label:after,[type="checkbox"]:not(:checked) + label:after{@include position(absolute, 50% null null 0);content:"\ea0a";@include size(16px);margin-top:-9px;@include padding(null 2px);color:$white;font-size:0.75rem;font-family:$font-icon;transition:all 0.2s ease}
 [type="checkbox"]:not(:checked) + label:after{opacity:0;transform:scale(0)}
 [type="checkbox"]:checked + label:after{opacity:1;transform:scale(1)}
-[type="checkbox"]:not(:checked) + label:before{background:transparent;border-color:#ccc}
+[type="checkbox"]:not(:checked) + label:before{background:transparent;border-color:#979797}
