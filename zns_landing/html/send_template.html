@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Zalo Notification Service</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="description" content="description here">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="author" content="Lam Nguyen">
+    <meta name="copyright" content="2018 Lam Nguyen">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="7 days">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="">
+    <meta property="og:image" content="">
+    <link rel="icon" type="image/ico" href="images/favicon.ico">
+    <link href="css/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="css/layout.css" rel="stylesheet" type="text/css">
+    <style></style>
+  </head>
+  <body>
+    <main class="zns-landing">
+      <div class="module-send-template"><a class="logo-zad" href="index.html"></a>
+        <div class="context-modal context-send-template">
+          <div class="col-left">
+            <h2 class="head">Ưu điểm của ZNS</h2>
+            <div class="body">
+              <ul class="list">
+                <li class="item"><i class="icz icz-fill-check"></i><span class="text">Nội dung đa dạng</span></li>
+                <li class="item"><i class="icz icz-fill-check"></i><span class="text">Chi phí gửi tiết kiệm</span></li>
+                <li class="item"><i class="icz icz-fill-check"></i><span class="text">Tương tác 2 chiều</span></li>
+                <li class="item"><i class="icz icz-fill-check"></i><span class="text">Tiếp cận chủ động</span></li>
+                <li class="item"><i class="icz icz-fill-check"></i><span class="text">Theo dõi dễ dàng</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-right">
+            <h2 class="head">Gửi tin nhắn mẫu</h2>
+            <p class="text">Nhập thông tin bên dưới để nhận tin nhắn mẫu</p>
+            <div class="body">
+              <form class="form-send-template">
+                <div class="field">
+                  <div class="control is-invalid">
+                    <input class="input" type="text" value="" required>
+                    <label class="label">Tên của bạn</label>
+                  </div>
+                  <p class="help has-text-danger">Nội dung báo lỗi</p>
+                </div>
+                <div class="field">
+                  <div class="control">
+                    <input class="input" type="text" value="" required>
+                    <label class="label">Tên của bạn</label>
+                  </div>
+                  <p class="help has-text-danger">Nội dung báo lỗi</p>
+                </div>
+                <div class="field">
+                  <div class="control">
+                    <input class="input" type="text" value="0983823444" required>
+                    <label class="label">Số điện thoại Zalo của bạn</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="button is-primary is-large func-send"><i class="icz icz-send"></i><span>Gửi đi</span></div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="context-modal context-register is-hide">
+          <div class="head">
+            <svg class="ico-success" width="133px" height="133px" viewBox="0 0 133 133" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g id="check-group" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <circle id="filled-circle" fill="#09AB4C" cx="66.5" cy="66.5" r="54.5"></circle>
+                <circle id="white-circle" fill="#FFFFFF" cx="66.5" cy="66.5" r="55.5"></circle>
+                <circle id="outline" stroke="#09AB4C" stroke-width="6" cx="66.5" cy="66.5" r="54.5"></circle>
+                <polyline id="check" stroke="#FFFFFF" stroke-width="6" points="41 70 56 85 92 49"></polyline>
+              </g>
+            </svg>
+            <h2>Gửi tin nhắn thành công</h2>
+            <p>Tin nhắn đã được gửi đến số điện thoại Zalo của bạn. Bạn là doanh nghiệp muốn sử dụng Zalo để chăm sóc khách hàng? Vui lòng nhập thông tin đăng ký bên dưới.</p>
+          </div>
+          <div class="body">
+            <form class="form-register" name="cform-1" id="cform-1" target="_self" action="">
+              <div class="field">
+                <div class="control">
+                  <input class="input" type="text" id="nameField-1" value="" invalid="this.setCustomValidity('Vui lòng nhập họ và tên')" required>
+                  <label class="label">Tên người liên hệ</label>
+                </div>
+              </div>
+              <div class="field">
+                <div class="control">
+                  <input class="input" type="number" id="phoneField-1" value="" invalid="this.setCustomValidity('Nhập đúng định dạng số điện thoại')" required>
+                  <label class="label">Số điện thoại</label>
+                </div>
+              </div>
+              <div class="field">
+                <div class="control">
+                  <input class="input" type="text" id="nameInterpriseField-1" value="" invalid="this.setCustomValidity('Vui lòng nhập tên Doanh Nghiệp')" required>
+                  <label class="label">Tên doanh nghiệp</label>
+                </div>
+              </div>
+              <div class="field">
+                <div class="control">
+                  <input class="input" type="text" id="emailField-1" value="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$" invalid="this.setCustomValidity('Vui lòng nhập đúng định dạng Email')" required>
+                  <label class="label">Email công ty</label>
+                </div>
+              </div>
+              <div class="field">
+                <div class="control">
+                  <input class="input" type="text" id="positionField-1" value="" invalid="this.setCustomValidity('Vui lòng nhập chức vụ hiện tại')" required>
+                  <label class="label">Chức vụ hiện tại</label>
+                </div>
+              </div>
+              <div class="field">
+                <div class="control">
+                  <input class="input" type="number" id="numberMontlyField-1" value="" invalid="this.setCustomValidity('Vui lòng nhập Lượng tin CSKH gửi hàng tháng')" required>
+                  <label class="label">Lượng tin CSKH gửi hàng tháng</label>
+                </div>
+              </div>
+              <div class="field">
+                <div class="control">
+                  <input class="input" type="text" id="numberPresentField-1" value="" invalid="this.setCustomValidity('Vui lòng nhập Các mẫu tin CSKH hiện tại')" required>
+                  <label class="label">Các mẫu tin CSKH hiện tại</label>
+                </div>
+              </div>
+              <div class="field has-text-centered">
+                <button class="button is-primary is-large" id="cform-1" name="send">Đăng ký ngay</button><a class="func-back-form" href="#!"><i class="icz icz-arrow-left"></i><span>Gửi tin nhắn mẫu khác</span></a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="notice-submit-success">
+        <div class="context-notice">
+          <div class="content"><i class="icz icz-fill-check"></i><span>Thông tin đăng ký đã được gửi thành công!</span></div><a class="func-close-notice" href="javascript:void(0);"><i class="icz icz-close"></i></a>
+        </div>
+      </div>
+    </main>
+    <div class="bl-modal">
+    </div>
+    <!-- Include Plugin-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      //- chuyển content modal
+      $(".func-send").click(function(){
+      	$(".context-send-template").addClass("is-hide");
+      	$(".context-register").removeClass("is-hide");
+      	$(".ico-success").addClass("is-active-ico");
+      });
+      $(".func-back-form").click(function(){
+      	$(".context-send-template").removeClass("is-hide");
+      	$(".context-register").addClass("is-hide");
+      	$(".ico-success").removeClass("is-active-ico");
+      });
+      $(".func-close-notice").click(function(){
+      	$(".notice-submit-success").removeClass("is-active");
+      });
+    </script>
+  </body>
+</html>
