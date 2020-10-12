@@ -341,13 +341,15 @@ body, html{height:100%;
 	}
 }
 .notice-submit-success{@include position(fixed, -100% 0 null 0);background-color:$success;z-index:1005;@extend %tr-all;
-	.context-notice{display:flex;align-items:center;justify-content:center;height:68px;@include padding(null 1rem);
+	.context-notice{display:flex;align-items:center;justify-content:center;@include padding(1rem);
 		.content{display:flex;align-items:center;justify-content:center;max-width:980px;@include margin(null auto);
 			[class^="icz"]{@include size(24px);color:$white;font-size:1.5rem;}
-			span{margin-left:8px;color:$white;font-size:$size-normal;}
+			span{margin-left:$gutter;color:$white;font-size:$size-normal;
+				strong{display:block;color:$white;font-weight:$weight-bold}
+			}
 		}
-		.func-close-notice{@include position(absolute, 4px 4px null null);@include size(24px);@include padding(4px);
-			[class^="icz"]{@include size(16px);@include padding(0);color:$white;font-size:1rem;}
+		.func-close-notice{@include position(absolute, 50% 16px null null);@include size(32px);margin-top:-16px;@include padding(4px);
+			[class^="icz"]{@include size(24px);@include padding(2px);color:$white;font-size:1.25rem;}
 		}
 	}
 	&.is-active{top:0;}
@@ -450,11 +452,11 @@ body, html{height:100%;
 	.help{display:none;}
 	.control{position:relative;height:54px;background-color:$white;border-radius:$radius-small;
 		input{@include position(absolute, 0);height:100%;@include padding(null 1rem);color:$text;font-size:$size-medium;font-weight:$weight-semibold;
-			&:focus, &:not(:focus):valid, &.error{padding-top:24px;}
+			&:focus, &:not(:focus):valid, &.error, &.has-value{padding-top:24px;}
 			&.error{border:1px solid $danger;}
 		}
 		.label{@include position(absolute, 14px null null 16px);color:$grey-light;font-size:$size-medium;font-weight:$weight-normal;pointer-events:none;transition:all 0.2s ease;}
-		input:not(:focus):valid ~ .label, input:focus ~ .label, input.error ~ .label{top:6px;font-size:$size-small}
+		input:not(:focus):valid ~ .label, input:focus ~ .label, input.error ~ .label, input.has-value ~ .label{top:6px;font-size:$size-small}
 		input.error ~ label{display:none}
 		input.error ~ label.error{display:block;@include position(absolute, 6px null null 16px);color:$danger;font-size:$size-small;font-weight:$weight-normal;pointer-events:none;transition:all 0.2s ease;}
 	}

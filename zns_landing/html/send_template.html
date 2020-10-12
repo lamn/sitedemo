@@ -56,7 +56,7 @@
                 </div>
                 <div class="field">
                   <div class="control">
-                    <input class="input" type="text" value="0983823444" required>
+                    <input class="has-value input" type="text" value="0983823444" required disabled>
                     <label class="label">Số điện thoại Zalo của bạn</label>
                   </div>
                 </div>
@@ -81,51 +81,51 @@
             <p>Tin nhắn đã được gửi đến số điện thoại Zalo của bạn. Bạn là doanh nghiệp muốn sử dụng Zalo để chăm sóc khách hàng? Vui lòng nhập thông tin đăng ký bên dưới.</p>
           </div>
           <div class="body">
-            <form class="form-register" name="cform-1" id="cform-1" target="_self" action="">
+            <form class="form-register" name="cform-1" id="cform-1" target="_self" action="" data-form-validate="true" method="post" novalidate="novalidate">
               <div class="field">
                 <div class="control">
-                  <input class="input" type="text" id="nameField-1" value="" invalid="this.setCustomValidity('Vui lòng nhập họ và tên')" required>
+                  <input class="input" type="text" id="nameField" data-rule-required="true" data-msg-required="Vui lòng nhập tên người liên hệ." name="nameField" required>
                   <label class="label">Tên người liên hệ</label>
                 </div>
               </div>
               <div class="field">
                 <div class="control">
-                  <input class="input" type="number" id="phoneField-1" value="" invalid="this.setCustomValidity('Nhập đúng định dạng số điện thoại')" required>
+                  <input class="input" type="text" id="phoneField" data-rule-required="true" data-msg-required="Vui lòng nhập số điện thoại." value="" name="phoneField" required>
                   <label class="label">Số điện thoại</label>
                 </div>
               </div>
               <div class="field">
                 <div class="control">
-                  <input class="input" type="text" id="nameInterpriseField-1" value="" invalid="this.setCustomValidity('Vui lòng nhập tên Doanh Nghiệp')" required>
+                  <input class="input" type="text" id="nameInterpriseField" data-rule-required="true" data-msg-required="Vui lòng nhập tên doanh nghiệp." value="" name="nameInterpriseField" required>
                   <label class="label">Tên doanh nghiệp</label>
                 </div>
               </div>
               <div class="field">
                 <div class="control">
-                  <input class="input" type="text" id="emailField-1" value="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$" invalid="this.setCustomValidity('Vui lòng nhập đúng định dạng Email')" required>
+                  <input class="input" type="email" id="emailField" data-rule-required="true" data-msg-required="Vui lòng nhập email công ty." value="" name="emailField" required>
                   <label class="label">Email công ty</label>
                 </div>
               </div>
               <div class="field">
                 <div class="control">
-                  <input class="input" type="text" id="positionField-1" value="" invalid="this.setCustomValidity('Vui lòng nhập chức vụ hiện tại')" required>
+                  <input class="input" type="text" id="positionField" data-rule-required="true" data-msg-required="Vui lòng nhập chức vụ hiện tại." value="" name="positionField" required>
                   <label class="label">Chức vụ hiện tại</label>
                 </div>
               </div>
               <div class="field">
                 <div class="control">
-                  <input class="input" type="number" id="numberMontlyField-1" value="" invalid="this.setCustomValidity('Vui lòng nhập Lượng tin CSKH gửi hàng tháng')" required>
+                  <input class="input" type="text" id="numberMontlyField" data-rule-required="true" data-msg-required="Vui lòng nhập Lượng tin CSKH gửi hàng tháng." value="" name="numberMontlyField" required>
                   <label class="label">Lượng tin CSKH gửi hàng tháng</label>
                 </div>
               </div>
               <div class="field">
                 <div class="control">
-                  <input class="input" type="text" id="numberPresentField-1" value="" invalid="this.setCustomValidity('Vui lòng nhập Các mẫu tin CSKH hiện tại')" required>
+                  <input class="input" type="text" id="numberPresentField" data-rule-required="true" data-msg-required="Vui lòng nhập Các mẫu tin CSKH hiện tại." value="" name="numberPresentField" required>
                   <label class="label">Các mẫu tin CSKH hiện tại</label>
                 </div>
               </div>
               <div class="field has-text-centered">
-                <button class="button is-primary is-large" id="cform-1" name="send">Đăng ký ngay</button><a class="func-back-form" href="#!"><i class="icz icz-arrow-left"></i><span>Gửi tin nhắn mẫu khác</span></a>
+                <button class="button is-large is-primary" id="send" type="submit" name="cform-1">Đăng ký ngay</button>
               </div>
             </form>
           </div>
@@ -133,7 +133,7 @@
       </div>
       <div class="notice-submit-success">
         <div class="context-notice">
-          <div class="content"><i class="icz icz-fill-check"></i><span>Thông tin đăng ký đã được gửi thành công!</span></div><a class="func-close-notice" href="javascript:void(0);"><i class="icz icz-close"></i></a>
+          <div class="content"><i class="icz icz-fill-check"></i><span><strong>Cảm ơn bạn đã để lại thông tin.</strong>Chúng tôi sẽ liên hệ lại với bạn trong vòng 3 ngày làm việc để tư vấn chi tiết hơn về dịch vụ.</span></div><a class="func-close-notice" href="javascript:void(0);"><i class="icz icz-close"></i></a>
         </div>
       </div>
     </main>
@@ -156,6 +156,22 @@
       });
       $(".func-close-notice").click(function(){
       	$(".notice-submit-success").removeClass("is-active");
+      });
+      $(document).ready(function() {
+      	$("form[data-form-validate='true']").each(function() {
+      		$(this).validate({
+      			submitHandler: function() { return postToGoogle(); },
+      			rules: {
+      				"phoneField": {
+      					minlength: 8,
+      					number: true
+      				},
+      				"numberMontlyField": {
+      					number: true
+      				},
+      			},
+      		});
+      	})
       });
     </script>
   </body>

@@ -331,12 +331,12 @@ $.extend( $.validator, {
 		url: "Please enter a valid URL.",
 		date: "Please enter a valid date.",
 		dateISO: "Please enter a valid date ( ISO ).",
-		number: "Please enter a valid number.",
+		number: "Vui lòng nhập đúng định dạng số.",
 		digits: "Please enter only digits.",
 		creditcard: "Please enter a valid credit card number.",
 		equalTo: "Please enter the same value again.",
 		maxlength: $.validator.format( "Please enter no more than {0} characters." ),
-		minlength: $.validator.format( "Please enter at least {0} characters." ),
+		minlength: $.validator.format( "Vui lòng nhập ít nhất {0} ký tự." ),
 		rangelength: $.validator.format( "Please enter a value between {0} and {1} characters long." ),
 		range: $.validator.format( "Please enter a value between {0} and {1}." ),
 		max: $.validator.format( "Please enter a value less than or equal to {0}." ),
@@ -1398,7 +1398,7 @@ if ( $.ajaxPrefilter ) {
 
 }));
 
-$('#cform').submit(function(){
+function postToGoogle(name,phone,nameInterprise,email,position,numberMontly,numberPresent) {
 	var name = $("#nameField").val();
 	var phone = $("#phoneField").val();
 	var nameInterprise = $("#nameInterpriseField").val();
@@ -1406,22 +1406,6 @@ $('#cform').submit(function(){
 	var position = $("#positionField").val();
 	var numberMontly = $("#numberMontlyField").val();
 	var numberPresent = $("#numberPresentField").val();
-	postToGoogle(name,phone,nameInterprise,email,position,numberMontly,numberPresent);
-	//return false;
-
-});
-$('#cform-1').submit(function(){
-	var name = $("#nameField-1").val();
-	var phone = $("#phoneField-1").val();
-	var nameInterprise = $("#nameInterpriseField-1").val();
-	var email = $("#emailField-1").val();
-	var position = $("#positionField-1").val();
-	var numberMontly = $("#numberMontlyField-1").val();
-	var numberPresent = $("#numberPresentField-1").val();
-	postToGoogle(name,phone,nameInterprise,email,position,numberMontly,numberPresent);
-	return false;
-});
-function postToGoogle(name,phone,nameInterprise,email,position,numberMontly,numberPresent) {
 	//Xử lý gửi dữ liệu lên form
 	$.ajax({
 		//Chỉ định đích gửi dữ liệu đến: là form response đã tạo ở trên
@@ -1440,8 +1424,7 @@ function postToGoogle(name,phone,nameInterprise,email,position,numberMontly,numb
 		success: function(d){}, 
 		error: function(x, y, z) {
 			$(".notice-submit-success").addClass("is-active");
-			setTimeout(function(){$(".notice-submit-success").removeClass("is-active");},9000)
 		}
 	});
-	//return false;
+	return false;
 }

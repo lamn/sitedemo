@@ -134,7 +134,7 @@
         <div class="context">
           <h2 class="head">Đăng ký thử nghiệm</h2>
           <p class="text">Nhận <strong>50,000 </strong>tin ZNS miễn phí trong 1 tháng đầu khi đăng ký ngay hôm nay.</p>
-          <form class="form-register" name="cform" target="_self" data-form-validate="true" action="" method="post" novalidate="novalidate">
+          <form class="form-register" name="cform" id="cform" target="_self" action="" data-form-validate="true" method="post" novalidate="novalidate">
             <div class="field">
               <div class="control">
                 <input class="input" type="text" id="nameField" data-rule-required="true" data-msg-required="Vui lòng nhập tên người liên hệ." name="nameField" required>
@@ -143,7 +143,7 @@
             </div>
             <div class="field">
               <div class="control">
-                <input class="input" type="number" id="phoneField" data-rule-required="true" data-msg-required="Vui lòng nhập số điện thoại." value="" name="phoneField" required>
+                <input class="input" type="text" id="phoneField" data-rule-required="true" data-msg-required="Vui lòng nhập số điện thoại." value="" name="phoneField" required>
                 <label class="label">Số điện thoại</label>
               </div>
             </div>
@@ -167,7 +167,7 @@
             </div>
             <div class="field">
               <div class="control">
-                <input class="input" type="number" id="numberMontlyField" data-rule-required="true" data-msg-required="Vui lòng nhập Lượng tin CSKH gửi hàng tháng." value="" name="numberMontlyField" required>
+                <input class="input" type="text" id="numberMontlyField" data-rule-required="true" data-msg-required="Vui lòng nhập Lượng tin CSKH gửi hàng tháng." value="" name="numberMontlyField" required>
                 <label class="label">Lượng tin CSKH gửi hàng tháng</label>
               </div>
             </div>
@@ -178,44 +178,16 @@
               </div>
             </div>
             <div class="field has-text-centered">
-              <button class="button is-large is-outlined" id="cform" type="submit" name="cform">Đăng ký ngay</button>
+              <button class="button is-large is-outlined" id="send" type="submit" name="cform">Đăng ký ngay</button>
             </div>
           </form>
-          <!--form#register-form(data-form-validate="true" action="" method="post" novalidate="novalidate")
-          h2 Registration form 1
-          #form-content
-          	.form-group
-          		label(for="name") Name
-          		input.form-control(data-rule-required="true" data-msg-required="Please enter your Name." type="text" name="name")
-          	.form-group
-          		label(for="password") Password
-          		input.form-control(data-rule-required="true" data-msg-required="Please enter Password." data-msg-minlength="Your password must be at least 6 characters long" data-rule-minlength="6" type="password" name="password")
-          	.form-group
-          		label(for="city") City
-          		input.form-control(data-rule-required="true" data-msg-required="Please enter city name." type="text" name="city")
-          	.form-group
-          		label  Gender 
-          		br
-          		label(for="gender_male")
-          			| Male
-          		input#gender_male(data-rule-required="true" data-msg-required="Please select gender." type="radio" value="male" name="gender[]")
-          		label(for="gender_female") Female
-          		input#gender_female(type="radio" value="female" name="gender[]")
-          	.form-group
-          		label(for="RangeAndNumberDemo") An option must be selected:
-          		select#DropDownRequiredDemo.form-control(data-msg-required="This field is required." data-rule-required="true" name="DropDownRequiredDemo")
-          			option(value="") Please select
-          			option(value="An Option") An Option
-          	.form-group
-          		input.btn.btn-primary(type="submit" name="submit")
-          -->
           <div class="notice"><span class="text"> <i class="icz icz-c-info"></i>Mẫu tin sẽ được duyệt trước bởi Zalo và ưu đãi không dành cho tin quảng cáo. Zalo sẽ chỉ liên hệ lại nếu thấy dịch vụ có thể đáp ứng nhu cầu Doanh nghiệp.</span></div>
         </div>
       </section>
       <footer class="footer"><span class="text">© 2020 Zalo Notification Service. Một dịch vụ của Zalo</span></footer>
       <div class="notice-submit-success">
         <div class="context-notice">
-          <div class="content"><i class="icz icz-fill-check"></i><span>Thông tin đăng ký đã được gửi thành công!</span></div><a class="func-close-notice" href="javascript:void(0);"><i class="icz icz-close"></i></a>
+          <div class="content"><i class="icz icz-fill-check"></i><span><strong>Cảm ơn bạn đã để lại thông tin.</strong>Chúng tôi sẽ liên hệ lại với bạn trong vòng 3 ngày làm việc để tư vấn chi tiết hơn về dịch vụ.</span></div><a class="func-close-notice" href="javascript:void(0);"><i class="icz icz-close"></i></a>
         </div>
       </div>
     </main>
@@ -454,14 +426,16 @@
       $(document).ready(function() {
       	$("form[data-form-validate='true']").each(function() {
       		$(this).validate({
-      			//- rules: {
-      			//- 	phoneField: {
-      			//- 		required  : true,
-      			//- 		matches: "[0-9]+",
-      			//- 		minlength:10,
-      			//- 		maxlength:10
-      			//- 	}
-      			//- }
+      			submitHandler: function() { return postToGoogle(); },
+      			rules: {
+      				"phoneField": {
+      					minlength: 8,
+      					number: true
+      				},
+      				"numberMontlyField": {
+      					number: true
+      				},
+      			},
       		});
       	})
       });
