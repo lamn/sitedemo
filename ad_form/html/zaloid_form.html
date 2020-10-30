@@ -28,28 +28,49 @@
         <div></div>
       </div>
     </div>
-    <div class="page-content">
+    <div class="page-content has-cover-fixed">
       <div class="bl-cover"><span class="img-cover" style="background-image:url(images/upload/cover_default.png)"></span></div>
       <div class="body">
         <div class="group-form">
+          <div class="m-oa">
+            <div class="avatar avatar--m">
+              <div class="avatar-img" style="background-image:url(https://via.placeholder.com/72)"></div>
+            </div>
+            <div class="desc"><span class="is-label">Tài khoản Zalo</span><span class="truncate">Nguyen Xitrum</span></div><a class="func-info func-tooltip func-tooltip-2" href="javascript:void(0);"><i class="icz icz-fill-info"></i></a>
+          </div>
           <div class="bl-form">
-            <h2 class="title has-text-centered mb-4 pb-3">Thông tin liên hệ</h2>
+            <h2 class="title has-text-centered mb-4 pb-3">Cung cấp thêm thông tin</h2>
             <div class="field">
-              <label class="label">Số điện thoại<span class="fs--s color-grey-light ml-1">(không bắt buộc)</span><a class="func-tooltip func-tooltip-1" href="javascript:void(0);"><i class="icz icz-fill-info"></i></a></label>
+              <label class="label">Họ và tên</label>
               <div class="control has-icons-right">
-                <input class="input" type="text" placeholder="Vd: 098 9899 777" value="">
+                <input class="input" type="text" placeholder="Vd: Nguyễn Văn Chiến" value="">
                 <div class="icon is-small is-right"><i class="icz icz-fill-warning has-text-danger"></i></div>
               </div>
               <p class="help has-text-danger">Đây là warning text</p>
             </div>
             <div class="field">
-              <label class="label">Họ và tên<span class="fs--s color-grey-light ml-1">(không bắt buộc)</span></label>
+              <label class="label">Họ và tên</label>
               <div class="control has-icons-right">
                 <input class="input" type="text" placeholder="Vd: Nguyễn Văn Chiến" value="">
                 <div class="icon is-small is-right"><i class="icz icz-fill-check has-text-success"></i></div>
               </div>
             </div>
-            <p class="is-policy">Bằng việc bấm nút <strong>Gửi thông tin</strong>, bạn đồng ý gửi các thông tin này tới <strong>BĐS Hưng Thịnh Prop</strong>. Xem các quy định về <a href="https://ads.zalo.me/business/p/chinh-sach/?utm_source=Zalo_Form_Ad&utm_campaign=Zalo_Form" target="_blank">chính sách quảng cáo</a> của Zalo</p><a class="button is-primary is-large is-fullwidth" href="thankyou.html">Gửi thông tin</a>
+            <div class="field">
+              <label class="label">Khung giờ liên hệ</label>
+              <div class="control"><span class="select is-fullwidth">
+                  <select required>
+                    <option selected disabled value="">Chọn</option>
+                    <option value="1">12:00 - 14:00</option>
+                    <option value="2">14:00 - 16:00</option>
+                  </select></span></div>
+            </div>
+            <div class="field">
+              <label class="label">Sản phẩm quan tâm</label>
+              <div class="control has-icons-right">
+                <input class="input" type="text" placeholder="Nhập nội dung" value="">
+              </div>
+            </div>
+            <p class="is-policy">Bằng việc bấm nút <strong>Gửi thông tin</strong>, bạn đồng ý gửi các thông tin này tới <strong>Brand Official Account</strong>. Xem <a href="https://ads.zalo.me/business/p/chinh-sach/?utm_source=Zalo_Form_Ad&utm_campaign=Zalo_Form" target="_blank">quy định về sử dụng Zalo Form</a></p><a class="button is-primary is-large is-fullwidth" href="zaloid_review.html">Gửi thông tin</a>
             <p class="copyright">Powered by Zalo Form</p>
           </div>
         </div>
@@ -84,9 +105,9 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/picker.js"></script>
     <script>
-      $(".func-tooltip-1").click(function(){
+      $(".func-tooltip-2").click(function(){
       	$("body").addClass("overlay-tooltip");
-      	$("#tooltip-1").addClass("is-show");
+      	$("#tooltip-2").addClass("is-show");
       });
       $(".func-close-tooltip").click(function(){
       	$("body").removeClass("overlay-tooltip");

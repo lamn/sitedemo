@@ -15,8 +15,8 @@
 }
 .avatar--xs{@include size(20px);line-height:20px}
 .avatar--s{@include size(44px);line-height:44px}
-.avatar--m{@include size(64px);line-height:64px}
-.avatar-img{@include position(absolute,0 null null 0);z-index:1;@include size(100%);@extend %backgroundCover--center;@extend %is-radius-rounded;}
+.avatar--m{@include size(52px);line-height:52px}
+.avatar-img{@include position(absolute, 0 null null 0);z-index:1;@include size(100%);@extend %backgroundCover--center;@extend %is-radius-rounded;}
 
 /* Switch */
 .switch{position:relative;display:inline-block;@include size(40px, 24px);

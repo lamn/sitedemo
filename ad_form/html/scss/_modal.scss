@@ -23,10 +23,11 @@
 			}
 		}
 		.bl-tooltip-context{max-height:400px;@include padding($gutter);font-size:$size-normal;overflow-y:scroll;-webkit-overflow-scrolling:touch;
-			p{margin-bottom:$gutter}
-			ul{
-				li{position:relative;margin-bottom:$gutter;padding-left:20px;
-					[class^=icz]{@include position(absolute, 2px null null 0);@include size(16px);@include padding(2px);color:$primary;font-size:0.75rem;vertical-align:middle}
+			p{margin-bottom:$gutter/2}
+			ul{margin-bottom:$gutter;margin-top:$gutter;
+				li{position:relative;margin-bottom:$gutter/2;padding-left:20px;
+					&:before{@include position(absolute, 7px null null 7px);content:"";background-color:$text;@include size(4px);border-radius:100%}
+					&:last-child{margin-bottom:0}
 				}
 			}
 			@media only screen and (max-height:600px){max-height:280px}
