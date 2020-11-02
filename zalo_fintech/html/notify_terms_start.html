@@ -50,7 +50,7 @@
     <script src="js/jquery.min.js"></script>
     <script>
       $(window).scroll(function() {
-      	if($(window).scrollTop() + $(window).height() == $(document).height()) {
+      	if($(window).scrollTop() + $(window).height() > $(document).height() - 120) {
       		$(".btn-primary").removeClass("disabled");
       	}
       });
