@@ -30,7 +30,7 @@
           <div class="context-notify-term">
             <div class="notify-term-content">
               <h2 class="mb-3">Điều khoản và điều kiện sử dụng tính năng “Tìm kiếm sản phẩm tài chính”</h2>
-              <p>“Tìm kiếm sản phẩm tài chính” là công cụ tin học phát triển bởi Zalo nhằm hỗ trợ các Tổ chức tín dụng được cấp phép hoạt động bởi Ngân hàng Nhà nước Việt Nam (“TCTD”) quảng bá sản phẩm tài chính tới người dùng cuối một cách nhanh chóng, dễ dàng và tiện lợi nhất (“Khách hàng”).</p>
+              <p>“Tìm kiếm sản phẩm tài chính” là công cụ tin học phát triển bởi Zalo nhằm hỗ trợ các Tổ chức tín dụng được cấp phép hoạt động bởi Ngân hàng Nhà nước Việt Nam (“<strong>TCTD</strong>”) quảng bá sản phẩm tài chính tới người dùng cuối một cách nhanh chóng, dễ dàng và tiện lợi nhất (“<strong>Khách hàng</strong>”).</p>
               <p>Bằng việc ấn vào nút “Đồng ý” dưới dây để bắt đầu sử dụng tính năng “Tìm kiếm sản phẩm tài chính”, Khách hàng xác nhận và đồng ý rằng:</p>
               <ul class="default-list">
                 <li>Zalo chỉ cung cấp công cụ tin học để hỗ trợ Khách hàng tiếp cận với các sản phẩm tài chính cung cấp bởi TCTD. TCTD chịu trách nhiệm đưa ra các tiêu chí xét duyệt, phê duyệt hồ sơ, cấp tín dụng và thực hiện toàn bộ các quy trình liên quan tới hoạt động ngân hàng với Khách hàng.</li>
@@ -38,15 +38,22 @@
                 <li>Nếu Bạn không đồng ý với bất kỳ nội dung nào được quy định tại thỏa thuận này thì có quyền ngừng sử dụng bằng cách thoát khỏi tính năng “Tìm kiếm sản phẩm tài chính”.</li>
               </ul>
             </div>
-            <div class="notify-term-action"><a class="btn btn--m btn-primary w-100" href="card_list.html">Đồng ý</a>
-              <p>Bằng cách bấm nút "<strong>Đồng ý</strong>", quý khách cam kết đã đọc, hiểu và đồng ý với nội dung điều khoản trước khi đăng ký.</p>
+            <div class="notify-term-action is-fixed"><a class="btn btn--m btn-primary w-100 disabled" href="card_list.html">Đồng ý</a>
+              <!--p Bằng cách bấm nút "<strong>Đồng ý</strong>", quý khách cam kết đã đọc, hiểu và đồng ý với nội dung điều khoản trước khi đăng ký.-->
             </div>
+            <div class="trans-bottom otr"></div>
           </div>
         </div>
       </div>
     </div>
     <!-- Include Plugin-->
     <script src="js/jquery.min.js"></script>
-    <script></script>
+    <script>
+      $(window).scroll(function() {
+      	if($(window).scrollTop() + $(window).height() == $(document).height()) {
+      		$(".btn-primary").removeClass("disabled");
+      	}
+      });
+    </script>
   </body>
 </html>
