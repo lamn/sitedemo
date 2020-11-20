@@ -5554,16 +5554,17 @@ a.has-text-danger:hover, a.has-text-danger:focus {
   background-color: #999;
 }
 .button.is-small {
+  height: 32px;
   border-radius: 5px;
-  font-size: 0.75em;
-  padding-left: 6px;
-  padding-right: 6px;
+  font-size: 0.875em;
+  font-weight: 600;
 }
 .button.is-normal {
   font-size: 0.875em;
 }
 .button.is-medium {
   font-size: 1em;
+  font-weight: 600;
 }
 .button.is-large {
   height: 44px;
@@ -5632,13 +5633,14 @@ a.has-text-danger:hover, a.has-text-danger:focus {
   margin-bottom: 1rem;
 }
 .buttons.are-small .button:not(.is-normal):not(.is-medium):not(.is-large) {
+  height: 32px;
   border-radius: 5px;
-  font-size: 0.75em;
-  padding-left: 6px;
-  padding-right: 6px;
+  font-size: 0.875em;
+  font-weight: 600;
 }
 .buttons.are-medium .button:not(.is-small):not(.is-normal):not(.is-large) {
   font-size: 1em;
+  font-weight: 600;
 }
 .buttons.are-large .button:not(.is-small):not(.is-normal):not(.is-medium) {
   height: 44px;
@@ -9140,6 +9142,12 @@ p.copyright {
   color: #aaa;
 }
 
+.button.is-primary.is-outlined:hover, .button.is-primary.is-outlined:active {
+  background-color: transparent;
+  border-color: #1745cf;
+  color: #1745cf;
+}
+
 /* Block */
 .group-form {
   background-color: white;
@@ -9151,6 +9159,10 @@ p.copyright {
 }
 .group-form .bottom {
   margin-bottom: 7.5px;
+}
+.group-form + .buttons {
+  margin-top: 80px;
+  margin-bottom: 1.5rem;
 }
 
 .bl-cover {
@@ -9395,7 +9407,10 @@ p.copyright {
   background-image: -webkit-gradient(linear, left top, right top, from(#0492FD), to(#05B6F5));
   background-image: -o-linear-gradient(left, #0492FD, #05B6F5);
   background-image: linear-gradient(to right, #0492FD, #05B6F5);
+  max-width: 300px;
+  margin-right: auto;
   margin-bottom: 20px;
+  margin-left: auto;
   padding: 4px;
 }
 .m-oa .avatar.avatar--m {
@@ -9615,6 +9630,15 @@ p.copyright {
   background-color: white;
   margin: 15px;
   padding: 25px;
+  -webkit-box-shadow: 0 0 6px rgba(175, 175, 175, 0.5);
+          box-shadow: 0 0 6px rgba(175, 175, 175, 0.5);
+}
+.bl-error .img-noid {
+  display: block;
+  max-width: 200px;
+  margin-right: auto;
+  margin-bottom: 7.5px;
+  margin-left: auto;
 }
 .bl-error .img-error {
   display: block;
@@ -9632,6 +9656,16 @@ p.copyright {
     max-width: 400px;
     margin: 0 auto;
   }
+}
+
+/* Test */
+.func-test {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #fff;
+  padding: 10px;
 }
 
 @-webkit-keyframes outline {

@@ -34,14 +34,15 @@ $button-static-border-color: $border !default
 
 // The button sizes use mixins so they can be used at different breakpoints
 =button-small
+  height: 32px
   border-radius: $radius-small
-  font-size: $size-small
-  padding-left: 6px
-  padding-right: 6px
+  font-size: $size-normal
+  font-weight: $weight-semibold
 =button-normal
   font-size: $size-normal
 =button-medium
   font-size: $size-medium
+  font-weight: $weight-semibold
 =button-large
   height: 44px
   font-size: $size-medium

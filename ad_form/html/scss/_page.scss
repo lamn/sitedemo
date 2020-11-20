@@ -74,10 +74,14 @@ hr.line{display:block;background-color:$grey-light;height:1px;@include margin(0 
 }
 select:invalid{color:#ccc}
 p.copyright{@include margin(20px null -5px);text-align:center;font-size:0.688em;color:#aaa;}
+.button.is-primary.is-outlined{
+	&:hover, &:active{background-color:transparent;border-color:$primary;color:$primary}
+}
 
 /* Block */
 .group-form{background-color:$white;@include margin($gutter null);@include padding(25px);@extend %is-radius;box-shadow:0 0 6px rgba(#afafaf, 0.5);
 	.bottom{margin-bottom:$gutter/2}
+	& + .buttons{margin-top:80px;margin-bottom:1.5rem}
 }
 .bl-cover{display:block;position:relative;background-color:$grey;overflow:hidden;
 	&:before{content:"";display:block;padding-top:52%}
@@ -126,7 +130,7 @@ p.copyright{@include margin(20px null -5px);text-align:center;font-size:0.688em;
 	}
 	.avatar.avatar--s{@include size(40px)}
 }
-.m-oa{display:flex;align-items:center;background-image:linear-gradient(to right, #0492FD, #05B6F5);margin-bottom:$gutter/0.75;@include padding(4px);@extend %is-radius-rounded;
+.m-oa{display:flex;align-items:center;background-image:linear-gradient(to right, #0492FD, #05B6F5);max-width:300px;@include margin(null auto ($gutter/0.75));@include padding(4px);@extend %is-radius-rounded;
 	.avatar.avatar--m{flex-shrink:0;@include size(52px);margin-right:$gutter/2}
 	.desc{flex-grow:1;min-width:0;padding-right:40px;
 		span{display:block;color:$white;font-size:$size-medium;font-weight:$weight-bold;
@@ -180,12 +184,16 @@ p.copyright{@include margin(20px null -5px);text-align:center;font-size:0.688em;
 }
 
 /* Error */ 
-.bl-error{background-color:$white;@include margin($gutter);@include padding(25px);@extend %is-radius;
+.bl-error{background-color:$white;@include margin($gutter);@include padding(25px);@extend %is-radius;box-shadow:0 0 6px rgba(175,175,175,0.5);
+	.img-noid{display:block;max-width:200px;@include margin(null auto ($gutter/2))}
 	.img-error{display:block;max-width:270px;@include margin(null auto)}
 	@include tablet{@include margin(0 auto);@include padding(($gutter*2) 64px);padding-bottom:45px;
 		.button{max-width:400px;@include margin(0 auto);}
 	}
 }
+
+/* Test */ 
+.func-test{@include position(absolute, 0 null null 0);z-index:100;background-color:#fff;@include padding(10px);}
 
 // Animation
 @keyframes outline{
