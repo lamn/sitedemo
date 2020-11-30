@@ -8940,6 +8940,28 @@ body.for-article .page-content .field:not(:last-child) {
 }
 
 /* General */
+.func-back {
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  z-index: 12;
+  height: 40px;
+  width: 40px;
+  padding: 6px;
+}
+.func-back [class^=icz] {
+  display: block;
+  background-color: white;
+  height: 28px;
+  width: 28px;
+  padding: 6px;
+  color: #222;
+  font-size: 1rem;
+  border-radius: 100%;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
+}
+
 .page-content {
   background-color: #f1f5f8;
   max-width: 560px;
@@ -9081,6 +9103,7 @@ hr.line.is-outside {
 }
 .subtitle .js-read-more {
   display: inline;
+  word-break: break-word;
 }
 .subtitle .js-read-more br {
   display: block;
@@ -9142,6 +9165,9 @@ p.copyright {
   color: #aaa;
 }
 
+.button.is-primary.is-outlined {
+  border-color: #ddd;
+}
 .button.is-primary.is-outlined:hover, .button.is-primary.is-outlined:active {
   background-color: transparent;
   border-color: #1745cf;

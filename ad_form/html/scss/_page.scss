@@ -24,6 +24,9 @@ body{
 	}
 }
 /* General */
+.func-back{@include position(absolute, 9px null null 9px);z-index:12;@include size(40px);@include padding(6px);
+	[class^=icz]{display:block;background-color:$white;@include size(28px);@include padding(6px);color:$text;font-size:1rem;border-radius:100%;box-shadow:0 0 3px rgba(0,0,0,0.8)}
+}
 .page-content{background-color:#f1f5f8;max-width:560px;min-height:100vh;@include margin(null auto);
 	.body{position:relative;z-index:2;@include padding(null $gutter)}
 	.bl-cover + .body{margin-top:-42px;
@@ -56,7 +59,7 @@ hr.line{display:block;background-color:$grey-light;height:1px;@include margin(0 
 .func-popup-location{@include position(absolute, 0);z-index:1}
 .title{display:block;margin-bottom:10px;color:$text;font-size:$size-large;font-weight:$weight-bold;line-height:24px}
 .subtitle{display:block;margin-bottom:40px;color:$grey;font-size:0.875rem;font-weight:$weight-normal;line-height:20px;
-	.js-read-more{display:inline;
+	.js-read-more{display:inline;word-break:break-word;
 		br{display:block;content:"";@include margin(10px null)}
 	}
 	.read-more-link-wrap{white-space:nowrap;margin-left:4px;
@@ -74,7 +77,7 @@ hr.line{display:block;background-color:$grey-light;height:1px;@include margin(0 
 }
 select:invalid{color:#ccc}
 p.copyright{@include margin(20px null -5px);text-align:center;font-size:0.688em;color:#aaa;}
-.button.is-primary.is-outlined{
+.button.is-primary.is-outlined{border-color:$border;
 	&:hover, &:active{background-color:transparent;border-color:$primary;color:$primary}
 }
 
