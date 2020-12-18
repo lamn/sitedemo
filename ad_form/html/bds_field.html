@@ -28,8 +28,8 @@
         <div></div>
       </div>
     </div>
-    <div class="page-content"><a class="func-back" href="javascript:history.back()"><i class="icz icz-left"></i></a>
-      <div class="bl-cover"><span class="img-cover" style="background-image:url(images/upload/cover_default.png)"></span></div>
+    <div class="page-content">
+      <div class="bl-cover"><span class="img-cover" style="background-image:url(images/upload/cover_default.png)"></span><a class="func-back" href="javascript:history.back()"><span class="ico-wrap"><i class="icz icz-left"></i></span></a></div>
       <div class="body">
         <div class="group-form">
           <div class="bl-form">
@@ -98,6 +98,15 @@
       	$("body").removeClass("overlay-tooltip");
       	$(".tooltip-container").removeClass("is-show");
       });
+      
+      var backStick = document.getElementsByClassName("func-back")[0]
+      window.onscroll = function() {
+      	if (window.scrollY >= 80){
+      		backStick.classList.add('is-out')
+      	} else {
+      		backStick.classList.remove('is-out')
+      	}
+      }
       
       //- tắt loading[test]
       setTimeout(function(){$('.layer-loading').removeClass("is-active")},3000)

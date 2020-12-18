@@ -8945,6 +8945,15 @@ body.for-article .page-content .field:not(:last-child) {
   top: 9px;
   left: 9px;
   z-index: 12;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 40px;
   width: 40px;
   padding: 6px;
@@ -8953,17 +8962,22 @@ body.for-article .page-content .field:not(:last-child) {
   -o-transition: all 0.35s ease;
   transition: all 0.35s ease;
 }
-.func-back [class^=icz] {
-  display: block;
+.func-back .ico-wrap {
   background-color: white;
-  height: 28px;
-  width: 28px;
-  padding: 6px;
-  color: #222;
-  font-size: 1rem;
+  height: 24px;
+  width: 24px;
+  padding: 4px;
   border-radius: 100%;
   -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
           box-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
+}
+.func-back [class^=icz] {
+  display: block;
+  height: 16px;
+  width: 16px;
+  padding: 0;
+  color: #222;
+  font-size: 1rem;
 }
 .func-back.is-out {
   top: -50px;
