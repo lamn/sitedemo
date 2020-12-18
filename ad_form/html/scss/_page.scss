@@ -24,8 +24,9 @@ body{
 	}
 }
 /* General */
-.func-back{@include position(absolute, 9px null null 9px);z-index:12;@include size(40px);@include padding(6px);
-	[class^=icz]{display:block;background-color:$white;@include size(28px);@include padding(6px);color:$text;font-size:1rem;border-radius:100%;box-shadow:0 0 3px rgba(0,0,0,0.8)}
+.func-back{@include position(absolute, 9px null null 9px);z-index:12;@include size(40px);@include padding(6px);opacity:1;transition:all 0.35s ease;
+	[class^=icz]{display:block;background-color:$white;@include size(28px);@include padding(6px);color:$text;font-size:1rem;border-radius:100%;box-shadow:0 0 3px rgba(0,0,0,0.8);}
+	&.is-out{top:-50px;opacity:0}
 }
 .page-content{background-color:#f1f5f8;max-width:560px;min-height:100vh;@include margin(null auto);
 	.body{position:relative;z-index:2;@include padding(null $gutter)}

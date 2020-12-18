@@ -28,8 +28,8 @@
         <div></div>
       </div>
     </div>
-    <div class="page-content has-cover-fixed"><a class="func-back" href="javascript:history.back()"><i class="icz icz-left"></i></a>
-      <div class="bl-cover"><span class="img-cover" style="background-image:url(images/upload/cover_default.png)"></span></div>
+    <div class="page-content has-cover-fixed">
+      <div class="bl-cover"><span class="img-cover" style="background-image:url(images/upload/cover_default.png)"></span><a class="func-back" href="javascript:history.back()"><i class="icz icz-left"></i></a></div>
       <div class="body">
         <div class="group-form">
           <div class="bl-form">
@@ -44,9 +44,30 @@
               </div>
             </div>
             <div class="context-default">
-              <p class="has-text-centered">Nguyen Xitrum</p>
-              <p class="has-text-centered">9:00 - 12:00</p>
-              <p class="has-text-centered">Căn hộ 2 phòng ngủ</p>
+              <p>Nguyen Xitrum</p>
+              <p>9:00 - 12:00</p>
+              <p>Căn hộ 2 phòng ngủ</p>
+              <p>Nguyen Xitrum</p>
+              <p>9:00 - 12:00</p>
+              <p>Căn hộ 2 phòng ngủ</p>
+              <p>Nguyen Xitrum</p>
+              <p>9:00 - 12:00</p>
+              <p>Căn hộ 2 phòng ngủ</p>
+              <p>Nguyen Xitrum</p>
+              <p>9:00 - 12:00</p>
+              <p>Căn hộ 2 phòng ngủ</p>
+              <p>Nguyen Xitrum</p>
+              <p>9:00 - 12:00</p>
+              <p>Căn hộ 2 phòng ngủ</p>
+              <p>Nguyen Xitrum</p>
+              <p>9:00 - 12:00</p>
+              <p>Căn hộ 2 phòng ngủ</p>
+              <p>Nguyen Xitrum</p>
+              <p>9:00 - 12:00</p>
+              <p>Căn hộ 2 phòng ngủ</p>
+              <p>Nguyen Xitrum</p>
+              <p>9:00 - 12:00</p>
+              <p>Căn hộ 2 phòng ngủ</p>
             </div>
             <p class="is-policy">Bằng việc bấm nút <strong>Gửi thông tin</strong>, bạn đồng ý gửi các thông tin này tới <strong>Brand Official Account</strong>. Xem <a href="https://ads.zalo.me/business/p/chinh-sach/?utm_source=Zalo_Form_Ad&utm_campaign=Zalo_Form" target="_blank">quy định về sử dụng Zalo Form</a></p><a class="button is-primary is-large is-fullwidth" href="zaloid_thankyou.html">Xác nhận gửi thông tin</a>
             <p class="copyright">Powered by Zalo Form</p>
@@ -96,6 +117,18 @@
       $(".func-close-tooltip").click(function(){
       	$("body").removeClass("overlay-tooltip");
       	$(".tooltip-container").removeClass("is-show");
+      });
+      $(".func-tooltip-2").click(function(){
+      	$("body").addClass("overlay-tooltip");
+      	$("#tooltip-2").addClass("is-show");
+      });
+      
+      $(window).scroll(function() {
+      	if ($(this).scrollTop() > 80) {
+      		$('.func-back').addClass('is-out');
+      	} else {
+      		$('.func-back').removeClass('is-out');
+      	}
       });
       
       //- tắt loading[test]

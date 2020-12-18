@@ -8948,6 +8948,10 @@ body.for-article .page-content .field:not(:last-child) {
   height: 40px;
   width: 40px;
   padding: 6px;
+  opacity: 1;
+  -webkit-transition: all 0.35s ease;
+  -o-transition: all 0.35s ease;
+  transition: all 0.35s ease;
 }
 .func-back [class^=icz] {
   display: block;
@@ -8960,6 +8964,10 @@ body.for-article .page-content .field:not(:last-child) {
   border-radius: 100%;
   -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
           box-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
+}
+.func-back.is-out {
+  top: -50px;
+  opacity: 0;
 }
 
 .page-content {
