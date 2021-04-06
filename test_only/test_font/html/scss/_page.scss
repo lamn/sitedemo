@@ -13,9 +13,9 @@ html, body{background:#f1f5f8}
 	&.is-font1{font-family:"Google Sans";
 		*{font-family:"Google Sans";}
 	}
-	h1{display:block;margin-bottom:$gutter*2;color:$text;font-size:$size-xlarge;font-weight:$weight-normal}
+	h1{display:block;margin-bottom:$gutter*2;color:$text;font-size:$size-xlarge;font-weight:$weight-bold}
 	h2{display:block;margin-bottom:$gutter*1.5;color:$text;font-size:$size-large;font-weight:$weight-normal}
-	h3{display:block;margin-bottom:$gutter*1.5;color:$text;font-size:$size-medium;font-weight:$weight-normal}
+	h3{display:block;margin-bottom:$gutter*1.5;color:$text;font-size:$size-medium;font-weight:$weight-normal;font-style:italic}
 	p{display:block;margin-bottom:$gutter;color:$text;font-size:$size-normal;font-weight:$weight-normal}
 	strong{font-weight:bold}
 }
