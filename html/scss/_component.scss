@@ -1,0 +1,18 @@
+// Core variables and mixins bourbon
+@import "bourbon";
+
+// @author Lam Nguyen
+// Ellips
+.ellips-2{overflow:hidden;text-overflow:ellipsis;display:block;display:-webkit-box!important;-webkit-line-clamp:2;-webkit-box-orient:vertical;word-break:break-word}
+
+// Avatar
+.avatar{position:relative;border-radius:$radius-rounded;
+	&.is-small{@include size(32px);line-height:32px}
+	&.is-normal{@include size(56px);line-height:56px}
+	&.is-large{@include size(128px);line-height:128px}
+}
+.avatar-img{@include position(absolute, 0 null null 0);z-index:1;@include size(100%);@include background-center;border-radius:$radius-rounded}
+
+// Hr
+hr.separate{display:block;background-color:$grey-lightest;height:8px;@include margin(0 null)}
+hr.line{display:block;background-color:$grey-lightest;height:1px;@include margin(0 null)}
