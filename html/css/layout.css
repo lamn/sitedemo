@@ -14280,6 +14280,11 @@ body, html {
   transition: all 0.25s ease;
 }
 
+a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:focus, .navbar-link:focus-within, .navbar-link:hover, .navbar-link.is-active {
+  background-color: transparent;
+  color: #CA181F;
+}
+
 @media screen and (max-width: 1023px) {
   .navbar-start {
     padding: 1.5rem;
@@ -14637,8 +14642,8 @@ nav.navtop ul li.is-lang a.is-active {
   display: block;
   background: url(../images/logo_footer.png) 0 0 no-repeat;
   background-size: cover;
-  height: 110px;
-  width: 162px;
+  height: 96px;
+  width: 141px;
   margin-bottom: 1.25em;
 }
 .footer p {
@@ -14770,6 +14775,10 @@ nav.navtop ul li.is-lang a.is-active {
     padding-right: 0;
     padding-left: 0;
   }
+  .footer i.ico-logo {
+    height: 110px;
+    width: 162px;
+  }
   .footer .info-company {
     padding-right: 1.5rem;
   }
@@ -14842,9 +14851,6 @@ nav.navtop ul li.is-lang a.is-active {
 .section-hero .swiper-pagination {
   position: absolute;
   bottom: 2rem;
-}
-.section-hero .swiper-pagination .swiper-pagination-bullet {
-  background-color: #F0F2F6;
 }
 @media screen and (min-width: 1024px) {
   .section-hero .swiper-pagination {
@@ -14999,16 +15005,10 @@ nav.navtop ul li.is-lang a.is-active {
 }
 .section-service .service-list li .item-service .desc p {
   display: block;
-  color: #5F666D;
-  text-align: center;
-}
-.section-service .service-list li .item-service .desc p.is-text-mobile {
   margin-bottom: 0.75rem;
+  color: #5F666D;
   font-size: 0.813em;
-}
-.section-service .service-list li .item-service .desc p.is-text-desktop {
-  display: none;
-  font-size: 1em;
+  text-align: center;
 }
 @media screen and (min-width: 769px) {
   .section-service {
@@ -15041,7 +15041,7 @@ nav.navtop ul li.is-lang a.is-active {
   }
   .section-service .service-list li .item-service .desc {
     padding-right: 4px;
-    padding-bottom: 68px;
+    padding-bottom: 48px;
     padding-left: 4px;
   }
   .section-service .service-list li .item-service .desc h3 {
@@ -15049,11 +15049,8 @@ nav.navtop ul li.is-lang a.is-active {
     font-size: 1.563em;
     line-height: 36px;
   }
-  .section-service .service-list li .item-service .desc p.is-mobile {
-    display: none;
-  }
-  .section-service .service-list li .item-service .desc p.is-desktop {
-    display: block;
+  .section-service .service-list li .item-service .desc p {
+    font-size: 1em;
   }
   .section-service .service-list li .item-service .desc .buttons {
     position: absolute;
@@ -15268,7 +15265,11 @@ nav.navtop ul li.is-lang a.is-active {
   position: relative;
   background: url(../images/bg_contact.png) top center no-repeat;
   background-size: cover;
+  max-width: 1232px;
+  margin-right: auto;
+  margin-left: auto;
   padding: 1.5rem;
+  border-radius: 12px;
 }
 .section-form .slogan {
   color: white;
@@ -15296,7 +15297,7 @@ nav.navtop ul li.is-lang a.is-active {
 }
 @media screen and (min-width: 1024px) {
   .section-form {
-    padding: 3rem 0;
+    padding: 3rem 3rem 3rem 4.75rem;
   }
   .section-form .slogan {
     margin-top: 4rem;
