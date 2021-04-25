@@ -480,7 +480,7 @@ ul.bullet-list{
 	}
 	.adr-list{padding-bottom:$gutter;
 		li{display:block;position:relative;margin-bottom:0.75rem;padding-left:32px;
-			i{@include position(absolute, 2px null null 0);color:$primary;font-size:1.125em}
+			i{@include position(absolute, 0px null null 0);color:$primary;font-size:1.125em}
 			span, a{@extend %body;color:$grey}
 			&:last-child{margin-bottom:0}
 		}
@@ -496,6 +496,9 @@ ul.bullet-list{
 		.pr-0{padding-right:0.75rem!important}
 	}
 	@include until($tablet){
+		.form-inside .control{width:100%;
+			.button{width:100%}
+		}
 		.adr-list{border-bottom:1px solid $grey-lighter;}
 	}
 }

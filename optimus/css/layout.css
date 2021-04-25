@@ -14852,7 +14852,7 @@ ul.bullet-list li:before {
 }
 .section-contact .adr-list li i {
   position: absolute;
-  top: 2px;
+  top: 0px;
   left: 0;
   color: #CA181F;
   font-size: 1.125em;
@@ -14892,6 +14892,12 @@ ul.bullet-list li:before {
   }
 }
 @media screen and (max-width: 768px) {
+  .section-contact .form-inside .control {
+    width: 100%;
+  }
+  .section-contact .form-inside .control .button {
+    width: 100%;
+  }
   .section-contact .adr-list {
     border-bottom: 1px solid #D0D7DF;
   }
