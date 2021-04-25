@@ -39,14 +39,19 @@
               <div class="control has-icons-left">
                 <input class="input" type="text" placeholder="Tìm kiếm" value=""><span class="icon is-left"><i class="ti ti-search"></i></span>
               </div>
-            </div><a class="navbar-item" href="index.html">Trang chủ</a><a class="navbar-item" href="about.html">Giới thiệu</a>
+            </div><a class="navbar-item is-active" href="index.html">Trang chủ</a><a class="navbar-item" href="about.html">Giới thiệu</a>
             <div class="navbar-item has-dropdown is-hoverable"><a class="navbar-link">Gói giải pháp</a>
               <div class="navbar-dropdown"><a class="navbar-item" href="#!">Tiếng Anh doanh nghiệp</a><a class="navbar-item" href="#!">Tiếng Anh 1 kèm 1</a><a class="navbar-item" href="#!">Cung cấp giáo viên</a></div>
             </div><a class="navbar-item" href="news.html">Thông tin hay</a><a class="navbar-item" href="contact.html">Liên hệ</a>
           </div>
           <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="buttons"><a class="button is-primary is-large" href="javascript:void(0);">Đăng ký tư vấn </a></div>
+            <div class="buttons"><a class="func-search" href="javascript:void(0);"><i class="ti ti-search"></i></a><a class="func-close-search is-hidden" href="javascript:void(0);"><i class="ti ti-x"></i></a><a class="button is-primary is-large func-modal-register" href="javascript:void(0);">Đăng ký tư vấn </a></div>
+            <div class="navbar-search is-hidden">
+              <div class="field">
+                <div class="control has-icons-left">
+                  <input class="input" id="input-search" type="text" placeholder="Tìm kiếm" value=""><span class="icon is-left"><i class="ti ti-search"></i></span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -254,9 +259,9 @@
             <div class="column is-three-fifths">
               <h5 class="slogan">Hãy để <span>Optimus</span> <strong>hiểu và lựa chọn</strong> giải pháp giúp bạn!</h5>
             </div>
-            <div class="column is-4">
+            <div class="column">
               <form class="form-inside" action="">
-                <h3 class="subtitle">Đăng ký nhận tư vấn từ <span>Optimius</span></h3>
+                <h3 class="lstitle">Đăng ký nhận tư vấn từ <span>Optimius</span></h3>
                 <div class="field">
                   <div class="control">
                     <div class="select is-fullwidth">
@@ -404,6 +409,44 @@
     <div class="bl-popup">
     </div>
     <div class="bl-modal">
+      <div class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card"><a class="func-close-modal" href="javascript:void(0);"><i class="ti ti-x"></i></a>
+          <section class="modal-card-body">
+            <form class="form-inside" action="">
+              <h3 class="lstitle has-text-centered">Đăng ký nhận tư vấn từ <span>Optimius</span></h3>
+              <div class="field">
+                <div class="control">
+                  <div class="select is-fullwidth">
+                    <select>
+                      <option value="0" disabled selected>Chọn dịch vụ tư vấn</option>
+                      <option value="1">Dịch vụ tư vấn 1</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="field">
+                <div class="control">
+                  <input class="input" type="text" placeholder="Họ và tên">
+                </div>
+              </div>
+              <div class="field">
+                <div class="control">
+                  <input class="input" type="text" placeholder="Số điện thoại">
+                </div>
+              </div>
+              <div class="field">
+                <div class="control">
+                  <input class="input" type="text" placeholder="Email tư vấn">
+                </div>
+              </div>
+              <div class="field has-button">
+                <div class="control"><a class="button is-primary is-large is-fullwidth" href="#!">Gửi thông tin</a></div>
+              </div>
+            </form>
+          </section>
+        </div>
+      </div>
     </div>
     <!-- Include Plugin-->
     <script src="js/jquery.min.js"></script>
@@ -513,7 +556,6 @@
       			slidesOffsetAfter: 0,
       		},
       	}
-      	
       });
     </script>
   </body>
