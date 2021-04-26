@@ -1,3 +1,5 @@
+// Edited - remove style-medium & resize
+
 @import "../utilities/controls"
 @import "../utilities/mixins"
 
@@ -28,8 +30,8 @@ $pagination-disabled-background-color: $border !default
 $pagination-disabled-border-color: $border !default
 
 $pagination-current-color: $link-invert !default
-$pagination-current-background-color: $link !default
-$pagination-current-border-color: $link !default
+$pagination-current-background-color: $primary !default
+$pagination-current-border-color: $primary !default
 
 $pagination-ellipsis-color: $grey-light !default
 
@@ -106,6 +108,8 @@ $pagination-shadow-inset: inset 0 1px 2px rgba($scheme-invert, 0.2) !default
     background-color: $pagination-current-background-color
     border-color: $pagination-current-border-color
     color: $pagination-current-color
+  &.is-previous, &.is-next
+    border-color: transparent
 
 .pagination-ellipsis
   color: $pagination-ellipsis-color
