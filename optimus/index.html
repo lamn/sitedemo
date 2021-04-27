@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Optimus</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="description" content="description here">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="author" content="Lam Nguyen">
+    <meta name="copyright" content="2021 Lam Nguyen">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="7 days">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="">
+    <meta property="og:image" content="">
+    <link rel="icon" type="image/ico" href="images/favicon.ico">
+    <link href="css/layout.css" rel="stylesheet" type="text/css">
+    <style></style>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navtop">
+        <div class="container">
+          <ul> 
+            <li><a href="#!">Góc chia sẻ</a></li>
+            <li><a href="#!">Tin tức</a></li>
+            <li><a href="#!">Sự kiện</a></li>
+            <li><a href="#!">Tuyển dụng</a></li>
+            <li class="is-lang"><a class="is-active" href="#!">VI</a><a href="#!">EN</a></li>
+          </ul>
+        </div>
+      </nav>
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand"><a class="navbar-logo-mobile" href="index.html"><i class="logo"></i></a><a class="navbar-burger" role="button" aria-label="menu" aria-expanded="false" data-target="navbar-menu"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></a></div>
+        <div class="navbar-menu container" id="navbar-menu"><a class="navbar-logo" href="index.html"><i class="logo"></i></a>
+          <div class="navbar-start">
+            <div class="field is-hidden-desktop">
+              <div class="control has-icons-left">
+                <input class="input" type="text" placeholder="Tìm kiếm" value=""><span class="icon is-left"><i class="ti ti-search"></i></span>
+              </div>
+            </div><a class="navbar-item is-active" href="index.html">Trang chủ</a><a class="navbar-item" href="about.html">Giới thiệu</a>
+            <div class="navbar-item has-dropdown is-hoverable"><a class="navbar-link">Gói giải pháp</a>
+              <div class="navbar-dropdown"><a class="navbar-item" href="pro_a.html">Tiếng Anh doanh nghiệp</a><a class="navbar-item" href="pro_b.html">Tiếng Anh 1 kèm 1</a><a class="navbar-item" href="pro_c.html">Cung cấp giáo viên</a></div>
+            </div><a class="navbar-item" href="article_list.html">Thông tin hay</a><a class="navbar-item" href="contact.html">Liên hệ</a>
+          </div>
+          <div class="navbar-end">
+            <div class="buttons"><a class="func-search" href="javascript:void(0);"><i class="ti ti-search"></i></a><a class="func-close-search is-hidden" href="javascript:void(0);"><i class="ti ti-x"></i></a><a class="button is-primary is-large func-modal-register" href="javascript:void(0);">Đăng ký tư vấn </a></div>
+            <div class="navbar-search is-hidden">
+              <div class="field">
+                <div class="control has-icons-left">
+                  <input class="input" id="input-search" type="text" placeholder="Tìm kiếm" value=""><span class="icon is-left"><i class="ti ti-search"></i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="page-content">
+      <div class="section-hero">
+        <div class="swiper-container swiper-hero">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="slide-content" style="background-image:url(images/bg_hero.png)">
+                <div class="inner">
+                  <h1>Giải pháp đào tạo tiếng Anh cho doanh nghiệp chất lượng</h1>
+                  <div class="buttons is-centered"><a class="button is-primary is-large" href="javascript:void(0);">Tìm hiểu thêm</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slide-content" style="background-image:url(images/bg_hero.png)">
+                <div class="inner">
+                  <h1>Giải pháp đào tạo tiếng Anh cho doanh nghiệp chất lượng 1</h1>
+                  <div class="buttons is-centered"><a class="button is-primary is-large" href="javascript:void(0);">Tìm hiểu thêm</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slide-content" style="background-image:url(images/bg_hero.png)">
+                <div class="inner">
+                  <h1>Giải pháp đào tạo tiếng Anh cho doanh nghiệp chất lượng 2</h1>
+                  <div class="buttons is-centered"><a class="button is-primary is-large" href="javascript:void(0);">Tìm hiểu thêm</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination hero-pagination"></div>
+        <div class="swiper-button-next swiper-hero-next"></div>
+        <div class="swiper-button-prev swiper-hero-prev"></div>
+      </div>
+      <div class="section-about">
+        <div class="container">
+          <div class="columns"> 
+            <div class="column is-9">
+              <h2 class="title">Lý do bạn nên chọn <span>Optimus</span></h2>
+              <ul class="about-list">
+                <li> 
+                  <div class="ico-wrap"><i class="ti ti-thumb-up"></i></div><span>Giáo viên nước ngoài chất lượng</span>
+                </li>
+                <li> 
+                  <div class="ico-wrap"><i class="ti ti-book"></i></div><span>Phương pháp giảng dạy hiện đại, ứng dụng Edtech trong giảng dạy</span>
+                </li>
+                <li> 
+                  <div class="ico-wrap"><i class="ti ti-flame"></i></div><span>Chương trình thiết kế riêng bởi Optimus</span>
+                </li>
+                <li> 
+                  <div class="ico-wrap"><i class="ti ti-atom-2"></i></div><span>Giải pháp đào tạo chuyên biệt và toàn diện</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-service">
+        <div class="container">
+          <h2 class="title has-text-centered">Các dịch vụ của <span>Optimus</span></h2>
+          <ul class="service-list">
+            <li> 
+              <div class="item-service"><span class="img-service" style="background-image:url(images/img_service1.png)"></span>
+                <div class="desc">
+                  <h3>Cung cấp giáo viên nước ngoài</h3>
+                  <p class="is-hidden-desktop">Cam kết tính minh bạch, ổn định & kịp thời suốt quá trình sử dụng</p>
+                  <p class="is-hidden-mobile">Optimus luôn xem chất lượng là yếu tố tối quan trọng khi cung ứng giáo viên nước ngoài cho các đối tác của mình. Chúng tôi sẽ mang đến cho khách hàng giáo viên chất lượng nhất, giá cả cạnh tranh nhất thị trường.</p>
+                  <div class="buttons is-centered"><a class="button is-primary is-outlined" href="#!">Xem chi tiết</a></div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-service"><span class="img-service" style="background-image:url(images/img_service2.png)"></span>
+                <div class="desc">
+                  <h3>Đào tạo tiếng Anh cho doanh nghiệp</h3>
+                  <p class="is-hidden-desktop">Giải pháp đào tạo tiếng Anh chuyên biệt, hiệu quả, tiết kiệm cho doanh nghiệp</p>
+                  <p class="is-hidden-mobile">Optimus thường lắng nghe để thấu hiểu những trăn trở của Doanh nghiệp. Từ đó chúng tôi cung cấp giải pháp đào tạo Anh ngữ hoàn toàn chuyên biệt và toàn diện giúp Doanh nghiệp nhanh chóng hội nhập quốc tế và thành công trong tương lai.</p>
+                  <div class="buttons is-centered"><a class="button is-primary is-outlined" href="#!">Xem chi tiết</a></div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-service"><span class="img-service" style="background-image:url(images/img_service3.png)"></span>
+                <div class="desc">
+                  <h3>Tiếng Anh 1 kèm 1</h3>
+                  <p class="is-hidden-desktop">Hiện đại, hiệu quả, tiết kiệm là thứ tiếng Anh 1 kèm 1 mang lại</p>
+                  <p class="is-hidden-mobile">Dịch vụ học tiếng Anh 1 kèm 1 với GVNN đang là sản phẩm hot nhất đến từ Optimus với ưu điểm tiết kiệm thời gian, công sức và tiền bạc của học viên mà vẫn tối ưu hoá được hiệu quả học tập.</p>
+                  <div class="buttons is-centered"><a class="button is-primary is-outlined" href="#!">Xem chi tiết</a></div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="section-partner">
+        <div class="container">
+          <h2 class="title">Các đối tác tiêu biểu</h2>
+          <div class="partner-inside">
+            <div class="swiper-container swiper-partner">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><a class="item-partner" href="#!"><img src="images/logo_partner.png" alt="Optimus"></a></div>
+                <div class="swiper-slide"><a class="item-partner" href="#!"><img src="images/logo_partner.png" alt="Optimus"></a></div>
+                <div class="swiper-slide"><a class="item-partner" href="#!"><img src="images/logo_partner.png" alt="Optimus"></a></div>
+                <div class="swiper-slide"><a class="item-partner" href="#!"><img src="images/logo_partner.png" alt="Optimus"></a></div>
+                <div class="swiper-slide"><a class="item-partner" href="#!"><img src="images/logo_partner.png" alt="Optimus"></a></div>
+                <div class="swiper-slide"><a class="item-partner" href="#!"><img src="images/logo_partner.png" alt="Optimus"></a></div>
+              </div>
+            </div>
+            <div class="swiper-pagination partner-pagination"></div>
+            <div class="swiper-button-next swiper-partner-next"></div>
+            <div class="swiper-button-prev swiper-partner-prev"></div>
+          </div>
+        </div>
+      </div>
+      <div class="section-testimonial">
+        <div class="container">
+          <h2 class="title">Chia sẻ đến từ học viên</h2>
+          <div class="testimonial-inside">
+            <div class="swiper-container swiper-testimonial">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="item-tes">
+                    <div class="tes-user">
+                      <div class="avatar is-normal">
+                        <div class="avatar-img" style="background-image:url(https://via.placeholder.com/160x160)"></div>
+                      </div>
+                      <div class="desc"> 
+                        <p class="name">Anh Thịnh</p>
+                        <p class="meta">Học viên khoá Tiếng Anh doanh nghiệp tại FPT</p>
+                        <div class="stars">
+                          <div class="stars-live" style="width:70%"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="desc">“Nhờ những giờ học thú vị với thầy giáo nước ngoài mà tôi đã tự tin giao tiếp tiếng Anh. Hiện tại, công việc của tôi trở nên dễ dàng hơn nhờ có tiếng Anh tốt.”</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="item-tes">
+                    <div class="tes-user">
+                      <div class="avatar is-normal">
+                        <div class="avatar-img" style="background-image:url(https://via.placeholder.com/160x160)"></div>
+                      </div>
+                      <div class="desc"> 
+                        <p class="name">Chị Vân</p>
+                        <p class="meta">Phụ huynh của học viên khoá tiếng Anh 1 kèm 1</p>
+                        <div class="stars">
+                          <div class="stars-live" style="width:70%"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="desc">““Đầu tư cho con gái học khoá tiếng Anh 1 kèm 1 thật sự đáng giá. Con gái tôi bây giờ giao tiếp tiếng Anh tốt, chủ động, tự tin, và cởi mở hơn nhiều so với trước đây.”</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="item-tes">
+                    <div class="tes-user">
+                      <div class="avatar is-normal">
+                        <div class="avatar-img" style="background-image:url(https://via.placeholder.com/160x160)"></div>
+                      </div>
+                      <div class="desc"> 
+                        <p class="name">Chị Thúy</p>
+                        <p class="meta">Hiệu trưởng trường Mầm non Nắng Vàng</p>
+                        <div class="stars">
+                          <div class="stars-live" style="width:70%"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="desc">““Tôi cảm thấy hoàn toàn yên tâm về chất lượng khi sử dụng giáo viên nước ngoài của Optimus. Phụ huynh và nhà trường rất tin tưởng sử dụng dịch vụ của Optimus.””</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="item-tes">
+                    <div class="tes-user">
+                      <div class="avatar is-normal">
+                        <div class="avatar-img" style="background-image:url(https://via.placeholder.com/160x160)"></div>
+                      </div>
+                      <div class="desc"> 
+                        <p class="name">Anh Thắng</p>
+                        <p class="meta">Học viên khoá Tiếng Anh doanh nghiệp tại VinSchool</p>
+                        <div class="stars">
+                          <div class="stars-live" style="width:70%"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="desc">“Nhờ những giờ học thú vị với thầy giáo nước ngoài mà tôi đã tự tin giao tiếp tiếng Anh. Hiện tại, công việc của tôi trở nên dễ dàng hơn nhờ có tiếng Anh tốt.”</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination tes-pagination"></div>
+            <div class="swiper-button-next swiper-tes-next"></div>
+            <div class="swiper-button-prev swiper-tes-prev"></div>
+          </div>
+        </div>
+      </div>
+      <div class="section-form"> 
+        <div class="container">
+          <div class="columns">
+            <div class="column is-three-fifths">
+              <h5 class="slogan">Hãy để <span>Optimus</span> <strong>hiểu và lựa chọn</strong> giải pháp giúp bạn!</h5>
+            </div>
+            <div class="column">
+              <form class="form-inside" action="">
+                <h3 class="lstitle">Đăng ký nhận tư vấn từ <span>Optimius</span></h3>
+                <div class="field">
+                  <div class="control">
+                    <div class="select is-fullwidth">
+                      <select>
+                        <option value="0" disabled selected>Chọn dịch vụ tư vấn</option>
+                        <option value="1">Dịch vụ tư vấn 1</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="control">
+                    <input class="input" type="text" placeholder="Họ và tên">
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="control">
+                    <input class="input is-danger" type="text" placeholder="Số điện thoại">
+                    <p class="help is-danger">Vui lòng nhập lại thông tin</p>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="control">
+                    <input class="input" type="text" placeholder="Email tư vấn">
+                  </div>
+                </div>
+                <div class="field has-button">
+                  <div class="control"><a class="button is-primary is-large" href="#!">Gửi thông tin</a></div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-hnews">
+        <div class="container">
+          <h2 class="title">Tin tức & Sự kiện</h2>
+          <div class="hnews-inside">
+            <div class="swiper-container swiper-hnews">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><a class="item-hnews" href="#!"><span class="img-hnews" style="background-image:url(https://via.placeholder.com/640x400)"></span>
+                    <div class="desc"> 
+                      <h3>Chương trình ưu đãi mùa tựu trường</h3>
+                      <p>09 Tháng 5 2021</p>
+                      <div class="line-timer"></div>
+                      <p>Đối mặt với những xa lạ về ngôn ngữ, chúng ta chỉ biết ngậm ngùi gọi nhau bằng cái tên ngoài hành tinh...</p>
+                    </div></a></div>
+                <div class="swiper-slide"><a class="item-hnews" href="#!"><span class="img-hnews" style="background-image:url(https://via.placeholder.com/640x400)"></span>
+                    <div class="desc"> 
+                      <h3>Ý nghĩa đằng sau những câu chuyện về Santa workshop</h3>
+                      <p>09 Tháng 5 2021</p>
+                      <div class="line-timer"></div>
+                      <p>Mỗi dịp Giáng Sinh về, hình ảnh ông già Noel rong ruổi mọi miền đất nước trao quà cho các bạn nhỏ tiếp tục được kể lại...</p>
+                    </div></a></div>
+                <div class="swiper-slide"><a class="item-hnews" href="#!"><span class="img-hnews" style="background-image:url(https://via.placeholder.com/640x400)"></span>
+                    <div class="desc"> 
+                      <h3>Giải mã gen Z dưới góc nhìn của ngôn ngữ học</h3>
+                      <p>09 Tháng 5 2021</p>
+                      <div class="line-timer"></div>
+                      <p>Lớn lên trong thời đại số hóa, gen Z được định hình lối sống và giao tiếp hằng ngày. Nhưng đừng lầm tưởng gen Z là...</p>
+                    </div></a></div>
+                <div class="swiper-slide"><a class="item-hnews" href="#!"><span class="img-hnews" style="background-image:url(https://via.placeholder.com/640x400)"></span>
+                    <div class="desc"> 
+                      <h3>Giải mã gen A dưới góc nhìn của ngôn ngữ học</h3>
+                      <p>09 Tháng 5 2021</p>
+                      <div class="line-timer"></div>
+                      <p>Lớn lên trong thời đại số hóa, gen Z được định hình lối sống và giao tiếp hằng ngày. Nhưng đừng lầm tưởng gen Z là...</p>
+                    </div></a></div>
+              </div>
+            </div>
+            <div class="swiper-pagination hnews-pagination"></div>
+            <div class="swiper-button-next swiper-hnews-next"></div>
+            <div class="swiper-button-prev swiper-hnews-prev"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-one-third">
+            <div class="info-company"><i class="ico-logo"></i>
+              <h3>Công ty TNHH Giải pháp đào tạo Optimus</h3>
+              <p>Địa chỉ: 202/7 Phạm Văn Hai, Phường 5, Quận Tân Bình, TP.HCM.<br />Trụ sở: 353 - 355 An Dương Vương, Phường 3, Quận 5, TP.HCM</p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="columns">
+              <div class="column is-8">
+                <div class="columns is-mobile">
+                  <div class="column is-half">
+                    <ul class="links-list">
+                      <li><a href="#!">Giới thiệu về Optimus</a></li>
+                      <li><a href="#!">Gói giải pháp</a></li>
+                      <li><a href="#!">Tuyển dụng</a></li>
+                      <li><a href="#!">Liên hệ</a></li>
+                    </ul><img class="img-cer-bct is-hidden-mobile" src="images/img_cer_bct.png" alt="Optimus">
+                  </div>
+                  <div class="column is-half">
+                    <ul class="links-list">
+                      <li><a href="#!">Quyền riêng tư</a></li>
+                      <li><a href="#!">Bảo mật thông tin</a></li>
+                      <li><a href="#!">Điều khoản</a></li>
+                      <li><a href="#!">Hướng dẫn thanh toán</a></li>
+                    </ul><img class="img-cer-dmca is-hidden-mobile" src="images/img_cer_dmca.png" alt="Optimus">
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="info-footer">
+                  <h4>Thông tin liên hệ</h4>
+                  <ul class="info-footer-list">
+                    <li><span class="ico-wrap"><i class="ti ti-phone-call"></i></span>
+                      <div class="desc">
+                        <p>Hotline</p>
+                        <p class="meta"><a href="tel:0909999999">090 999 9999</a></p>
+                      </div>
+                    </li>
+                    <li><span class="ico-wrap"><i class="ti ti-mail"></i></span>
+                      <div class="desc">
+                        <p>Email</p>
+                        <p class="meta"><a href="mailto:admin@optimus.vn">admin@optimus.vn</a></p>
+                      </div>
+                    </li>
+                    <li><span class="ico-wrap"><i class="ico-zalo"></i></span>
+                      <div class="desc">
+                        <p>Zalo</p>
+                        <p class="meta"><a href="https://zalo.me/optimus">zalo.me/optimus</a></p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column">
+            <div class="cpr"><span>©</span> Công ty TNHH Giải pháp đào tạo Optimus. Giấy phép kinh doanh số: 0316717932 do Sở Kế Hoạch Đầu Tư TP.HCM cấp ngày 22/02/2021</div>
+            <div class="cer-list"><img class="img-cer-bct is-hidden-desktop" src="images/img_cer_bct.png" alt="Optimus"><img class="img-cer-dmca is-hidden-desktop" src="images/img_cer_dmca.png" alt="Optimus"></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="bl-modal">
+      <div class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card"><a class="func-close-modal" href="javascript:void(0);"><i class="ti ti-x"></i></a>
+          <section class="modal-card-body">
+            <form class="form-inside" action="">
+              <h3 class="lstitle has-text-centered">Đăng ký nhận tư vấn từ <span>Optimius</span></h3>
+              <div class="field">
+                <div class="control">
+                  <div class="select is-fullwidth">
+                    <select>
+                      <option value="0" disabled selected>Chọn dịch vụ tư vấn</option>
+                      <option value="1">Dịch vụ tư vấn 1</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="field">
+                <div class="control">
+                  <input class="input" type="text" placeholder="Họ và tên">
+                </div>
+              </div>
+              <div class="field">
+                <div class="control">
+                  <input class="input" type="text" placeholder="Số điện thoại">
+                </div>
+              </div>
+              <div class="field">
+                <div class="control">
+                  <input class="input" type="text" placeholder="Email tư vấn">
+                </div>
+              </div>
+              <div class="field has-button">
+                <div class="control"><a class="button is-primary is-large is-fullwidth" href="#!">Gửi thông tin</a></div>
+              </div>
+            </form>
+          </section>
+        </div>
+      </div>
+    </div>
+    <!-- Include Plugin-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/init.js"></script>
+    <script>
+      var swiper = new Swiper('.swiper-hero', {
+      	slidesPerView: 1,
+      	spaceBetween: 0,
+      	pagination: {
+      		el: '.hero-pagination',
+      		clickable: true,
+      	},
+      	navigation: {
+      		nextEl: '.swiper-hero-next',
+      		prevEl: '.swiper-hero-prev',
+      	},
+      });
+      var swiper = new Swiper('.swiper-partner', {
+      	slidesPerView: 2.8,
+      	spaceBetween: 24,
+      	slidesOffsetBefore: 24,
+      	slidesOffsetAfter: 24,
+      	pagination: {
+      		el: '.partner-pagination',
+      		clickable: true,
+      	},
+      	navigation: {
+      		nextEl: '.swiper-partner-next',
+      		prevEl: '.swiper-partner-prev',
+      	},
+      	breakpoints: {
+      		// when window width is >= 320px
+      		320: {
+      			slidesPerView: 2.8,
+      			spaceBetween: 12,
+      		},
+      		// when window width is >= 480px
+      		480: {
+      			slidesPerView: 3.8,
+      			spaceBetween: 12,
+      		},
+      		// when window width is >= 768px
+      		768: {
+      			slidesPerView: 5,
+      			spaceBetween: 24,
+      			slidesOffsetBefore: 0,
+      			slidesOffsetAfter: 0,
+      		},
+      	}
+      });
+      var swiper = new Swiper('.swiper-testimonial', {
+      	slidesPerView: 3,
+      	spaceBetween: 24,
+      	slidesOffsetBefore: 24,
+      	slidesOffsetAfter: 24,
+      	pagination: {
+      		el: '.tes-pagination',
+      		clickable: true,
+      	},
+      	navigation: {
+      		nextEl: '.swiper-tes-next',
+      		prevEl: '.swiper-tes-prev',
+      	},
+      	breakpoints: {
+      		// when window width is >= 320px
+      		320: {
+      			slidesPerView: 1.25,
+      		},
+      		// when window width is >= 480px
+      		480: {
+      			slidesPerView: 1.5,
+      		},
+      		// when window width is >= 768px
+      		768: {
+      			slidesPerView: 3,
+      			slidesOffsetBefore: 0,
+      			slidesOffsetAfter: 0,
+      		},
+      	}
+      });
+      var swiper = new Swiper('.swiper-hnews', {
+      	slidesPerView: 3,
+      	spaceBetween: 24,
+      	slidesOffsetBefore: 24,
+      	pagination: {
+      		el: '.hnews-pagination',
+      		clickable: true,
+      	},
+      	navigation: {
+      		nextEl: '.swiper-hnews-next',
+      		prevEl: '.swiper-hnews-prev',
+      	},
+      	breakpoints: {
+      		// when window width is >= 320px
+      		320: {
+      			slidesPerView: 1.25,
+      		},
+      		// when window width is >= 480px
+      		480: {
+      			slidesPerView: 1.5,
+      		},
+      		// when window width is >= 768px
+      		768: {
+      			slidesPerView: 3,
+      			slidesOffsetBefore: 0,
+      			slidesOffsetAfter: 0,
+      		},
+      	}
+      });
+    </script>
+  </body>
+</html>
