@@ -125,8 +125,8 @@ nav.navtop{display:none;@include position(absolute, 0 0 null 0);z-index:10;backg
 	}
 }
 .bullet-list{
-	li{position:relative;margin-bottom:1rem;padding-left:34px;@extend %body;color:$grey;
-		&:before{@include position(absolute, 4px null null 0);content:"";background:url(../images/ico_bullet.png) 0 0 no-repeat;background-size:cover;@include size(18px)}
+	li{position:relative;margin-bottom:1rem;padding-left:2rem;@extend %body;color:$grey;
+		&:before{@include position(absolute, 4px null null 0);content:"";background:url(../images/ico_bullet.png) 0 0 no-repeat;background-size:cover;@include size(16px)}
 	}
 }
 // Stars
@@ -261,7 +261,7 @@ nav.navtop{display:none;@include position(absolute, 0 0 null 0);z-index:10;backg
 				}
 				.desc{
 					h3{display:block;margin-bottom:$gutter/3;@extend %h3;text-align:center}
-					p{display:block;margin-bottom:$gutter/2;@extend %small;text-align:center}
+					p{display:block;margin-bottom:$gutter/2;@include padding(0 1rem);@extend %small;text-align:center}
 				}
 			}
 		}
@@ -309,7 +309,7 @@ nav.navtop{display:none;@include position(absolute, 0 0 null 0);z-index:10;backg
 	.swiper-button-next{background-position:-40px 0;
 		&.swiper-button-disabled{background-position:-40px -40px;}
 	}
-	@include from($desktop){@include padding(4.75rem 0);
+	@include from($desktop){@include padding(4.75rem 0 0);
 		.partner-inside{width:896px;@include margin(null auto)}
 		.swiper-button-next, .swiper-button-prev{@include position(absolute, 1.5rem 0 null null)}
 		.swiper-button-prev{right:44px;left:inherit}
@@ -362,6 +362,7 @@ nav.navtop{display:none;@include position(absolute, 0 0 null 0);z-index:10;backg
 		.form-inside{
 			.field.has-button{display:flex;justify-content:flex-end;}
 		}
+		& + .section-hnews{margin-top:-4.75rem}
 	}
 	@include until($desktop){
 		.button{width:100%;}
@@ -443,7 +444,7 @@ nav.navtop{display:none;@include position(absolute, 0 0 null 0);z-index:10;backg
 				}
 				.desc{
 					h3{display:block;margin-bottom:$gutter/3;@extend %h3;text-align:center}
-					p{display:block;@extend %small;text-align:center}
+					p{display:block;@include padding(0 1rem);@extend %small;text-align:center}
 				}
 			}
 		}
@@ -562,7 +563,7 @@ nav.navtop{display:none;@include position(absolute, 0 0 null 0);z-index:10;backg
 	}
 }
 .section-top{
-	@include from($desktop){margin-top:$gutter}
+	@include from($desktop){margin-top:2rem}
 }
 .section-cate-links{margin-bottom:3rem;@include padding($gutter);
 	.cate-links-list{
@@ -658,10 +659,14 @@ nav.navtop{display:none;@include position(absolute, 0 0 null 0);z-index:10;backg
 				&:last-child{margin-right:0}
 				a{@include flex-center;@include size(48px);border-radius:$radius-rounded;border:1px solid $text;
 					i{color:$text;font-size:1.5rem}
+					&:hover{border-color:$primary;
+						i{color:$primary;}
+					}
 				}
 			}
 		}
 	}
+	@include from($desktop){@include padding(2rem 1.5rem 0 0)}
 }
 .section-comment{@include padding($gutter);
 	.field{

@@ -19,7 +19,9 @@
 %h1{color:$text;font-size:$size-xlarge;font-weight:$weight-bold;line-height:44px;letter-spacing:-0.5px;
 	@include from($desktop){font-size:$size-display;line-height:52px}
 }
-%h2{color:$text;font-size:$size-large;font-weight:$weight-bold;line-height:36px;letter-spacing:-0.5px}
+%h2{color:$text;font-size:$size-large;font-weight:$weight-bold;line-height:36px;letter-spacing:-0.5px;
+	@include from($desktop){font-size:$size-xlarge;line-height:44px}
+}
 %h3{color:$text;font-size:$size-medium;font-weight:$weight-medium;line-height:28px;letter-spacing:-0.5px}
 %subtitle{color:$text;font-size:$size-normal;font-weight:$weight-medium;line-height:24px}
 %body{color:$text;font-size:$size-normal;font-weight:$weight-normal;line-height:24px}
@@ -30,7 +32,7 @@
 .title{display:block;margin-bottom:$gutter - 0.25rem;@extend %h2;
 	span{color:$primary}
 	span.num{color:$grey-light;font-weight:$weight-normal}
-	& + .sub{display:block;margin-top:-1rem;margin-bottom:$gutter;@extend %small;}
+	& + .sub{display:block;margin-top:-1rem;margin-bottom:$gutter;@extend %body;}
 	& + .sub-more{display:block;margin-top:-0.25rem;margin-bottom:$gutter;@extend %body;color:$grey}
 	@include from($desktop){margin-bottom:$gutter;
 		& + .sub{margin-bottom:2rem;font-size:$size-medium;line-height:28px}
