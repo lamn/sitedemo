@@ -15241,7 +15241,6 @@ nav.navtop ul li.is-lang a.is-active {
 }
 
 .section-article-list {
-  margin-bottom: 3rem;
   padding-right: 1.5rem;
   padding-left: 1.5rem;
 }
@@ -15329,7 +15328,6 @@ nav.navtop ul li.is-lang a.is-active {
 }
 
 .section-cate-links {
-  margin-bottom: 3rem;
   padding: 1.5rem;
 }
 .section-cate-links .cate-links-list li {
@@ -15380,12 +15378,12 @@ nav.navtop ul li.is-lang a.is-active {
 }
 @media screen and (min-width: 1024px) {
   .section-cate-links {
+    margin-bottom: 3rem;
     padding: 0;
   }
 }
 
 .section-latest {
-  margin-bottom: 3rem;
   padding: 1.5rem;
 }
 .section-latest .latest-list li {
@@ -15414,12 +15412,13 @@ nav.navtop ul li.is-lang a.is-active {
 }
 @media screen and (min-width: 1024px) {
   .section-latest {
+    margin-bottom: 3rem;
     padding: 0;
   }
 }
 
 .section-topview {
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
   padding: 1.5rem;
 }
 .section-topview .topview-list li {
@@ -15468,6 +15467,7 @@ nav.navtop ul li.is-lang a.is-active {
 }
 @media screen and (min-width: 1024px) {
   .section-topview {
+    margin-bottom: 3rem;
     padding: 0;
   }
 }
