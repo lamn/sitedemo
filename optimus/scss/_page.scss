@@ -13,6 +13,7 @@ body, html{height:100%;
 	@include from($widescreen){}
 }
 a:hover{@include tr-all;}
+.page-content{overflow-x:hidden}
 
 // Re-Style
 .navbar-burger{@include size(68px);margin-left:inherit}
@@ -620,6 +621,10 @@ nav.navtop{display:none;@include position(absolute, 0 0 null 0);z-index:10;backg
 .section-article{@include padding($gutter);
 	.breadcrumb{margin-bottom:0.75rem;
 		i{position:relative;top:-2px}
+		@include until($desktop){
+			ul li a{font-size:$size-small}
+			i{position:relative;top:-1px}
+		}
 	}
 	.article-title{display:block;margin-bottom:0.5rem;@extend %h1;}
 	.article-subtitle{display:block;margin-bottom:$gutter;@extend %subtitle;color:$grey}
@@ -715,7 +720,8 @@ nav.navtop{display:none;@include position(absolute, 0 0 null 0);z-index:10;backg
 	}
 	.tabs-list{display:flex;align-items:center;margin-bottom:$gutter;@include padding(2px);border:1px solid $grey-lighter;box-shadow:$shadow-soft;border-radius:$radius-rounded;
 		li{flex-shrink:0;width:33.33333333%;
-			a.b-nav-tab{@include flex-center;height:48px;@include padding(null 0.5rem);@extend %pretitle;font-weight:$weight-bold;text-align:center;
+			a.b-nav-tab{@include flex-center;flex-direction:column;min-height:48px;@include padding(0.25rem 0.75rem);@extend %pretitle;font-weight:$weight-bold;text-align:center;
+				span{white-space:nowrap;}
 				&.is-active{background-color:$primary;color:$white;border-radius:$radius-rounded;}
 			}
 		}
