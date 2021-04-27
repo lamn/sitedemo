@@ -18,7 +18,33 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 });
-
+// Tabs
+'use strict';
+function Tabs() {
+	var bindAll = function() {
+		var menuElements = document.querySelectorAll('[data-tab]');
+		for(var i = 0; i < menuElements.length ; i++) {
+		menuElements[i].addEventListener('click', change, false);
+		}
+	}
+	var clear = function() {
+		var menuElements = document.querySelectorAll('[data-tab]');
+		for(var i = 0; i < menuElements.length ; i++) {
+		menuElements[i].classList.remove('is-active');
+		var id = menuElements[i].getAttribute('data-tab');
+		document.getElementById(id).classList.remove('is-active');
+		}
+	}
+	var change = function(e) {
+		clear();
+		e.target.classList.add('is-active');
+		e.preventDefault();
+		var id = e.currentTarget.getAttribute('data-tab');
+		document.getElementById(id).classList.add('is-active');
+	}
+	bindAll();
+}
+var connectTabs = new Tabs();
 // Other
 $(".func-search").click(function(){
 	$(this).addClass("is-hidden");
