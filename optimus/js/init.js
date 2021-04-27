@@ -38,9 +38,9 @@ function Tabs() {
 	var change = function(e) {
 		clear();
 		e.target.classList.add('is-active');
-		e.preventDefault();
 		var id = e.currentTarget.getAttribute('data-tab');
 		document.getElementById(id).classList.add('is-active');
+		e.preventDefault();
 	}
 	bindAll();
 }
