@@ -413,7 +413,7 @@ nav.navtop{display:none;@include position(absolute, 0 0 null 0);z-index:10;backg
 	h1{display:block;color:$white;font-size:$size-large;font-weight:$weight-bold;line-height:1.35;text-align:center;
 		&.is-otr{font-weight:$weight-medium}
 	}
-	p{display:none;max-width:720px;@include margin(1rem auto null);@extend %body;color:$white;text-align:center}
+	p{display:none;max-width:750px;@include margin(1rem auto null);@extend %body;color:$white;text-align:center}
 	@include from($desktop){height:480px;
 		h1{max-width:930px;@include margin(3rem auto 1rem);font-size:$size-display;line-height:1.5;}
 		p{display:block}
@@ -532,6 +532,13 @@ nav.navtop{display:none;@include position(absolute, 0 0 null 0);z-index:10;backg
 		}
 	}
 	@include from($desktop){@include padding(null 0)}
+	@media screen and (max-width:349px){
+		.filter-list{
+			li{margin-right:0.5rem;margin-bottom:0.5rem;
+				a{font-size:0.75rem}
+			}
+		}
+	}
 }
 .section-article-list{@include padding(null $gutter);
 	.article-list{margin-bottom:$gutter;
@@ -720,9 +727,11 @@ nav.navtop{display:none;@include position(absolute, 0 0 null 0);z-index:10;backg
 	}
 	.tabs-list{display:flex;align-items:center;margin-bottom:$gutter;@include padding(2px);border:1px solid $grey-lighter;box-shadow:$shadow-soft;border-radius:$radius-rounded;
 		li{flex-shrink:0;width:33.33333333%;
-			a.b-nav-tab{@include flex-center;flex-direction:column;min-height:48px;@include padding(0.25rem 0.75rem);@extend %pretitle;font-weight:$weight-bold;text-align:center;
-				span{white-space:nowrap;}
+			a.b-nav-tab{min-height:48px;@include padding(0.25rem 0.75rem);@extend %pretitle;font-weight:$weight-bold;text-align:center;
 				&.is-active{background-color:$primary;color:$white;border-radius:$radius-rounded;}
+				@include until ($tablet){@include flex-center;flex-direction:column;
+					span{white-space:nowrap;}
+				}
 			}
 		}
 	}
@@ -742,7 +751,7 @@ nav.navtop{display:none;@include position(absolute, 0 0 null 0);z-index:10;backg
 	@include from($tablet){@include padding(4.75rem 0);
 		.tabs-list{max-width:570px;@include margin(null auto);
 			li{
-				a.b-nav-tab{height:56px;font-size:$size-normal;font-weight:$weight-medium}
+				a.b-nav-tab{display:block;height:56px;font-size:$size-normal;font-weight:$weight-medium;line-height:52px;}
 			}
 		}
 		.tabs-content{
@@ -779,7 +788,7 @@ nav.navtop{display:none;@include position(absolute, 0 0 null 0);z-index:10;backg
 			li{margin-bottom:$gutter - 0.25rem;
 				.item-program-why{
 					.desc{
-						p{font-size:$size-normal;font-weight:$weight-normal}
+						p{font-size:$size-normal;font-weight:$weight-normal;line-height:24px}
 					}
 				}
 			}

@@ -19,7 +19,7 @@
 %h1{color:$text;font-size:$size-xlarge;font-weight:$weight-bold;line-height:44px;letter-spacing:-0.5px;
 	@include from($desktop){font-size:$size-display;line-height:52px}
 }
-%h2{color:$text;font-size:$size-large;font-weight:$weight-bold;line-height:36px;letter-spacing:-0.5px;
+%h2{color:$text;font-size:$size-large;font-weight:$weight-bold;line-height:36px;letter-spacing:-0.85px;
 	@include from($desktop){font-size:$size-xlarge;line-height:44px}
 }
 %h3{color:$text;font-size:$size-medium;font-weight:$weight-medium;line-height:28px;letter-spacing:-0.5px}

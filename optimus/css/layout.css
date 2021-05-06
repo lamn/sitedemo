@@ -6566,7 +6566,6 @@ label.panel-block:hover {
   flex-basis: 0;
   flex-grow: 1;
   flex-shrink: 1;
-  min-height: -webkit-min-content;
   min-height: min-content;
 }
 .tile.is-ancestor {
@@ -13526,7 +13525,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   font-size: 1.563rem;
   font-weight: 700;
   line-height: 36px;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.85px;
 }
 @media screen and (min-width: 1024px) {
   .section-article .article-body h1, .section-article .article-body h2, .title {
@@ -14933,7 +14932,7 @@ nav.navtop ul li.is-lang a.is-active {
 }
 .section-cover p {
   display: none;
-  max-width: 720px;
+  max-width: 750px;
   margin-top: 1rem;
   margin-right: auto;
   margin-left: auto;
@@ -15261,6 +15260,15 @@ nav.navtop ul li.is-lang a.is-active {
   .section-filter {
     padding-right: 0;
     padding-left: 0;
+  }
+}
+@media screen and (max-width: 349px) {
+  .section-filter .filter-list li {
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .section-filter .filter-list li a {
+    font-size: 0.75rem;
   }
 }
 
@@ -15801,22 +15809,26 @@ nav.navtop ul li.is-lang a.is-active {
   width: 33.33333333%;
 }
 .section-program .tabs-list li a.b-nav-tab {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   min-height: 48px;
   padding: 0.25rem 0.75rem;
   font-weight: 700;
   text-align: center;
 }
-.section-program .tabs-list li a.b-nav-tab span {
-  white-space: nowrap;
-}
 .section-program .tabs-list li a.b-nav-tab.is-active {
   background-color: #CA181F;
   color: white;
   border-radius: 290486px;
+}
+@media screen and (max-width: 768px) {
+  .section-program .tabs-list li a.b-nav-tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .section-program .tabs-list li a.b-nav-tab span {
+    white-space: nowrap;
+  }
 }
 .section-program .tabs-content .img-program {
   display: block;
@@ -15859,9 +15871,11 @@ nav.navtop ul li.is-lang a.is-active {
     margin-left: auto;
   }
   .section-program .tabs-list li a.b-nav-tab {
+    display: block;
     height: 56px;
     font-size: 1rem;
     font-weight: 500;
+    line-height: 52px;
   }
   .section-program .tabs-content .content-inside {
     display: flex;
@@ -15959,6 +15973,7 @@ nav.navtop ul li.is-lang a.is-active {
   .section-program-why .program-why-list li .item-program-why .desc p {
     font-size: 1rem;
     font-weight: 400;
+    line-height: 24px;
   }
 }
 
