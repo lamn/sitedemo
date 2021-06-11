@@ -1,0 +1,174 @@
+// Core variables and mixins bourbon
+@import "bourbon";
+
+// Body
+*, *::before, *::after{box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased}
+body{background:$white;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%;font-display:swap;
+	@media only screen and (max-width:414px){font-size:calc(100% + 1 * (100vw - 360px)/ 39)}
+	&.is-frame{background-color:$grey-lightest;
+		.navbar-back{display:block}
+		.page-content{background-color:$grey-lightest;padding-top:70px;padding-bottom:60px}
+	}
+}
+body, html{height:100%;
+	@include from($tablet){}
+	@include until($tablet){}
+	@include from($widescreen){}
+}
+a:hover{@include tr-all;}
+
+// Re-Style
+.navbar-burger{@include size(68px);margin-left:auto}
+.navbar-burger span{background-color:$text;height:2px;border-radius:$radius-rounded}
+.button, .navbar-dropdown, .input, .textarea, .select select{@include tr-all;}
+a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:focus, .navbar-link:focus-within, .navbar-link:hover, .navbar-link.is-active{background-color:transparent;color:$primary}
+
+@include until($desktop){
+	.navbar-start{@include padding(1rem $gutter)}
+	.navbar-item, .navbar-link{color:$text;@include padding(0.625rem 0);font-weight:$weight-medium}
+}
+
+// General
+.navbar{background-color:$white;height:68px;
+	.navbar-logo, .navbar-logo-mobile{display:none;@include position(absolute, 0 null null 50%);@include size(153px, 68px);margin-left:-76px;
+		i.logo{display:block;background:url(../images/logo.png) 0 0 no-repeat;background-size:cover;@include size(153px, 68px)}
+	}
+	.navbar-logo-mobile{display:block;@include size(108px, 48px);margin-left:-54px;margin-top:10px;
+		i.logo{@include size(108px, 48px)}
+	}
+	.navbar-menu{display:none;@include margin(null auto);
+		&.is-active{display:block}
+	}
+	.navbar-start{display:block;width:100%;
+		i.ti{display:flex;position:relative;top:-1px;margin-right:4px}
+		@include from($desktop){display:flex;;align-items:center;justify-content:space-between;@include margin(null auto);
+			.ns-left{display:flex;align-items:flex-start;justify-content:center}
+			.ns-right{display:flex;align-items:flex-end;justify-content:center;
+				.button{margin-left:1.5rem}
+			}
+		}
+	}
+	.navbar-back{display:none;@include position(absolute, 0 null null 0);@include size(68px);
+		i.ti{display:block;@include size(68px);@include padding(20px);color:$text;font-size:1.5rem}
+	}
+	@include from($desktop){
+		.navbar-menu{display:flex;
+			.navbar-logo{display:block}
+		}
+		.navbar-brand{display:none}
+		.navbar-back{display:none}
+	}
+	@include until($desktop){
+		.navbar-brand{
+			.button{@include position(absolute, 50% 0.75rem null null);margin-top:-20px}
+		}
+		.navbar-start{
+			i.ti{display:none}
+			.ns-right{
+				.button{width:100%;margin-top:1rem;}
+			}
+		}
+	}
+}
+.swiper-pagination{@include flex-center;@include position(absolute, null 0);
+	.swiper-pagination-bullet{background-color:$grey-light;@include size(12px);@include margin(null 4px);border:2px solid $grey-lightest;outline:0;
+		&.swiper-pagination-bullet-active{background-color:$primary;@include size(16px);border:3px solid $white;box-shadow:0 0 2px $primary}
+	}
+}
+
+.header{@include position(fixed, 0 0 null 0);z-index:100;box-shadow:0 6px 12px rgba(0,0,0,0.01);}
+.page-content{@include padding(120px null 1rem);}
+.section-hero{margin-bottom:3rem;@include padding(null 1.5rem);
+	@include from($desktop){margin-bottom:4rem;}
+}
+.section-video{margin-bottom:3rem;@include padding(null 1.5rem);
+	.video-player{background-color:$grey-lighter;width:100%;@include margin(null auto);border-radius:$radius-large;
+		&:before{content:"";display:block;padding-top:56.25%;}
+	}
+	@include from($desktop){margin-bottom:4rem;
+		.video-player{width:80%}
+	}
+}
+.section-product{margin-bottom:3rem;@include padding(null 1.5rem);
+	.product-inside{@include margin(null (-$gutter))}
+	.item-product{display:block;
+		img{display:block;@include size(auto);border-radius:$radius-large;border:1px solid $grey-lightest;}
+	}
+	.swiper-pagination{@include position(absolute, null null -2rem null)}
+	.swiper-button-next, .swiper-button-prev{display:none;background:url(../images/arrows.png) 0 0 no-repeat;background-size:80px 80px;@include size(40px);outline:0;
+		&.swiper-button-disabled{opacity:1;}
+		&:after, &:before{display:none}
+		@include from($desktop){display:block}
+	}
+	.swiper-button-prev{background-position:0 0;
+		&.swiper-button-disabled{background-position:0 -40px;}
+	}
+	.swiper-button-next{background-position:-40px 0;
+		&.swiper-button-disabled{background-position:-40px -40px;}
+	}
+	@include from($desktop){margin-bottom:4rem;
+		.product-inside{@include margin(null 0)}
+		.swiper-button-next, .swiper-button-prev{@include position(absolute, 1.5rem 0 null null)}
+		.swiper-button-prev{right:44px;left:inherit}
+	}
+}
+.section-frame{margin-bottom:2rem;overflow-x:auto;-webkit-overflow-scrolling:touch;
+	ul{display:flex;justify-content:center;align-items:flex-start;@include padding(null 0.5rem)}
+	&.has-items{
+		ul{justify-content:flex-start}
+	}
+	.frame-box{position:relative;background-color:$white;@include size(260px);@include margin(null 0.75rem);overflow:hidden;border-radius:$radius-large;
+		.overlay{display:none;@include position(absolute, 0);background-color:rgba(0,0,0,0.5);}
+		&:hover{
+			.overlay{@include flex-center}
+		}
+		&.is-preset-1{
+			&:before{@include position(absolute, -6px);content:"";background:url(../images/white_large.svg) 0 0 no-repeat;}
+		}
+		&.is-preset-2{@include padding(30px 34px);
+			&:before{@include position(absolute, -6px);content:"";background:url(../images/white_large.svg) 0 0 no-repeat;}
+		}
+		&.is-preset-3{
+			&:before{@include position(absolute, -6px);content:"";background:url(../images/black_large.svg) 0 0 no-repeat;}
+		}
+		&.is-preset-4{@include padding(30px 34px);
+			&:before{@include position(absolute, -6px);content:"";background:url(../images/black_large.svg) 0 0 no-repeat;}
+		}
+		&.is-upload{@include flex-center;flex-direction:column;border:2px dashed $grey-light;
+			.ico-wrap{display:block;background-color:$primary;@include size(64px);margin-bottom:1rem;border-radius:$radius-rounded;
+				i.ti{display:block;@include size(64px);@include padding(20px);color:$white;font-size:1.5rem}
+			}
+			h4{display:block;margin-bottom:0.5rem;color:$text;font-size:$size-normal;font-weight:$weight-medium;text-align:center;}
+			p{@include padding(null 1rem);text-align:center;}
+			.inputfile-container{@include position(absolute, 0 null null 0);@include size(100%);
+				.inputfile{position:absolute;z-index:-1;@include size(0.1px);opacity:0;overflow:hidden}
+				.inputfile + label{display:block;position:relative;z-index:10;@include size(100%);cursor:pointer;}
+			}
+		}
+	}
+	@include from($tablet){
+		ul{justify-content:center;}
+	}
+	@include from($desktop){@include flex-center;min-height:360px;overflow-x:inherit;
+		&.has-items{
+			ul{justify-content:center}
+		}
+		ul{flex-wrap:wrap}
+		.frame-box{margin-bottom:1rem}
+	}
+}
+.section-preset{background-color:$white;@include margin(0 auto 1.5rem);@include padding(0.5rem);
+	ul{display:flex;justify-content:center;overflow-y:auto;}
+	.preset{display:flex;flex-direction:column;padding-bottom:4px;border-radius:$radius;
+		img{display:block;}
+		span{color:$text;font-size:$size-small;text-align:center}
+		&.is-active{background-color:tint($primary, 75%)}
+	}
+	@include from($desktop){width:460px;@include margin(1rem auto null);border-radius:$radius-large;}
+}
+.section-buttons{@include position(fixed, null 0 0 0);background-color:$white;@include padding(1rem);box-shadow:0 6px 12px rgba(0,0,0,0.01);
+	@include from($desktop){@include margin(null auto);
+		.inside{width:580px;@include margin(null auto)}
+	}
+}

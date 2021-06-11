@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Frame</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="description" content="description here">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="author" content="Lam Nguyen">
+    <meta name="copyright" content="2021 Lam Nguyen">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="7 days">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="">
+    <meta property="og:image" content="">
+    <!--link(rel="icon" type="image/ico" href="images/favicon.ico")-->
+    <link href="css/layout.css" rel="stylesheet" type="text/css">
+    <style></style>
+  </head>
+  <body class="is-frame">
+    <header class="header">
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand"><a class="navbar-logo-mobile" href="index.html"><i class="logo"></i></a><a class="navbar-burger" role="button" aria-label="menu" aria-expanded="false" data-target="navbar-menu"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></a><a class="navbar-back" href="javascript:history.back()"> <i class="ti ti-chevron-left"></i></a></div>
+        <div class="navbar-menu container" id="navbar-menu"><a class="navbar-logo" href="index.html"><i class="logo"></i></a>
+          <div class="navbar-start">
+            <div class="ns-left"><a class="navbar-item is-active" href="index.html"><i class="ti ti-mist"></i>Giới thiệu ứng dụng</a><a class="navbar-item" href="faqs.html">Trung tâm hướng dẫn</a></div>
+            <div class="ns-right"><a class="navbar-item" href="contact.html">Liên hệ</a><a class="button is-primary is-large" href="frame_has_items.html">Tạo khung ảnh</a></div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="page-content">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+            <div class="section-preset">
+              <ul> 
+                <li> <a class="preset is-active" href="javascript:void(0);"><img src="images/preset_1.svg" alt="Frame"><span>Trắng</span></a></li>
+                <li> <a class="preset" href="javascript:void(0);"><img src="images/preset_2.svg" alt="Frame"><span>Trắng viền</span></a></li>
+                <li> <a class="preset" href="javascript:void(0);"><img src="images/preset_4.svg" alt="Frame"><span>Đen</span></a></li>
+                <li> <a class="preset" href="javascript:void(0);"><img src="images/preset_4.svg" alt="Frame"><span>Đen viền</span></a></li>
+              </ul>
+            </div>
+            <div class="section-frame has-items">
+              <ul>
+                <li>
+                  <div class="frame-box is-preset-1"><img class="img-frame" src="images/img_demo.png" alt="Frame">
+                    <div class="overlay">
+                      <div class="buttons"><a class="button is-danger" href="#!">
+                          <spab class="icon is-small"><i class="ti ti-trash"></i></spab></a><a class="button is-primary" href="#!">Chỉnh sửa</a></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="frame-box is-upload">
+                    <div class="inputfile-container">
+                      <input class="inputfile" type="file" id="file1">
+                      <label for="file1"></label>
+                    </div>
+                    <div class="ico-wrap"><i class="ti ti-upload"> </i></div>
+                    <h4>Tải ảnh lên</h4>
+                    <p class="pretitle">Hỗ trợ định dạng png, jpg, jpeg. Kích thước tối đa 50MB.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-buttons">
+        <div class="inside"><a class="button is-primary is-large is-fullwidth" href="#!"><i class="ti ti-shopping-cart mr-2"></i>Đặt hàng</a></div>
+      </div>
+    </div>
+    <div class="bl-modal">
+      <div class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card"><a class="func-close-modal" href="javascript:void(0);"><i class="ti ti-x"></i></a>
+          <section class="modal-card-body">
+            <form class="form-inside" action="">
+              <h3 class="lstitle has-text-centered">Đăng ký nhận tư vấn từ <span>Optimius</span></h3>
+              <div class="field">
+                <div class="control">
+                  <div class="select is-fullwidth">
+                    <select>
+                      <option value="0" disabled selected>Chọn dịch vụ tư vấn</option>
+                      <option value="1">Dịch vụ tư vấn 1</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="field">
+                <div class="control">
+                  <input class="input" type="text" placeholder="Họ và tên">
+                </div>
+              </div>
+              <div class="field">
+                <div class="control">
+                  <input class="input" type="text" placeholder="Số điện thoại">
+                </div>
+              </div>
+              <div class="field">
+                <div class="control">
+                  <input class="input" type="text" placeholder="Email tư vấn">
+                </div>
+              </div>
+              <div class="field has-button">
+                <div class="control"><a class="button is-primary is-large is-fullwidth" href="#!">Gửi thông tin</a></div>
+              </div>
+            </form>
+          </section>
+        </div>
+      </div>
+    </div>
+    <!-- Include Plugin-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/init.js"></script>
+    <script></script>
+  </body>
+</html>
