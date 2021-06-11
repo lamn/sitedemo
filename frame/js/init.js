@@ -49,7 +49,7 @@ var connectTabs = new Tabs();
 $(document).ready(function() {
 
 	var $videoSrc;  
-	$('.video-btn').click(function() {
+	$('.func-modal-video').click(function() {
 		$videoSrc = $(this).data( "src" );
 	});
 

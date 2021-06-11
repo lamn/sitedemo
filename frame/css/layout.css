@@ -14169,8 +14169,8 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 
 .section-video {
   margin-bottom: 3rem;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
+  padding-right: 0;
+  padding-left: 0;
 }
 .section-video .video-preview {
   position: relative;
@@ -14181,7 +14181,6 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  border-radius: 12px;
   overflow: hidden;
 }
 .section-video .video-preview img {
@@ -14199,7 +14198,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 .section-video .video-preview:before {
   content: "";
   display: block;
-  padding-top: 46.25%;
+  padding-top: 64%;
 }
 .section-video .video-preview:hover img {
   transform: scale(1.05);
@@ -14208,20 +14207,35 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   position: relative;
   z-index: 1;
   text-align: center;
+  padding: 1rem;
 }
 .section-video .video-preview .inside h2 {
   display: block;
   margin-bottom: 1rem;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 500;
 }
 @media screen and (min-width: 1024px) {
   .section-video {
     margin-bottom: 4rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    border-radius: 12px;
   }
   .section-video .video-preview {
     width: 80%;
+  }
+  .section-video .video-preview:before {
+    padding-top: 46.25%;
+  }
+  .section-video .video-preview .inside {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+  }
+  .section-video .video-preview .inside h2 {
+    font-size: 1.5rem;
   }
 }
 
@@ -14579,6 +14593,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   top: 0;
   right: 0.75rem;
   z-index: 1;
+  display: block;
   height: 48px;
   width: 48px;
   padding: 0.75rem;
@@ -14588,6 +14603,17 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   font-size: 1.25rem;
 }
 .func-close-modal:hover i {
+  color: #ED6A5A;
+}
+.func-close-modal.is-outside {
+  position: relative;
+  top: inherit;
+  right: inherit;
+  background-color: white;
+  margin: 1rem auto;
+  border-radius: 290486px;
+}
+.func-close-modal.is-outside i {
   color: #ED6A5A;
 }
 
@@ -14608,17 +14634,8 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   }
 }
 
-.modal {
-  display: flex;
-  z-index: -1;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.35s ease;
-}
 .modal.is-active {
   z-index: 1002;
-  opacity: 1;
-  visibility: visible;
 }
 .modal .frame-box {
   margin-right: auto;
