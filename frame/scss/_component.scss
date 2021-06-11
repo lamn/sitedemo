@@ -28,6 +28,11 @@
 %small{color:$grey;font-size:$size-small;font-weight:$weight-normal;line-height:18px}
 %pretitle{color:$grey;font-size:$size-small;font-weight:$weight-medium;line-height:18px}
 
+/* Box Shadow */
+%is-shadow-1{box-shadow:0 2px 5px rgba(67,86,100,0.12)!important}
+%is-shadow-2{box-shadow:0 2px 4px rgba(67,86,100,0.10), 0 5px 8px rgba(67,86,100,0.12)!important}
+%is-shadow-3{box-shadow:0 4px 8px rgba(67,86,100,0.10), 0 8px 16px rgba(67,86,100,0.08)!important}
+
 // Typography
 .heading{display:block;margin-bottom:$gutter - 0.25rem;@extend %h1;
 	@include from($desktop){margin-bottom:$gutter}

@@ -1,26 +1,49 @@
-@import "../utilities/mixins"
-
-$notification-background-color: $background !default
+$notification-background-color: $white !default
 $notification-code-background-color: $scheme-main !default
-$notification-radius: $radius !default
-$notification-padding: 1.25rem 2.5rem 1.25rem 1.5rem !default
-$notification-padding-ltr: 1.25rem 2.5rem 1.25rem 1.5rem !default
-$notification-padding-rtl: 1.25rem 1.5rem 1.25rem 2.5rem !default
-
-$notification-colors: $colors !default
+$notification-radius: $radius-small !default
+$notification-padding: 1rem 2rem 1rem 2.5rem !default
 
 .notification
   @extend %block
-  background-color: $notification-background-color
+  border-left: 2px solid $notification-background-color
   border-radius: $notification-radius
+  padding: $notification-padding
   position: relative
-  +ltr
-    padding: $notification-padding-ltr
-  +rtl
-    padding: $notification-padding-rtl
+  border: 1px solid hsl(213, 19%, 88%)
+  background-color: $white
+  &.is-default
+    padding: 1rem
+  & + .notification
+    margin-top: -6px
+  @extend %is-shadow-1
+  [class^=ti]
+    @include position(absolute, 14px null null 10px)
+    width: 24px
+    padding: 4px
+    font-size: 1rem
+  .delete
+    background-color: transparent
+    transform: scale(1.5)
+    &:before
+      background-color: $border
+      height: 1px
+    &:after
+      background-color: $border
+      width: 1px
+  h4
+    display: block
+    font-size: $size-normal
+    font-weight: $weight-semibold
+  p
+    font-size: $size-small
+  .button.is-white
+    margin-bottom: -$gutter
+    padding-left: 0
+    padding-right: 0
+      
   a:not(.button):not(.dropdown-item)
-    color: currentColor
-    text-decoration: underline
+    // color: currentColor
+    // text-decoration: underline
   strong
     color: currentColor
   code,
@@ -29,24 +52,23 @@ $notification-colors: $colors !default
   pre code
     background: transparent
   & > .delete
-    +ltr-position(0.5rem)
     position: absolute
+    right: 0.5rem
     top: 0.5rem
+    &:hover
+      &::before
+        background-color: $primary
+      &::after
+        background-color: $primary
   .title,
   .subtitle,
   .content
     color: currentColor
   // Colors
-  @each $name, $pair in $notification-colors
+  @each $name, $pair in $colors
     $color: nth($pair, 1)
     $color-invert: nth($pair, 2)
     &.is-#{$name}
-      background-color: $color
-      color: $color-invert
-      // If light and dark colors are provided
-      @if length($pair) >= 4
-        $color-light: nth($pair, 3)
-        $color-dark: nth($pair, 4)
-        &.is-light
-          background-color: $color-light
-          color: $color-dark
+      border-left: 2px solid $color
+      [class^=ti]
+        color: $color

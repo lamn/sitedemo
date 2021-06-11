@@ -31,6 +31,12 @@
       </nav>
     </header>
     <div class="page-content">
+      <div class="toast is-danger">
+        <div class="notification is-danger"><i class="ti ti-alert-triangle"></i>
+          <button class="delete"></button>
+          <h4>Hình ảnh của bạn đã được xóa</h4>
+        </div>
+      </div>
       <div class="section-preset">
         <ul> 
           <li> <a class="preset is-active" href="javascript:void(0);"><img src="images/preset_1.svg" alt="Frame"><span>Trắng</span></a></li>
@@ -55,26 +61,38 @@
         </ul>
       </div>
       <div class="section-buttons">
-        <div class="inside"><a class="button is-primary is-large is-fullwidth" href="#!"><i class="ti ti-shopping-cart mr-2"></i>Đặt hàng</a></div>
+        <div class="inside"><a class="button is-primary is-large is-fullwidth func-modal-cart" href="#!"><i class="ti ti-shopping-cart mr-2"></i>Đặt hàng</a></div>
       </div>
     </div>
     <div class="bl-modal">
-      <div class="modal">
+      <div class="modal modal-edit">
         <div class="modal-background"></div>
         <div class="modal-card"><a class="func-close-modal" href="javascript:void(0);"><i class="ti ti-x"></i></a>
           <section class="modal-card-body">
-            <form class="form-inside" action="">
-              <h3 class="lstitle has-text-centered">Đăng ký nhận tư vấn từ <span>Optimius</span></h3>
-              <div class="field">
-                <div class="control">
-                  <div class="select is-fullwidth">
-                    <select>
-                      <option value="0" disabled selected>Chọn dịch vụ tư vấn</option>
-                      <option value="1">Dịch vụ tư vấn 1</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
+            <h2 class="title has-text-centered">Điều chỉnh hình ảnh</h2>
+            <p class="pretitle mb-3 has-text-centered">Vuốt để zoom, touch để đổi vị trí</p>
+            <div class="frame-box is-preset-1">
+              <div class="img-frame"><img src="images/img_demo.png" alt="Frame"></div>
+            </div>
+          </section>
+          <footer class="modal-card-foot has-2button"><a class="button is-light is-large" href="javascript:void(0);">Đóng</a><a class="button is-primary is-large" href="javascript:void(0);">Hoàn thành</a></footer>
+        </div>
+      </div>
+      <div class="modal modal-video">
+        <div class="modal-background"></div><a class="func-close-modal" href="javascript:void(0);"><i class="ti ti-x"></i></a>
+        <div class="modal-content">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always" allow="autoplay"></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="modal modal-cart">
+        <div class="modal-background"></div>
+        <div class="modal-card"><a class="func-close-modal" href="javascript:void(0);"><i class="ti ti-x"></i></a>
+          <section class="modal-card-body">
+            <h2 class="title has-text-centered">Đặt hàng</h2>
+            <form class="form-inside mb-5" action="">
+              <h3 class="lstitle has-text-centered">Thông tin giao hàng</h3>
               <div class="field">
                 <div class="control">
                   <input class="input" type="text" placeholder="Họ và tên">
@@ -87,13 +105,45 @@
               </div>
               <div class="field">
                 <div class="control">
-                  <input class="input" type="text" placeholder="Email tư vấn">
+                  <input class="input" type="text" placeholder="Email">
                 </div>
               </div>
-              <div class="field has-button">
-                <div class="control"><a class="button is-primary is-large is-fullwidth" href="#!">Gửi thông tin</a></div>
+              <div class="field">
+                <div class="control">
+                  <div class="select is-fullwidth">
+                    <select>
+                      <option value="0" disabled selected>Chọn abc</option>
+                      <option value="1">Dịch vụ abc</option>
+                    </select>
+                  </div>
+                </div>
               </div>
-            </form>
+              <div class="field">
+                <div class="control">
+                  <textarea class="textarea" type="textarea" rows="2" placeholder="Nhập lời nhắn..."></textarea>
+                </div>
+              </div>
+              <h3 class="lstitle has-text-centered mt-5">Thanh toán</h3>
+              <div class="notification is-info is-default">
+                <p>Miễn phí vận chuyển với đơn hàng từ 4 tấm.</p>
+              </div>
+              <table class="table is-striped is-bordered">
+                <tbody>
+                  <tr> 
+                    <td>Số lượng 2 cái</td>
+                    <td>200,000đ</td>
+                  </tr>
+                  <tr> 
+                    <td>Vận chuyển</td>
+                    <td>40,000đ</td>
+                  </tr>
+                  <tr> 
+                    <td>Tổng cộng</td>
+                    <td><strong>240,000đ</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </form><a class="button is-primary is-large is-fullwidth" href="javascript:void(0);">Xác nhận đơn hàng</a>
           </section>
         </div>
       </div>
@@ -102,6 +152,14 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/init.js"></script>
-    <script></script>
+    <script>
+      $(".func-delete").click(function(){
+      	$(".toast.is-danger").addClass("is-show");
+      	setTimeout(function(){ $(".toast").removeClass("is-show");},4000)
+      });
+      $(".delete").click(function(){
+      	$(".toast").removeClass("is-show");
+      });
+    </script>
   </body>
 </html>

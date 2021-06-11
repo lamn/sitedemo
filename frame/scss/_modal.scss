@@ -2,9 +2,28 @@
 @import "bourbon";
 
 // Modal
-.func-close-modal{@include position(absolute, 0 ($gutter/2) null null);@include size(48px);@include padding(($gutter/2));
+.func-close-modal{@include position(absolute, 0 ($gutter/2) null null);z-index:1;@include size(48px);@include padding(($gutter/2));
 	i{color:$text;font-size:1.25rem}
 	&:hover{
 		i{color:$primary}
+	}
+}
+.modal-content, .modal-card{width:calc(100% - 20px);
+	@include from($desktop){width:480px;@include margin(null auto);}
+}
+.modal-content{
+	@include from($desktop){width:720px}
+}
+.modal{display:flex;z-index:-1;opacity:0;visibility:hidden;@include tr-all;
+	&.is-active{z-index:1002;opacity:1;visibility:visible}
+	.frame-box{@include margin(null auto);}
+	.modal-card-body{position:relative}
+	.modal-card-foot{
+		&.has-2button{
+			.button{width:calc(50% - 8px);@include margin(null 0);
+				&:first-child{margin-right:8px}
+				&:last-child{margin-left:8px}
+			}
+		}
 	}
 }

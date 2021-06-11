@@ -46,20 +46,25 @@ function Tabs() {
 }
 var connectTabs = new Tabs();
 // Other
-$(".func-search").click(function(){
-	$(this).addClass("is-hidden");
-	$(".func-close-search").removeClass("is-hidden");
-	$(".navbar-search").removeClass("is-hidden");
-	$("#input-search").focus();
-});
-$(".func-close-search").click(function(){
-	$(this).addClass("is-hidden");
-	$(".func-search").removeClass("is-hidden");
-	$(".navbar-search").addClass("is-hidden");
-});
-$(".func-modal-register").click(function(){
-	$(".modal").addClass("is-active");
-});
-$(".func-close-modal").click(function(){
-	$(".modal").removeClass("is-active");
+$(document).ready(function() {
+
+	var $videoSrc;  
+	$('.video-btn').click(function() {
+		$videoSrc = $(this).data( "src" );
+	});
+
+	$(".func-modal-edit").click(function(){
+		$(".modal-edit").addClass("is-active");
+	});
+	$(".func-modal-cart").click(function(){
+		$(".modal-cart").addClass("is-active");
+	});
+	$(".func-modal-video").click(function(){
+		$(".modal-video").addClass("is-active");
+		$("#video").attr('src',$videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0" ); 
+	});
+	$(".func-close-modal").click(function(){
+		$(".modal").removeClass("is-active");
+		$("#video").attr('src',$videoSrc); 
+	});
 });
