@@ -227,3 +227,9 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 	.body-accordion{display:block;padding-top:0.75rem;color:$grey;font-size:$size-small;}
 	@include from($desktop){max-width:628px;@include margin(null auto)}
 }
+.section-done{position:relative;margin-bottom:6rem;@include padding(null 1.5rem);
+	.ico-wrap{display:block;background-color:$success;@include size(64px);@include margin(2rem auto 1rem);border-radius:$radius-rounded;
+		i.ti{display:block;@include size(64px);@include padding(12px);color:$white;font-size:2.5rem}
+	}
+	@include from($desktop){max-width:628px;@include margin(null auto)}
+}

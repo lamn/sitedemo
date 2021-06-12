@@ -14706,6 +14706,36 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   }
 }
 
+.section-done {
+  position: relative;
+  margin-bottom: 6rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+.section-done .ico-wrap {
+  display: block;
+  background-color: #24A148;
+  height: 64px;
+  width: 64px;
+  margin: 2rem auto 1rem;
+  border-radius: 290486px;
+}
+.section-done .ico-wrap i.ti {
+  display: block;
+  height: 64px;
+  width: 64px;
+  padding: 12px;
+  color: white;
+  font-size: 2.5rem;
+}
+@media screen and (min-width: 1024px) {
+  .section-done {
+    max-width: 628px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
 .func-close-modal {
   position: absolute;
   top: 0;
