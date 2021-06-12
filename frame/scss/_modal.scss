@@ -20,7 +20,11 @@
 .modal{
 	&.is-active{z-index:1002}
 	.frame-box{@include margin(null auto);}
-	.modal-card-body{position:relative}
+	.modal-card-body{position:relative;
+		.form-inside{
+			.lstitle{color:$grey}
+		}
+	}
 	.modal-card-foot{
 		&.has-2button{
 			.button{width:calc(50% - 8px);@include margin(null 0);

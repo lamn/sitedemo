@@ -14195,6 +14195,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   width: 100%;
   margin-right: auto;
   margin-left: auto;
+  border-radius: 12px;
   overflow: hidden;
 }
 .section-video .video-preview img {
@@ -14653,7 +14654,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 
 .section-faqs {
   position: relative;
-  margin-bottom: 3rem;
+  margin-bottom: 6rem;
   padding-right: 1.5rem;
   padding-left: 1.5rem;
 }
@@ -14701,7 +14702,6 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   .section-faqs {
     max-width: 628px;
     margin-right: auto;
-    margin-bottom: 6rem;
     margin-left: auto;
   }
 }
@@ -14761,6 +14761,9 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 }
 .modal .modal-card-body {
   position: relative;
+}
+.modal .modal-card-body .form-inside .lstitle {
+  color: #5F666D;
 }
 .modal .modal-card-foot.has-2button .button {
   width: calc(50% - 8px);
