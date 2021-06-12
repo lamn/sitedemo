@@ -14438,6 +14438,9 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   margin-left: 0.75rem;
   overflow: hidden;
 }
+.frame-box .img-frame {
+  pointer-events: none;
+}
 .frame-box .overlay {
   display: flex;
   align-items: center;
