@@ -13837,11 +13837,18 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 
 .lstitle {
-  color: #5F666D;
+  color: #1A1226;
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 28px;
   letter-spacing: -0.5px;
+}
+
+.section-contact .adr-list li span, .section-contact .adr-list li a {
+  color: #1A1226;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 24px;
 }
 
 .pretitle {
@@ -13852,7 +13859,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 
 /* Box Shadow */
-.notification {
+.section-faqs ul li, .notification {
   box-shadow: 0 2px 5px rgba(67, 86, 100, 0.12) !important;
 }
 
@@ -14152,8 +14159,13 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 }
 
 .page-content {
-  padding-top: 120px;
+  padding-top: 100px;
   padding-bottom: 1rem;
+}
+@media screen and (min-width: 1024px) {
+  .page-content {
+    padding-top: 120px;
+  }
 }
 
 .section-hero {
@@ -14468,10 +14480,10 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 }
 .frame-box.is-preset-1 .img-frame {
   position: absolute;
-  top: 10px;
+  top: 12px;
   right: 20px;
   bottom: 22px;
-  left: 12px;
+  left: 14px;
 }
 .frame-box.is-preset-2 {
   padding: 30px 34px;
@@ -14487,10 +14499,10 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 }
 .frame-box.is-preset-2 .img-frame {
   position: absolute;
-  top: 30px;
+  top: 32px;
   right: 40px;
   bottom: 42px;
-  left: 32px;
+  left: 34px;
 }
 .frame-box.is-preset-3:before {
   position: absolute;
@@ -14503,10 +14515,10 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 }
 .frame-box.is-preset-3 .img-frame {
   position: absolute;
-  top: 10px;
+  top: 12px;
   right: 20px;
   bottom: 22px;
-  left: 12px;
+  left: 14px;
 }
 .frame-box.is-preset-4 {
   padding: 30px 34px;
@@ -14522,10 +14534,10 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 }
 .frame-box.is-preset-4 .img-frame {
   position: absolute;
-  top: 30px;
+  top: 32px;
   right: 40px;
   bottom: 42px;
-  left: 32px;
+  left: 34px;
 }
 .frame-box.is-upload {
   display: flex;
@@ -14587,6 +14599,111 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   height: 100%;
   width: 100%;
   cursor: pointer;
+}
+
+.section-contact {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+.section-contact .img-contact {
+  display: block;
+  margin-bottom: 1.25rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 12px;
+}
+.section-contact .img-contact:before {
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+}
+.section-contact .adr-list {
+  padding-bottom: 1.5rem;
+}
+.section-contact .adr-list li {
+  display: block;
+  position: relative;
+  margin-bottom: 0.75rem;
+  padding-left: 32px;
+}
+.section-contact .adr-list li i {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  color: #ED6A5A;
+  font-size: 1.125em;
+}
+.section-contact .adr-list li span, .section-contact .adr-list li a {
+  color: #5F666D;
+}
+.section-contact .adr-list li:last-child {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 1024px) {
+  .section-contact {
+    max-width: 628px;
+    margin-right: auto;
+    margin-bottom: 6rem;
+    margin-left: auto;
+  }
+}
+
+.section-faqs {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+.section-faqs ul li {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border: 1px solid #F0F2F6;
+  -webkit-user-select: none;
+          user-select: none;
+}
+.section-faqs ul li.acc_active {
+  background-color: rgba(237, 106, 90, 0.1);
+  border-color: #ED6A5A;
+}
+.section-faqs ul li.acc_active .head-accordion i.ti {
+  transform: rotate(180deg);
+}
+.section-faqs .head-accordion {
+  display: block;
+  position: relative;
+  padding-right: 32px;
+  cursor: pointer;
+  color: #1A1226;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.section-faqs .head-accordion i.ti {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  height: 24px;
+  width: 24px;
+  margin-top: -12px;
+  transition: all 0.35s ease;
+}
+.section-faqs .body-accordion {
+  display: block;
+  padding-top: 0.75rem;
+  color: #5F666D;
+  font-size: 0.813rem;
+}
+@media screen and (min-width: 1024px) {
+  .section-faqs {
+    max-width: 628px;
+    margin-right: auto;
+    margin-bottom: 6rem;
+    margin-left: auto;
+  }
 }
 
 .func-close-modal {

@@ -22,7 +22,7 @@
 %h2{color:$text;font-size:$size-large;font-weight:$weight-bold;line-height:36px;letter-spacing:-0.85px;
 	@include from($desktop){font-size:$size-xlarge;line-height:44px}
 }
-%h3{color:$grey;font-size:$size-medium;font-weight:$weight-normal;line-height:28px;letter-spacing:-0.5px}
+%h3{color:$text;font-size:$size-medium;font-weight:$weight-normal;line-height:28px;letter-spacing:-0.5px}
 %subtitle{color:$text;font-size:$size-normal;font-weight:$weight-medium;line-height:24px}
 %body{color:$text;font-size:$size-normal;font-weight:$weight-normal;line-height:24px}
 %small{color:$grey;font-size:$size-small;font-weight:$weight-normal;line-height:18px}

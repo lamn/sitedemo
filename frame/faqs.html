@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Frame</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="description" content="description here">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="author" content="Lam Nguyen">
+    <meta name="copyright" content="2021 Lam Nguyen">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="7 days">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="">
+    <meta property="og:image" content="">
+    <link rel="icon" type="image/ico" href="images/favicon.ico">
+    <link href="css/layout.css" rel="stylesheet" type="text/css">
+    <style></style>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand"><a class="navbar-logo-mobile" href="index.html"><i class="logo"></i></a><a class="navbar-burger" role="button" aria-label="menu" aria-expanded="false" data-target="navbar-menu"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></a><a class="navbar-back" href="javascript:history.back()"> <i class="ti ti-chevron-left"></i></a></div>
+        <div class="navbar-menu container" id="navbar-menu"><a class="navbar-logo" href="index.html"><i class="logo"></i></a>
+          <div class="navbar-start">
+            <div class="ns-left"><a class="navbar-item is-active" href="index.html"><i class="ti ti-mist"></i>Giới thiệu ứng dụng</a><a class="navbar-item" href="faqs.html">Trung tâm hướng dẫn</a></div>
+            <div class="ns-right"><a class="navbar-item" href="contact.html">Liên hệ</a><a class="button is-primary is-large" href="frame_has_items.html">Tạo khung ảnh</a></div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="page-content">
+      <div class="section-faqs">
+        <div class="container">
+          <h2 class="title">Trung tâm hướng dẫn</h2>
+          <ul class="accordionjs" id="my-accordion">
+            <li>
+              <div class="head-accordion">Giá cho mỗi khung hình là bao nhiêu?<i class="ti ti-chevron-down"></i></div>
+              <div class="body-accordion">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+              </div>
+            </li>
+            <li>
+              <div class="head-accordion">Giá cho mỗi khung hình là bao nhiêu?<i class="ti ti-chevron-down"></i></div>
+              <div class="body-accordion">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+              </div>
+            </li>
+            <li>
+              <div class="head-accordion">Giá cho mỗi khung hình là bao nhiêu?<i class="ti ti-chevron-down"></i></div>
+              <div class="body-accordion">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+              </div>
+            </li>
+            <li>
+              <div class="head-accordion">Giá cho mỗi khung hình là bao nhiêu?<i class="ti ti-chevron-down"></i></div>
+              <div class="body-accordion">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+              </div>
+            </li>
+            <li>
+              <div class="head-accordion">Giá cho mỗi khung hình là bao nhiêu?<i class="ti ti-chevron-down"></i></div>
+              <div class="body-accordion">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+              </div>
+            </li>
+            <li>
+              <div class="head-accordion">Giá cho mỗi khung hình là bao nhiêu?<i class="ti ti-chevron-down"></i></div>
+              <div class="body-accordion">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="section-buttons">
+        <div class="inside"><a class="button is-primary is-large is-fullwidth" href="frame.html">Tạo khung ảnh ngay</a></div>
+      </div>
+    </div>
+    <div class="bl-modal">
+    </div>
+    <!-- Include Plugin-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/accordion.min.js"></script>
+    <script src="js/init.js"></script>
+    <script>
+      $("#my-accordion").accordionjs({
+      	// Allow self close.(data-close-able)
+      	closeAble   : true,
+      	// Close other sections.(data-close-other)
+      	closeOther  : true,
+      	// Animation Speed.(data-slide-speed)
+      	slideSpeed  : 150,
+      	// The section open on first init. A number from 1 to X or false.(data-active-index)
+      	activeIndex : 1,
+      	// Callback when a section is open
+      	openSection: function( section ){},
+      	// Callback before a section is open
+      	beforeOpenSection: function( section ){},
+      });
+    </script>
+  </body>
+</html>
