@@ -14453,7 +14453,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   visibility: hidden;
   transition: all 0.35s ease;
 }
-.frame-box:hover .overlay {
+.frame-box:hover .overlay, .frame-box:focus .overlay {
   opacity: 1;
   visibility: visible;
 }
