@@ -14157,6 +14157,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 }
 
 .section-hero {
+  position: relative;
   margin-bottom: 3rem;
   padding-right: 1.5rem;
   padding-left: 1.5rem;
@@ -14168,6 +14169,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 }
 
 .section-video {
+  position: relative;
   margin-bottom: 3rem;
   padding-right: 0;
   padding-left: 0;
@@ -14240,6 +14242,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 }
 
 .section-product {
+  position: relative;
   margin-bottom: 3rem;
   padding-right: 1.5rem;
   padding-left: 1.5rem;
@@ -14304,15 +14307,16 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   .section-product .swiper-button-next, .section-product .swiper-button-prev {
     position: absolute;
     top: 1.5rem;
-    right: 0;
+    right: 1.5rem;
   }
   .section-product .swiper-button-prev {
-    right: 44px;
+    right: 68px;
     left: inherit;
   }
 }
 
 .section-frame {
+  position: relative;
   margin-bottom: 2rem;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -14352,6 +14356,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 }
 
 .section-preset {
+  position: relative;
   background-color: white;
   margin: 0 auto 1.5rem;
   padding: 0.5rem;
@@ -14442,13 +14447,13 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   right: 20px;
   bottom: 22px;
   left: 12px;
+  z-index: 30;
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 0;
   visibility: hidden;
   transition: all 0.35s ease;
 }
 .frame-box:hover .overlay {
-  z-index: 3;
   opacity: 1;
   visibility: visible;
 }
