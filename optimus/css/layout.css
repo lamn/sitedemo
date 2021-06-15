@@ -15996,15 +15996,32 @@ nav.navtop ul li.is-lang a.is-active {
 
 .section-knl {
   position: relative;
-  background-color: #25366A;
   max-width: 1232px;
   min-height: 400px;
   margin-right: auto;
   margin-left: auto;
-  padding: 1.5rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
 }
-.section-knl h4 {
-  color: white;
+.section-knl .img-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -8px;
+  margin-left: -8px;
+}
+.section-knl .img-grid .img-item {
+  display: block;
+  margin-bottom: 1rem;
+  padding-right: 8px;
+  padding-left: 8px;
+}
+.section-knl .img-grid .img-item img {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+.section-knl .img-grid .img-item:last-child, .section-knl .img-grid .img-item:empty {
+  margin-bottom: 0;
 }
 @media screen and (max-width: 1023px) {
   .section-knl {
@@ -16014,6 +16031,13 @@ nav.navtop ul li.is-lang a.is-active {
 @media screen and (min-width: 1024px) {
   .section-knl {
     border-radius: 12px;
+    flex-wrap: nowrap;
+  }
+  .section-knl .img-item {
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-bottom: 0;
   }
 }
 
