@@ -14334,18 +14334,14 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
-.section-frame ul {
+.section-frame .preview-images-zone {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  align-items: flex-end;
   padding-right: 0.5rem;
   padding-left: 0.5rem;
 }
-.section-frame.has-items ul {
-  justify-content: flex-start;
-}
 @media screen and (min-width: 769px) {
-  .section-frame ul {
+  .section-frame {
     justify-content: center;
   }
 }
@@ -14357,11 +14353,9 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
     min-height: 360px;
     overflow-x: inherit;
   }
-  .section-frame.has-items ul {
-    justify-content: center;
-  }
-  .section-frame ul {
+  .section-frame .preview-images-zone {
     flex-wrap: wrap;
+    justify-content: center;
   }
   .section-frame .frame-box {
     margin-bottom: 1rem;
@@ -14445,11 +14439,16 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 
 .frame-box {
   position: relative;
+  flex-shrink: 0;
   height: 260px;
   width: 260px;
   margin-right: 0.75rem;
   margin-left: 0.75rem;
   overflow: hidden;
+}
+.frame-box:only-child {
+  margin-right: auto;
+  margin-left: auto;
 }
 .frame-box .overlay {
   display: flex;
@@ -14461,14 +14460,20 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   bottom: 22px;
   left: 12px;
   z-index: 30;
-  background-color: rgba(0, 0, 0, 0.5);
   opacity: 0;
   visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
   transition: all 0.35s ease;
 }
 .frame-box:hover .overlay, .frame-box:focus .overlay {
   opacity: 1;
   visibility: visible;
+}
+.frame-box .img-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 .frame-box.is-preset-1:before {
   position: absolute;
@@ -14484,7 +14489,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   top: 12px;
   right: 20px;
   bottom: 22px;
-  left: 14px;
+  left: 15px;
 }
 .frame-box.is-preset-2 {
   padding: 30px 34px;
@@ -14503,7 +14508,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   top: 32px;
   right: 40px;
   bottom: 42px;
-  left: 34px;
+  left: 35px;
 }
 .frame-box.is-preset-3:before {
   position: absolute;
@@ -14516,10 +14521,10 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 }
 .frame-box.is-preset-3 .img-frame {
   position: absolute;
-  top: 12px;
-  right: 20px;
+  top: 10px;
+  right: 19px;
   bottom: 22px;
-  left: 14px;
+  left: 13px;
 }
 .frame-box.is-preset-4 {
   padding: 30px 34px;
@@ -14548,6 +14553,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   background-color: white;
   border: 2px dashed #D0D7DF;
   border-radius: 12px;
+  order: 100;
 }
 .frame-box.is-upload .ico-wrap {
   display: block;

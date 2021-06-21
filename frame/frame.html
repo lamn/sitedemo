@@ -25,7 +25,7 @@
         <div class="navbar-menu container" id="navbar-menu"><a class="navbar-logo" href="index.html"><i class="logo"></i></a>
           <div class="navbar-start">
             <div class="ns-left"><a class="navbar-item is-active" href="index.html"><i class="ti ti-mist"></i>Giới thiệu ứng dụng</a><a class="navbar-item" href="faqs.html">Trung tâm hướng dẫn</a></div>
-            <div class="ns-right"><a class="navbar-item" href="contact.html">Liên hệ</a><a class="button is-primary is-large" href="frame_has_items.html">Tạo khung ảnh</a></div>
+            <div class="ns-right"><a class="navbar-item" href="contact.html">Liên hệ</a><a class="button is-primary is-large" href="frame.html">Tạo khung ảnh</a></div>
           </div>
         </div>
       </nav>
@@ -39,26 +39,21 @@
       </div>
       <div class="section-preset">
         <ul> 
-          <li> <a class="preset is-active" href="javascript:void(0);"><img src="images/preset_1.svg" alt="Frame"><span>Trắng</span></a></li>
-          <li> <a class="preset" href="javascript:void(0);"><img src="images/preset_2.svg" alt="Frame"><span>Trắng viền</span></a></li>
-          <li> <a class="preset" href="javascript:void(0);"><img src="images/preset_4.svg" alt="Frame"><span>Đen</span></a></li>
-          <li> <a class="preset" href="javascript:void(0);"><img src="images/preset_4.svg" alt="Frame"><span>Đen viền</span></a></li>
+          <li> <a class="preset is-active" id="preset-1" href="javascript:void(0);"><img src="images/preset_1.svg" alt="Frame"><span>Trắng</span></a></li>
+          <li> <a class="preset" id="preset-2" href="javascript:void(0);"><img src="images/preset_2.svg" alt="Frame"><span>Trắng viền</span></a></li>
+          <li> <a class="preset" id="preset-3" href="javascript:void(0);"><img src="images/preset_4.svg" alt="Frame"><span>Đen</span></a></li>
+          <li> <a class="preset" id="preset-4" href="javascript:void(0);"><img src="images/preset_4.svg" alt="Frame"><span>Đen viền</span></a></li>
         </ul>
       </div>
       <div class="section-frame">
-        <ul>
-          <li>
-            <div class="frame-box is-upload">
-              <div class="inputfile-container">
-                <input class="inputfile" type="file" id="file1">
-                <label for="file1"></label>
-              </div>
-              <div class="ico-wrap"><i class="ti ti-upload"> </i></div>
-              <h4>Tải ảnh lên</h4>
-              <p class="pretitle">Hỗ trợ định dạng png, jpg, jpeg. Kích thước tối đa 50MB.</p>
+        <div class="preview-images-zone"><a class="frame-box is-upload" href="javascript:void(0)" onclick="$('#pro-image').click()">
+            <div class="inputfile-container">
+              <input class="inputfile" id="pro-image" name="pro-image" type="file">
+              <label for="pro-image"></label>
             </div>
-          </li>
-        </ul>
+            <div class="ico-wrap"><i class="ti ti-upload"> </i></div>
+            <h4>Tải ảnh lên</h4>
+            <p class="pretitle">Hỗ trợ định dạng png, jpg, jpeg. Kích thước tối đa 50MB.</p></a></div>
       </div>
       <div class="section-buttons">
         <div class="inside"><a class="button is-primary is-large is-fullwidth func-modal-cart" href="#!"><i class="ti ti-shopping-cart mr-2"></i>Đặt hàng</a></div>
@@ -150,13 +145,81 @@
     </div>
     <!-- Include Plugin-->
     <script src="js/jquery.min.js"></script>
-    <script src="js/swiper-bundle.min.js"></script>
     <script src="js/init.js"></script>
     <script>
-      $(".func-delete").click(function(){
-      	$(".toast.is-danger").addClass("is-show");
-      	setTimeout(function(){ $(".toast").removeClass("is-show");},4000)
+      $(document).ready(function() {
+      	document.getElementById('pro-image').addEventListener('change', readImage, false);
+      
+      	$(document).on('click', '.func-delete', function() {
+      		let no = $(this).data('no');
+      		$(".preview-show-"+no).remove();
+      		$(".toast.is-danger").addClass("is-show");
+      		setTimeout(function(){ $(".toast").removeClass("is-show");},4000)
+      	});
       });
+      
+      var num = 0;
+      function readImage() {
+      	if (window.File && window.FileList && window.FileReader) {
+      		var files = event.target.files;
+      		var output = $(".preview-images-zone");
+      
+      		for (let i = 0; i < files.length; i++) {
+      			var file = files[i];
+      			var checkdiv = $('div.frame-box').length;
+      			// lemit line
+      			if (num <= 5 || checkdiv <= 5){  
+      				var num = checkdiv;
+      				if (!file.type.match('image')) continue;
+      				
+      				var picReader = new FileReader();
+      				
+      				picReader.addEventListener('load', function (event) {
+      					var picFile = event.target;
+      					var html =  '<div class="frame-box is-preset is-preset-1 preview-show-' + num + '">' +
+      								'<div class="img-frame"><img id="pro-img-' + num + '" src="' + picFile.result + '"></div>' +
+      								'<div class="overlay">' +
+      								'<div class="buttons">' +
+      								'<div class="button is-primary func-delete mr-0" data-no="' + num + '"><span class="icon is-small"><i class="ti ti-trash"></i></span></div>' +
+      								'</div></div>';
+      
+      					output.append(html);
+      					num = num + 1;
+      				});
+      			}
+      			picReader.readAsDataURL(file);
+      		}
+      		$("#pro-image").val('');
+      	} else {
+      		console.log('Browser not support');
+      	}
+      }
+      
+      $("#preset-1").click(function(){
+      	$(".section-preset li a").removeClass("is-active");
+      	$(this).addClass("is-active");
+      	$(".frame-box.is-preset").addClass("is-preset-1");
+      	$(".frame-box.is-preset").removeClass("is-preset-2 is-preset-3 is-preset-4");
+      });
+      $("#preset-2").click(function(){
+      	$(".section-preset li a").removeClass("is-active");
+      	$(this).addClass("is-active");
+      	$(".frame-box.is-preset").addClass("is-preset-2");
+      	$(".frame-box.is-preset").removeClass("is-preset-1 is-preset-3 is-preset-4");
+      });
+      $("#preset-3").click(function(){
+      	$(".section-preset li a").removeClass("is-active");
+      	$(this).addClass("is-active");
+      	$(".frame-box.is-preset").addClass("is-preset-3");
+      	$(".frame-box.is-preset").removeClass("is-preset-1 is-preset-2 is-preset-4");
+      });
+      $("#preset-4").click(function(){
+      	$(".section-preset li a").removeClass("is-active");
+      	$(this).addClass("is-active");
+      	$(".frame-box.is-preset").addClass("is-preset-4");
+      	$(".frame-box.is-preset").removeClass("is-preset-1 is-preset-2 is-preset-3");
+      });
+      
       $(".delete").click(function(){
       	$(".toast").removeClass("is-show");
       });
