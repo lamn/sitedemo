@@ -14591,6 +14591,13 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   height: 100%;
   width: 100%;
 }
+.frame-box.is-upload .inputfile-container a {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
 .frame-box.is-upload .inputfile-container .inputfile {
   position: absolute;
   z-index: -1;

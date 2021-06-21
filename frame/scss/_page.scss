@@ -187,6 +187,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 		h4{display:block;margin-bottom:0.5rem;color:$text;font-size:$size-normal;font-weight:$weight-medium;text-align:center;}
 		p{@include padding(null 1rem);text-align:center;}
 		.inputfile-container{@include position(absolute, 0 null null 0);@include size(100%);
+			a{@include position(absolute, 0);}
 			.inputfile{position:absolute;z-index:-1;@include size(0.1px);opacity:0;overflow:hidden}
 			.inputfile + label{display:block;position:relative;z-index:10;@include size(100%);cursor:pointer;}
 		}
