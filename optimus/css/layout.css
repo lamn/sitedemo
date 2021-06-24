@@ -16047,16 +16047,37 @@ nav.navtop ul li.is-lang a.is-active {
   padding-bottom: 3rem;
   padding-left: 1.5rem;
 }
-.section-pro-bottom .pro-bottom-inside {
-  background-color: #F0F2F6;
-  min-height: 400px;
-  border-radius: 12px;
+.section-pro-bottom .img-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -8px;
+  margin-left: -8px;
+}
+.section-pro-bottom .img-grid .img-item {
+  display: block;
+  margin-bottom: 1rem;
+  padding-right: 8px;
+  padding-left: 8px;
+}
+.section-pro-bottom .img-grid .img-item img {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+.section-pro-bottom .img-grid .img-item:last-child, .section-pro-bottom .img-grid .img-item:empty {
+  margin-bottom: 0;
 }
 @media screen and (min-width: 1024px) {
   .section-pro-bottom {
     padding-right: 0;
     padding-bottom: 4.75rem;
     padding-left: 0;
+  }
+  .section-pro-bottom .img-item {
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-bottom: 0;
   }
 }
 

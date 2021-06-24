@@ -103,7 +103,7 @@
                     <div class="column content-inside is-10"><span class="img-program" style="background-image:url(images/img_proa_2.png)"></span>
                       <div class="desc">
                         <p>Optimus dạy tiếng Anh 1 on 1 cho trẻ em từ 3 – 12 tuổi. Đây là độ tuổi thích hợp nhất để học tiếng Anh. </p>
-                        <p>Với phương pháp học tập tiên tiến, áp dụng Edtech trong giảng dạy sẽ giúp cho trẻ tiếp thu nhanh chóng, ghi nhớ lâu hơn và hình thành phản xạ như người bản ngữ.</p><a class="button is-primary is-large mb-3" href="#!">Liên hệ tư vấn</a>
+                        <p>Với phương pháp học tập tiên tiến, áp dụng Edtech trong giảng dạy sẽ giúp cho trẻ tiếp thu nhanh chóng, ghi nhớ lâu hơn và hình thành phản xạ như người bản ngữ.</p><a class="button is-primary is-large mb-3" href="javascript:void(0);">Liên hệ tư vấn</a>
                         <p class="is-hotline">Hotline tư vấn: <a href="tel:099999999">099.9999.999</a></p>
                       </div>
                     </div>
@@ -113,7 +113,7 @@
                   <div class="columns is-centered">
                     <div class="column content-inside is-10"><span class="img-program" style="background-image:url(images/img_proa_2.png)"></span>
                       <div class="desc">
-                        <p>Nội dung 2</p><a class="button is-primary is-large mb-3" href="#!">Liên hệ tư vấn</a>
+                        <p>Nội dung 2</p><a class="button is-primary is-large mb-3" href="javascript:void(0);">Liên hệ tư vấn</a>
                         <p class="is-hotline">Hotline tư vấn: <a href="tel:099999999">099.9999.999</a></p>
                       </div>
                     </div>
@@ -123,7 +123,7 @@
                   <div class="columns is-centered">
                     <div class="column content-inside is-10"><span class="img-program" style="background-image:url(images/img_proa_2.png)"></span>
                       <div class="desc">
-                        <p>Nội dung 3</p><a class="button is-primary is-large mb-3" href="#!">Liên hệ tư vấn</a>
+                        <p>Nội dung 3</p><a class="button is-primary is-large mb-3" href="javascript:void(0);">Liên hệ tư vấn</a>
                         <p class="is-hotline">Hotline tư vấn: <a href="tel:099999999">099.9999.999</a></p>
                       </div>
                     </div>
@@ -295,12 +295,15 @@
           <div class="columns">
             <div class="column">
               <h2 class="title">Quy trình đăng ký tiếng Anh 1 kèm 1</h2>
-              <div class="pro-bottom-inside"></div>
+              <div class="img-grid">
+                <div class="img-item"><img src="https://via.placeholder.com/800x400" alt="Optimus"></div>
+                <div class="img-item"><img src="https://via.placeholder.com/800x400" alt="Optimus"></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="section-form"> 
+      <div class="section-form" id="form-contact">
         <div class="container">
           <div class="columns">
             <div class="column is-three-fifths">
@@ -485,6 +488,11 @@
       			slidesOffsetAfter: 0,
       		},
       	}
+      });
+      $(".b-tab .button").click(function() {
+      	$('html, body').animate({
+      		scrollTop: $("#form-contact").offset().top
+      	}, 1500);
       });
     </script>
   </body>

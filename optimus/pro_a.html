@@ -103,7 +103,7 @@
                     <div class="column content-inside is-10"><span class="img-program" style="background-image:url(images/img_proa_2.png)"></span>
                       <div class="desc">
                         <p>Optimus thiết kế, tư vấn chuyên sâu và cung cấp khoá tiếng Anh thương mại - kinh doanh theo đúng mục tiêu của doanh nghiệp.</p>
-                        <p>Chúng tôi thường tập trung đào tạo tiếng Anh 4 kỹ năng (nghe, nói, đọc, viết) cho đội ngũ nhân sự giúp người học phát triển toàn diện, cải thiện hiệu suất làm việc.<br />Trước, trong và sau khi tham gia khoá học của Optimus, học viên đều phải trải qua các bài đánh giá năng lực để hiểu rõ năng lực của bản thân và hướng phát triển tiếp.</p><a class="button is-primary is-large mb-3" href="#!">Liên hệ tư vấn</a>
+                        <p>Chúng tôi thường tập trung đào tạo tiếng Anh 4 kỹ năng (nghe, nói, đọc, viết) cho đội ngũ nhân sự giúp người học phát triển toàn diện, cải thiện hiệu suất làm việc.<br />Trước, trong và sau khi tham gia khoá học của Optimus, học viên đều phải trải qua các bài đánh giá năng lực để hiểu rõ năng lực của bản thân và hướng phát triển tiếp.</p><a class="button is-primary is-large mb-3" href="javascript:void(0);">Liên hệ tư vấn</a>
                         <p class="is-hotline">Hotline tư vấn: <a href="tel:099999999">099.9999.999</a></p>
                       </div>
                     </div>
@@ -113,7 +113,7 @@
                   <div class="columns is-centered">
                     <div class="column content-inside is-10"><span class="img-program" style="background-image:url(images/img_proa_2.png)"></span>
                       <div class="desc">
-                        <p>Nội dung 2</p><a class="button is-primary is-large mb-3" href="#!">Liên hệ tư vấn</a>
+                        <p>Nội dung 2</p><a class="button is-primary is-large mb-3" href="javascript:void(0);">Liên hệ tư vấn</a>
                         <p class="is-hotline">Hotline tư vấn: <a href="tel:099999999">099.9999.999</a></p>
                       </div>
                     </div>
@@ -123,7 +123,7 @@
                   <div class="columns is-centered">
                     <div class="column content-inside is-10"><span class="img-program" style="background-image:url(images/img_proa_2.png)"></span>
                       <div class="desc">
-                        <p>Nội dung 3</p><a class="button is-primary is-large mb-3" href="#!">Liên hệ tư vấn</a>
+                        <p>Nội dung 3</p><a class="button is-primary is-large mb-3" href="javascript:void(0);">Liên hệ tư vấn</a>
                         <p class="is-hotline">Hotline tư vấn: <a href="tel:099999999">099.9999.999</a></p>
                       </div>
                     </div>
@@ -296,12 +296,16 @@
           <div class="columns">
             <div class="column">
               <h2 class="title">Quy trình mở lớp</h2>
-              <div class="pro-bottom-inside"></div>
+              <div class="img-grid">
+                <div class="img-item"><img src="https://via.placeholder.com/800x400" alt="Optimus"></div>
+                <div class="img-item"><img src="https://via.placeholder.com/500x800" alt="Optimus"></div>
+                <div class="img-item"><img src="https://via.placeholder.com/800x400" alt="Optimus"></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="section-form"> 
+      <div class="section-form" id="form-contact">
         <div class="container">
           <div class="columns">
             <div class="column is-three-fifths">
@@ -486,6 +490,11 @@
       			slidesOffsetAfter: 0,
       		},
       	}
+      });
+      $(".b-tab .button").click(function() {
+      	$('html, body').animate({
+      		scrollTop: $("#form-contact").offset().top
+      	}, 1500);
       });
     </script>
   </body>
