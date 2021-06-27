@@ -47,17 +47,31 @@
         </div>
         <div class="section-product">
           <h2 class="title">Sample</h2>
-          <div class="product-inside">
-            <div class="swiper-container swiper-product">
+          <div class="product2-inside">
+            <div class="swiper-container mySwiper2">
               <div class="swiper-wrapper">
-                <div class="swiper-slide"><a class="item-product" href="#!"><img src="https://via.placeholder.com/480x480" alt="Frame"></a></div>
-                <div class="swiper-slide"><a class="item-product" href="#!"><img src="https://via.placeholder.com/480x480" alt="Frame"></a></div>
-                <div class="swiper-slide"><a class="item-product" href="#!"><img src="https://via.placeholder.com/480x480" alt="Frame"></a></div>
-                <div class="swiper-slide"><a class="item-product" href="#!"><img src="https://via.placeholder.com/480x480" alt="Frame"></a></div>
-                <div class="swiper-slide"><a class="item-product" href="#!"><img src="https://via.placeholder.com/480x480" alt="Frame"></a></div>
-                <div class="swiper-slide"><a class="item-product" href="#!"><img src="https://via.placeholder.com/480x480" alt="Frame"></a></div>
-                <div class="swiper-slide"><a class="item-product" href="#!"><img src="https://via.placeholder.com/480x480" alt="Frame"></a></div>
-                <div class="swiper-slide"><a class="item-product" href="#!"><img src="https://via.placeholder.com/480x480" alt="Frame"></a></div>
+                <div class="swiper-slide"><a class="item-product2" href="#!"><img src="https://via.placeholder.com/1200x1200" alt="Frame"></a></div>
+                <div class="swiper-slide"><a class="item-product2" href="#!"><img src="https://via.placeholder.com/1200x1200" alt="Frame"></a></div>
+                <div class="swiper-slide"><a class="item-product2" href="#!"><img src="https://via.placeholder.com/1200x1200" alt="Frame"></a></div>
+                <div class="swiper-slide"><a class="item-product2" href="#!"><img src="https://via.placeholder.com/1200x1200" alt="Frame"></a></div>
+                <div class="swiper-slide"><a class="item-product2" href="#!"><img src="https://via.placeholder.com/1200x1200" alt="Frame"></a></div>
+                <div class="swiper-slide"><a class="item-product2" href="#!"><img src="https://via.placeholder.com/1200x1200" alt="Frame"></a></div>
+                <div class="swiper-slide"><a class="item-product2" href="#!"><img src="https://via.placeholder.com/1200x1200" alt="Frame"></a></div>
+                <div class="swiper-slide"><a class="item-product2" href="#!"><img src="https://via.placeholder.com/1200x1200" alt="Frame"></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="product-inside">
+            <div class="swiper-container mySwiper" thumbsslider="">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><a class="item-product" href="#!"><img src="https://via.placeholder.com/720x720" alt="Frame"></a></div>
+                <div class="swiper-slide"><a class="item-product" href="#!"><img src="https://via.placeholder.com/720x720" alt="Frame"></a></div>
+                <div class="swiper-slide"><a class="item-product" href="#!"><img src="https://via.placeholder.com/720x720" alt="Frame"></a></div>
+                <div class="swiper-slide"><a class="item-product" href="#!"><img src="https://via.placeholder.com/720x720" alt="Frame"></a></div>
+                <div class="swiper-slide"><a class="item-product" href="#!"><img src="https://via.placeholder.com/720x720" alt="Frame"></a></div>
+                <div class="swiper-slide"><a class="item-product" href="#!"><img src="https://via.placeholder.com/720x720" alt="Frame"></a></div>
+                <div class="swiper-slide"><a class="item-product" href="#!"><img src="https://via.placeholder.com/720x720" alt="Frame"></a></div>
+                <div class="swiper-slide"><a class="item-product" href="#!"><img src="https://via.placeholder.com/720x720" alt="Frame"></a></div>
               </div>
             </div>
             <div class="swiper-pagination partner-pagination"></div>
@@ -156,19 +170,14 @@
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/init.js"></script>
     <script>
-      var swiper = new Swiper('.swiper-product', {
+      var swiper = new Swiper('.mySwiper', {
       	slidesPerView: 2.8,
       	spaceBetween: 24,
       	slidesOffsetBefore: 24,
       	slidesOffsetAfter: 24,
-      	pagination: {
-      		el: '.partner-pagination',
-      		clickable: true,
-      	},
-      	navigation: {
-      		nextEl: '.swiper-partner-next',
-      		prevEl: '.swiper-partner-prev',
-      	},
+      	freeMode: true,
+      	watchSlidesVisibility: true,
+      	watchSlidesProgress: true,
       	breakpoints: {
       		// when window width is >= 320px
       		320: {
@@ -187,7 +196,22 @@
       			slidesOffsetBefore: 0,
       			slidesOffsetAfter: 0,
       		},
-      	}
+      	},
+      });
+      var swiper2 = new Swiper(".mySwiper2", {
+      	spaceBetween: 24,
+      	slidesPerView: 1,
+      	thumbs: {
+      		swiper: swiper,
+      	},
+      	navigation: {
+      		nextEl: '.swiper-partner-next',
+      		prevEl: '.swiper-partner-prev',
+      	},
+      	pagination: {
+      		el: '.partner-pagination',
+      		clickable: true,
+      	},
       });
     </script>
   </body>

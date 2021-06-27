@@ -109,9 +109,10 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 		}
 	}
 }
-.section-product{position:relative;margin-bottom:3rem;@include padding(null 1.5rem);
+.section-product{position:relative;max-width:80%;@include margin(null auto 3rem);@include padding(null 1.5rem);
+	.product2-inside{max-width:480px;@include margin(null auto $gutter)}
 	.product-inside{@include margin(null (-$gutter))}
-	.item-product{display:block;
+	.item-product, .item-product2{display:block;
 		img{display:block;@include size(auto);border-radius:$radius-large;border:1px solid $grey-lightest;}
 	}
 	.swiper-pagination{@include position(absolute, null null -2rem null)}

@@ -14256,18 +14256,25 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 
 .section-product {
   position: relative;
+  margin-right: auto;
   margin-bottom: 3rem;
+  margin-left: auto;
   padding-right: 1.5rem;
   padding-left: 1.5rem;
+}
+.section-product .product2-inside {
+  margin-right: auto;
+  margin-bottom: 1.5rem;
+  margin-left: auto;
 }
 .section-product .product-inside {
   margin-right: -1.5rem;
   margin-left: -1.5rem;
 }
-.section-product .item-product {
+.section-product .item-product, .section-product .item-product2 {
   display: block;
 }
-.section-product .item-product img {
+.section-product .item-product img, .section-product .item-product2 img {
   display: block;
   height: auto;
   width: auto;
@@ -14311,7 +14318,11 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 }
 @media screen and (min-width: 1024px) {
   .section-product {
+    max-width: 80%;
     margin-bottom: 4rem;
+  }
+  .section-product .product2-inside {
+    max-width: 480px;
   }
   .section-product .product-inside {
     margin-right: 0;
