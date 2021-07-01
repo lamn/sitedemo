@@ -115,7 +115,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 	.item-product, .item-product2{display:block;
 		img{display:block;@include size(auto);border-radius:$radius-large;object-fit:cover;}
 	}
-	.item-product2 .img{display:block;position:relative;@include background-center;border-radius:$radius-large;
+	.item-product .img, .item-product2 .img{display:block;position:relative;@include background-center;border-radius:$radius-large;
 		&:before{content:"";display:block;padding-top:133.3333333%}
 	}
 	.swiper-pagination{@include position(absolute, null null -2rem null)}
