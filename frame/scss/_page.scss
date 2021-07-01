@@ -109,11 +109,14 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 		}
 	}
 }
-.section-product{position:relative;max-width:80%;@include margin(null auto 3rem);@include padding(null 1.5rem);
-	.product2-inside{max-width:480px;@include margin(null auto $gutter)}
+.section-product{position:relative;@include margin(null auto 3rem);@include padding(null 1.5rem);
+	.product2-inside{@include margin(null auto $gutter)}
 	.product-inside{@include margin(null (-$gutter))}
 	.item-product, .item-product2{display:block;
-		img{display:block;@include size(auto);border-radius:$radius-large;border:1px solid $grey-lightest;}
+		img{display:block;@include size(auto);border-radius:$radius-large;object-fit:cover;}
+	}
+	.item-product2 .img{display:block;position:relative;@include background-center;border-radius:$radius-large;
+		&:before{content:"";display:block;padding-top:133.3333333%}
 	}
 	.swiper-pagination{@include position(absolute, null null -2rem null)}
 	.swiper-button-next, .swiper-button-prev{display:none;background:url(../images/arrows.png) 0 0 no-repeat;background-size:80px 80px;@include size(40px);outline:0;
@@ -127,7 +130,8 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 	.swiper-button-next{background-position:-40px 0;
 		&.swiper-button-disabled{background-position:-40px -40px;}
 	}
-	@include from($desktop){margin-bottom:4rem;
+	@include from($desktop){max-width:80%;margin-bottom:4rem;
+		.product2-inside{max-width:400px;}
 		.product-inside{@include margin(null 0)}
 		.swiper-button-next, .swiper-button-prev{@include position(absolute, 1.5rem 1.5rem null null)}
 		.swiper-button-prev{right:68px;left:inherit}
@@ -164,7 +168,9 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 	&:hover, &:focus{
 		.overlay{opacity:1;visibility:visible}
 	}
-	.img-frame{@include flex-center;overflow:hidden}
+	.img-frame{@include flex-center;overflow:hidden;
+		img{@include size(260px);object-fit:cover;}
+	}
 	&.is-preset-1{
 		&:before{@include position(absolute, 0);content:"";background:url(../images/white_large.svg) 0 0 no-repeat;}
 		.img-frame{@include position(absolute, 12px 20px 22px 15px)}
