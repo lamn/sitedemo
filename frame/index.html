@@ -238,11 +238,11 @@
       			clickable: true,
       		},
       	});
+      	setTimeout(function () {
+      		swiper.reInit();
+      		swiper2.reInit();
+      	}, 2000);
       });
-      setTimeout(function () {
-      	swiper.update();
-      	swiper2.update();
-      }, 2000);
     </script>
   </body>
 </html>
