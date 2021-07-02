@@ -200,7 +200,7 @@
       		spaceBetween: 24,
       		slidesOffsetBefore: 24,
       		slidesOffsetAfter: 24,
-      		watchSlidesVisibility: false,
+      		watchSlidesVisibility: true,
       		watchSlidesProgress: true,
       		preloadImages: true,
       		breakpoints: {
@@ -222,6 +222,7 @@
       				slidesOffsetAfter: 0,
       			},
       		},
+      		init: false,
       	});
       	var swiper2 = new Swiper(".mySwiper2", {
       		spaceBetween: 24,
@@ -237,11 +238,12 @@
       			el: '.partner-pagination',
       			clickable: true,
       		},
+      		init: false,
       	});
       	setTimeout(function () {
-      		swiper.update();
-      		swiper2.update();
-      	}, 2000);
+      		swiper.init();
+      		swiper2.init();
+      	}, 1000);
       });
     </script>
   </body>
