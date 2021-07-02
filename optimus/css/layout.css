@@ -13638,6 +13638,7 @@ hr.line {
 
 html {
   -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
 }
 
 body {
