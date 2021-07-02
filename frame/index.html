@@ -196,10 +196,12 @@
     <script>
       $(document).ready(function() {
       	var swiper = new Swiper('.mySwiper', {
+      		loop: true,
       		slidesPerView: 3.6,
       		spaceBetween: 24,
       		slidesOffsetBefore: 24,
       		slidesOffsetAfter: 24,
+      		freeMode: true,
       		watchSlidesVisibility: true,
       		watchSlidesProgress: true,
       		preloadImages: true,
@@ -224,6 +226,7 @@
       		},
       	});
       	var swiper2 = new Swiper(".mySwiper2", {
+      		loop: true,
       		spaceBetween: 24,
       		slidesPerView: 1,
       		thumbs: {
@@ -238,10 +241,10 @@
       			clickable: true,
       		},
       	});
-      	setTimeout(function () {
-      		swiper.updateProgress();
-      		swiper2.updateProgress();
-      	}, 2000);
+      	//- setTimeout(function () {
+      	//- 	swiper.updateProgress();
+      	//- 	swiper2.updateProgress();
+      	//- }, 2000);
       });
     </script>
   </body>
