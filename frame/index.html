@@ -200,9 +200,9 @@
       		spaceBetween: 24,
       		slidesOffsetBefore: 24,
       		slidesOffsetAfter: 24,
-      		freeMode: true,
       		watchSlidesVisibility: true,
       		watchSlidesProgress: true,
+      		preloadImages: true,
       		breakpoints: {
       			// when window width is >= 320px
       			320: {
@@ -241,7 +241,8 @@
       });
       setTimeout(function () {
       	swiper.update();
-      }, 1000);
+      	swiper2.update();
+      }, 2000);
     </script>
   </body>
 </html>
