@@ -222,7 +222,6 @@
       				slidesOffsetAfter: 0,
       			},
       		},
-      		init: false,
       	});
       	var swiper2 = new Swiper(".mySwiper2", {
       		spaceBetween: 24,
@@ -238,12 +237,11 @@
       			el: '.partner-pagination',
       			clickable: true,
       		},
-      		init: false,
       	});
       	setTimeout(function () {
-      		swiper.init();
-      		swiper2.init();
-      	}, 1000);
+      		swiper.updateProgress();
+      		swiper2.updateProgress();
+      	}, 2000);
       });
     </script>
   </body>
