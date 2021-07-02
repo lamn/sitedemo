@@ -200,7 +200,7 @@
       		spaceBetween: 24,
       		slidesOffsetBefore: 24,
       		slidesOffsetAfter: 24,
-      		watchSlidesVisibility: true,
+      		watchSlidesVisibility: false,
       		watchSlidesProgress: true,
       		preloadImages: true,
       		breakpoints: {
@@ -239,8 +239,8 @@
       		},
       	});
       	setTimeout(function () {
-      		swiper.reInit();
-      		swiper2.reInit();
+      		swiper.update();
+      		swiper2.update();
       	}, 2000);
       });
     </script>
