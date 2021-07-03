@@ -40,3 +40,11 @@ $(document).ready(function() {
 		$("#video").attr('src',$videoSrc); 
 	});
 });
+function isFacebookApp() {
+	var ua = navigator.userAgent || navigator.vendor || window.opera;
+	return (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1);
+}
+//document.body.innerHTML = isFacebookApp();
+if(isFacebookApp()){
+	$(".modal-fb").addClass("is-active");
+};
