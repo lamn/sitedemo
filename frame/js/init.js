@@ -40,13 +40,11 @@ $(document).ready(function() {
 		$("#video").attr('src',$videoSrc); 
 	});
 });
-document.addEventListener('DOMContentLoaded', () => {
-	let ua = navigator.userAgent || navigator.vendor || window.opera;
-	if (ua.indexOf('FBAN') > -1 || ua.indexOf('FBAV') > -1 || ua.indexOf('Instagram') > -1) {
-		if (document.querySelector('input[accept]') !== null) {
-			document.querySelectorAll('input[accept]').forEach(el => {
-				el.removeAttribute('accept');
-			});
-		}
-	}
-});
+function isFacebookApp() {
+	var ua = navigator.userAgent || navigator.vendor || window.opera;
+	return (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1);
+}
+//document.body.innerHTML = isFacebookApp();
+if(isFacebookApp()){
+	$(".modal-fb").addClass("is-active");
+};
