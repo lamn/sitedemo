@@ -799,7 +799,7 @@ nav.navtop{display:none;@include position(absolute, 0 0 null 0);z-index:10;backg
 	p{margin-bottom:1rem;@extend %body;color:$grey}
 	@include from($desktop){@include padding(null 0);}
 }
-.section-knl{position:relative;max-width:1232px;min-height:400px;@include margin(null auto);@include padding(null $gutter);
+.section-knl{position:relative;background-color:$grey-lightest;max-width:1232px;@include margin(null auto);@include padding($gutter);
 	.img-grid{display:flex;flex-wrap:wrap;@include margin(null -8px);
 		.img-item{display:block;margin-bottom:1rem;@include padding(null 8px);
 			img{display:block;@include margin(null auto)}

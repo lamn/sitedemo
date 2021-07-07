@@ -15997,12 +15997,11 @@ nav.navtop ul li.is-lang a.is-active {
 
 .section-knl {
   position: relative;
+  background-color: #F0F2F6;
   max-width: 1232px;
-  min-height: 400px;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
+  padding: 1.5rem;
 }
 .section-knl .img-grid {
   display: flex;
