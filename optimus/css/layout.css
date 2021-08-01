@@ -13549,7 +13549,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   line-height: 24px;
 }
 
-.section-educate p, .section-program .tabs-content p, .section-article .article-body ul li, .section-article .article-body p, .section-article .index-list li a, .section-topview .topview-list li .item-topview .desc h4, .section-topview .topview-list li, .section-latest .latest-list li a, .section-contact .adr-list li span, .section-contact .adr-list li a, .section-about-why p, .section-cover p, .section-about .about-list li, .footer .info-footer .info-footer-list li .desc p, .footer ul.links-list li a, .bullet-list li, .title + .sub-more, .title + .sub {
+.section-educate p, .section-program .tabs-content p, .section-article .article-body ul li, .section-article .article-body ol li, .section-article .article-body p, .section-article .index-list li a, .section-topview .topview-list li .item-topview .desc h4, .section-topview .topview-list li, .section-latest .latest-list li a, .section-contact .adr-list li span, .section-contact .adr-list li a, .section-about-why p, .section-cover p, .section-about .about-list li, .footer .info-footer .info-footer-list li .desc p, .footer ul.links-list li a, .bullet-list li, .title + .sub-more, .title + .sub {
   color: #131920;
   font-size: 1rem;
   font-weight: 400;
@@ -15637,15 +15637,34 @@ nav.navtop ul li.is-lang a.is-active {
   margin-bottom: 1rem;
   color: #5F666D;
 }
-.section-article .article-body ul {
+.section-article .article-body ul, .section-article .article-body ol {
   margin-bottom: 1rem;
 }
-.section-article .article-body ul li {
+.section-article .article-body ul li, .section-article .article-body ol li {
+  display: block;
+  position: relative;
   margin-bottom: 1rem;
+  padding-left: 1.75rem;
   color: #5F666D;
 }
-.section-article .article-body ul li:last-child {
+.section-article .article-body ul li a, .section-article .article-body ol li a {
+  color: #5F666D;
+}
+.section-article .article-body ul li a:hover, .section-article .article-body ol li a:hover {
+  color: #CA181F;
+}
+.section-article .article-body ul li:last-child, .section-article .article-body ol li:last-child {
   margin-bottom: 0;
+}
+.section-article .article-body ul li:before, .section-article .article-body ol li:before {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  content: "";
+  background-color: #CA181F;
+  height: 6px;
+  width: 6px;
+  border-radius: 290486px;
 }
 .section-article .article-body img {
   display: block;
@@ -15665,6 +15684,7 @@ nav.navtop ul li.is-lang a.is-active {
 .section-article .article-body .social-list li {
   margin-bottom: 0;
   margin-right: 1rem;
+  padding-left: 0;
 }
 .section-article .article-body .social-list li:last-child {
   margin-right: 0;
@@ -15687,6 +15707,9 @@ nav.navtop ul li.is-lang a.is-active {
 }
 .section-article .article-body .social-list li a:hover i {
   color: #CA181F;
+}
+.section-article .article-body .social-list li:before {
+  display: none;
 }
 @media screen and (min-width: 1024px) {
   .section-article {
@@ -15724,6 +15747,11 @@ nav.navtop ul li.is-lang a.is-active {
 }
 .section-comment + .section-comment-list {
   margin-top: -1.5rem;
+}
+@media screen and (min-width: 1024px) {
+  .section-comment {
+    padding: 2rem 1.5rem 0 0;
+  }
 }
 
 .section-comment-null {
@@ -15782,6 +15810,9 @@ nav.navtop ul li.is-lang a.is-active {
 @media screen and (min-width: 769px) {
   .section-comment-list {
     margin-bottom: 1.5rem;
+    padding-top: 2rem;
+    padding-right: 1.5rem;
+    padding-left: 0;
   }
 }
 
