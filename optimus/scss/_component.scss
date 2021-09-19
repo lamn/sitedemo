@@ -46,3 +46,9 @@
 // Hr
 hr.separate{display:block;background-color:$grey-lightest;height:8px;@include margin(0 null)}
 hr.line{display:block;background-color:$grey-lightest;height:1px;@include margin(0 null)}
+
+// Collapse
+.collapse{
+	&:not(.show){display:none;}
+}
+.collapsing{position:relative;height:0;overflow:hidden;transition:height .35s ease;}

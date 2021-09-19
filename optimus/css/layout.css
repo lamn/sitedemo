@@ -13549,7 +13549,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   line-height: 24px;
 }
 
-.section-educate p, .section-program .tabs-content p, .section-article .article-body ul li, .section-article .article-body ol li, .section-article .article-body p, .section-article .index-list li a, .section-topview .topview-list li .item-topview .desc h4, .section-topview .topview-list li, .section-latest .latest-list li a, .section-contact .adr-list li span, .section-contact .adr-list li a, .section-about-why p, .section-cover p, .section-about .about-list li, .footer .info-footer .info-footer-list li .desc p, .footer ul.links-list li a, .bullet-list li, .title + .sub-more, .title + .sub {
+.section-educate p, .section-program .tabs-content p, .section-article .article-body ul li, .section-article .article-body ol li, .section-article .article-body p, .section-article .index-list .index-card .index-card-body a, .section-topview .topview-list li .item-topview .desc h4, .section-topview .topview-list li, .section-latest .latest-list li a, .section-contact .adr-list li span, .section-contact .adr-list li a, .section-about-why p, .section-cover p, .section-about .about-list li, .footer .info-footer .info-footer-list li .desc p, .footer ul.links-list li a, .bullet-list li, .title + .sub-more, .title + .sub {
   color: #131920;
   font-size: 1rem;
   font-weight: 400;
@@ -13630,6 +13630,17 @@ hr.line {
   height: 1px;
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.collapse:not(.show) {
+  display: none;
+}
+
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s ease;
 }
 
 *, *::before, *::after {
@@ -15590,36 +15601,79 @@ nav.navtop ul li.is-lang a.is-active {
 }
 .section-article .index-list h3 {
   display: block;
-  margin-bottom: 0.75rem;
+  position: relative;
+  padding-right: 36px;
+  text-transform: uppercase;
 }
-.section-article .index-list li {
+.section-article .index-list h3 .func-collapse-all {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  height: 24px;
+  width: 24px;
+  color: #5F666D;
+  font-size: 1.125rem;
+}
+.section-article .index-list .index-card {
   margin-bottom: 0.5rem;
 }
-.section-article .index-list li:last-child {
+.section-article .index-list .index-card:last-child {
   margin-bottom: 0;
 }
-.section-article .index-list li a {
+.section-article .index-list .index-card .index-card-header {
+  position: relative;
+  padding-top: 0.325rem;
+  padding-bottom: 0.325rem;
+  padding-left: 2rem;
+}
+.section-article .index-list .index-card .index-card-header .func-collapse {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  z-index: 2;
+  height: 24px;
+  width: 24px;
+}
+.section-article .index-list .index-card .index-card-header .func-collapse.collapsed i {
+  transform: rotate(180deg);
+}
+.section-article .index-list .index-card .index-card-header a {
+  color: #131920;
+  font-weight: 700;
+}
+.section-article .index-list .index-card .index-card-header a:hover {
+  color: #CA181F;
+}
+.section-article .index-list .index-card .index-card-body {
+  padding-left: 2rem;
+}
+.section-article .index-list .index-card .index-card-body a {
   display: block;
   position: relative;
-  padding-left: 1.75rem;
   color: #5F666D;
+  font-size: 0.938rem;
 }
-.section-article .index-list li a:before {
-  position: absolute;
-  top: 6px;
-  left: 4px;
-  content: "";
-  background: url(../images/ico_list.png) 0 0 no-repeat;
-  background-size: cover;
-  height: 9px;
-  width: 7px;
-}
-.section-article .index-list li a:hover {
+.section-article .index-list .index-card .index-card-body a:hover {
   color: #CA181F;
+}
+.section-article .index-list .accordion {
+  display: none;
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s ease;
+  margin-top: 0.75rem;
+}
+.section-article .index-list.is-active .func-collapse-all i {
+  transform: rotate(180deg);
+}
+.section-article .index-list.is-active .accordion {
+  display: block;
+  height: auto;
 }
 .section-article .article-body {
   margin-bottom: 1rem;
-  font-size: 15px;
 }
 .section-article .article-body h1, .section-article .article-body h2 {
   display: block;
@@ -15642,9 +15696,16 @@ nav.navtop ul li.is-lang a.is-active {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+.section-article .article-body h2 + h3 {
+  margin-top: -1em;
+}
+.section-article .article-body h3 + h4 {
+  margin-top: -1em;
+}
 .section-article .article-body p {
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   color: #5F666D;
+  font-size: 0.938rem;
 }
 .section-article .article-body a:hover {
   color: #CA181F;
@@ -15657,6 +15718,7 @@ nav.navtop ul li.is-lang a.is-active {
   position: relative;
   margin-bottom: 0.5rem;
   padding-left: 1.75rem;
+  font-size: 0.938rem;
 }
 .section-article .article-body ul li:last-child, .section-article .article-body ol li:last-child {
   margin-bottom: 0;
@@ -15682,6 +15744,7 @@ nav.navtop ul li.is-lang a.is-active {
   position: relative;
   margin-bottom: 1rem;
   padding-left: 1.25rem;
+  font-size: 0.938rem;
 }
 .section-article .article-body blockquote:before {
   position: absolute;

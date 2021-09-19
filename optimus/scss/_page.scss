@@ -13,7 +13,9 @@ body, html{height:100%;
 	@include from($widescreen){}
 }
 a:hover{@include tr-all;}
-.page-content{overflow-x:hidden}
+.page-content{
+	@include until($tablet){overflow-x:hidden}
+}
 
 // Re-Style
 .navbar-burger{@include size(68px);margin-left:inherit}
@@ -647,29 +649,55 @@ nav.navtop{display:none;@include position(absolute, 0 0 null 0);z-index:10;backg
 	}
 	.article-img{display:block;width:100%;height:auto;margin-bottom:$gutter;border-radius:$radius-large}
 	.index-list{background-color:$grey-lightest;margin-bottom:$gutter;@include padding(20px);border-radius:$radius-large;
-		h3{display:block;margin-bottom:0.75rem;@extend %h3;}
-		li{margin-bottom:0.75rem;
+		h3{display:block;position:relative;padding-right:36px;@extend %h3;text-transform:uppercase;
+			.func-collapse-all{@include position(absolute, 0 0 null null);z-index:2;@include size(24px);color:$grey;font-size:1.125rem}
+		}
+		.index-card{margin-bottom:0.5rem;
 			&:last-child{margin-bottom:0}
-			a{display:block;position:relative;padding-left:1.75rem;@extend %body;color:$grey;
-				&:before{@include position(absolute, 6px null null 4px);content:"";background:url(../images/ico_list.png) 0 0 no-repeat;background-size:cover;@include size(7px, 9px)}
-				&:hover{color:$primary}
+			.index-card-header{position:relative;padding-top:0.325rem;padding-bottom:0.325rem;padding-left:2rem;
+				.func-collapse{@include position(absolute, 4px null null 0);z-index:2;@include size(24px);
+					&.collapsed i{transform:rotate(180deg);}
+				}
+				a{color:$text;font-weight:$weight-bold;
+					&:hover{color:$primary}
+				}
 			}
+			.index-card-body{padding-left:2rem;
+				a{display:block;position:relative;@extend %body;color:$grey;font-size:0.938rem;
+					&:hover{color:$primary}
+				}
+			}
+		}
+		.accordion{display:none;position:relative;height:0;overflow:hidden;transition:height .35s ease;margin-top:0.75rem;}
+		&.is-active{
+			.func-collapse-all i{transform:rotate(180deg);}
+			.accordion{display:block;height:auto;}
 		}
 	}
 	.article-body{margin-bottom:1rem;
 		h1, h2{display:block;@include padding(1rem null);@extend %h2;}
-		h3{display:block;@include padding(1rem null);@extend %h3;}
+		h2{font-size:28px;line-height:1.6em}
+		h3{display:block;@include padding(1rem null);@extend %h3;font-size:24px;line-height:1.6em}
 		h4{display:block;@include padding(1rem null);@extend %subtitle;}
-		p{margin-bottom:1rem;@extend %body;color:$grey}
-		ul{margin-bottom:1rem;
-			li{margin-bottom:1rem;@extend %body;color:$grey;
+		h2 + h3{margin-top:-1em}
+		h3 + h4{margin-top:-1em}
+		p{margin-bottom:0.75rem;@extend %body;color:$grey;font-size:0.938rem;}
+		a{
+			&:hover{color:$primary;}
+		}
+		ul, ol{margin-bottom:1rem;
+			li{display:block;position:relative;margin-bottom:0.5rem;padding-left:1.75rem;@extend %body;font-size:0.938rem;
 				&:last-child{margin-bottom:0}
+				&:before{@include position(absolute, 8px null null 8px);content:"";background-color:$primary;@include size(6px);border-radius:$radius-rounded;}
 			}
 		}
 		img{display:block;width:100%;height:auto;margin-bottom:$gutter;border-radius:$radius-large}
+		blockquote{position:relative;margin-bottom:1rem;padding-left:1.25rem;font-size:0.938rem;
+			&:before{@include position(absolute, 0 null 0 0);content:"";background-color:$grey-lighter;width:2px}
+		}
 		.tags{margin-bottom:$gutter}
 		.social-list{display:flex;flex-wrap:wrap;margin-bottom:0;
-			li{margin-bottom:0;margin-right:1rem;
+			li{margin-bottom:0;margin-right:1rem;padding-left:0;
 				&:last-child{margin-right:0}
 				a{@include flex-center;@include size(48px);border-radius:$radius-rounded;border:1px solid $text;
 					i{color:$text;font-size:1.5rem}
@@ -677,6 +705,7 @@ nav.navtop{display:none;@include position(absolute, 0 0 null 0);z-index:10;backg
 						i{color:$primary;}
 					}
 				}
+				&:before{display:none}
 			}
 		}
 	}
@@ -698,6 +727,7 @@ nav.navtop{display:none;@include position(absolute, 0 0 null 0);z-index:10;backg
 		}
 	}
 	& + .section-comment-list{margin-top:-$gutter}
+	@include from($desktop){@include padding(2rem 1.5rem 0 0)}
 }
 .section-comment-null{@include padding($gutter);
 	i{display:block;@include margin(null auto 1rem);color:$text;font-size:1.5rem}
@@ -718,7 +748,7 @@ nav.navtop{display:none;@include position(absolute, 0 0 null 0);z-index:10;backg
 			}
 		}
 	}
-	@include from($tablet){margin-bottom:$gutter}
+	@include from($tablet){margin-bottom:$gutter;@include padding(2rem 1.5rem null 0)}
 }
 // Program
 .section-program{position:relative;background-color:rgba($grey-lightest, 0.75);@include padding(3rem $gutter);
