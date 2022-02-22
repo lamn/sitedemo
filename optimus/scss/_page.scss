@@ -748,10 +748,20 @@ nav.navtop{display:none;@include position(absolute, 0 0 null 0);z-index:10;backg
 			.item-comment{display:flex;
 				.avatar{flex-shrink:0;margin-right:1rem;}
 				.desc{flex-grow:1;min-width:0;
-					p.author{margin-bottom:0.25rem;@extend %subtitle;}
+					p.author{margin-bottom:0.25rem;@extend %subtitle;
+						&.is-admin{color:$primary;
+							.tag{background-color:$background-primary;color:$primary}
+						}
+					}
 					p.ctn{@extend %small;}
 				}
 			}
+		}
+	}
+	.comment-list{
+		ul{position:relative;margin-top:1rem;margin-left:4rem;
+			li{margin-left:1rem}
+			&:before{@include position(absolute, 0 null 0 null);content:"";background-color:$grey-lightest;width:2px}
 		}
 	}
 	@include from($tablet){margin-bottom:$gutter;@include padding(2rem 1.5rem null 0)}
